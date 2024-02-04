@@ -1,3 +1,5 @@
-# Welcome to Khang's Page
+# Introduction
+
+Welcome to Khang's Page
 
 Khang Test
