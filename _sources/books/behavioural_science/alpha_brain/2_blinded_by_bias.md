@@ -1,4 +1,4 @@
-# 1. Blinded by bias
+# 2. Blinded by bias
 
 Game of Poker: Skill and Luck
 
