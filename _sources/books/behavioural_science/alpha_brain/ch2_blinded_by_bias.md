@@ -8,7 +8,7 @@ Game of Poker: Skill and Luck
 
 Optical Illusion: things are not what they seem, no matter how sure you can be
 
-**What I learned**
+***What I learned***
 
 - Questions every detail that you have been 100% sure.
 - The more human factor is involved, the greater the chance for bias and mistakes

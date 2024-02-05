@@ -7,6 +7,6 @@
   - 52% win points --> 79% win rate (rank 3)
   - 55% win points --> 90% win rate (rank 1)
 
-**What I learned**
+***What I learned***
 
 - Small improvement, making fewer mistakes can significantly improve the outcomes
