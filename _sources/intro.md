@@ -2,4 +2,5 @@
 
 Welcome to Khang's Page
 
-Khang Test
+```{tableofcontents}
+```
