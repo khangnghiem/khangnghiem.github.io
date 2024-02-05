@@ -20,7 +20,7 @@
 
 - **Ask the right questions** before making a decision. These questions should tackle the underlying contexts that aim to minimize automatic decision making based on feeling or intuition.
 
-# Four types of Analytics
+## Four types of Analytics
 
 - Descriptive Analytics: What happened?
 - Diagnostic Analytics: Why did it happen?
