@@ -1,7 +1,7 @@
 
-# Decision making
+# 1. Decision making
 
-## Three types of decisions
+## 1.1. Three types of decisions
 
 - Rational decision
 - Right decision
@@ -12,7 +12,7 @@
 - Beware of mistakes and bias which can influence rational decisions when they turned out wrong.
 - Right decision might not necessarily be rational
   
-## Heuristics (Automaticity)
+## 1.2. Heuristics (Automaticity)
 
 - Most of our decisions are made quickly and automatically on a daily basis.
 - Sometimes, we rely too much on these automaticity, which blinds our ability to see the potential mistakes.
@@ -21,7 +21,7 @@
 
 - **Ask the right questions** before making a decision. These questions should tackle the underlying contexts that aim to minimize automatic decision making based on feeling or intuition.
 
-# Four types of Analytics
+# 2. Four types of Analytics
 
 - Descriptive Analytics: What happened?
 - Diagnostic Analytics: Why did it happen?
