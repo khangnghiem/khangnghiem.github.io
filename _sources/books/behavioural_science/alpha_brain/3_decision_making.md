@@ -1,4 +1,3 @@
-
 # 1. Decision making
 
 ## 1.1. Three types of decisions
