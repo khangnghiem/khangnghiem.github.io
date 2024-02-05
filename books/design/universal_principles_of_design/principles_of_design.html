@@ -1,358 +1,426 @@
+
 <!DOCTYPE html>
-<html  lang="en">
+
+
+<html lang="en" data-content_root="../../../" >
+
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-      <title>Principles of Design</title>
-    
-          <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-          <link rel="stylesheet" href="../../../_static/theme.css " type="text/css" />
-          <link rel="stylesheet" href="../../../_static/togglebutton.css" type="text/css" />
-          <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-          <link rel="stylesheet" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
-          <link rel="stylesheet" href="../../../_static/sphinx-thebe.css" type="text/css" />
-          <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
-      
-      <!-- sphinx script_files -->
-        <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../../../_static/copybutton.js?v=f281be69"></script>
-        <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
-        <script>let toggleHintShow = 'Click to show';</script>
-        <script>let toggleHintHide = 'Click to hide';</script>
-        <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-        <script src="../../../_static/design-tabs.js?v=36754332"></script>
-        <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <title>Principles of Design &#8212; My Journal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-        <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-        <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-
-      
-      <!-- bundled in js (rollup iife) -->
-      <!-- <script src="../../../_static/theme-vendors.js"></script> -->
-      <script src="../../../_static/theme.js" defer></script>
-    
-  <link rel="index" title="Index" href="../../../genindex.html" />
-  <link rel="search" title="Search" href="../../../search.html" />
-  <link rel="prev" title="Universal Principles of Design" href="universal_principles_of_design.html" /> 
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/design/universal_principles_of_design/principles_of_design';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="Universal Principles of Design" href="universal_principles_of_design.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-
-  <body>
-    <div id="app">
-    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
-  <router-link to="../../../intro.html" class="home-link">
-    
-      <span class="site-name">Python</span>
-    
-  </router-link>
-
-  <div class="links">
-    <navlinks class="can-hide">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-    <div class="nav-item">
-      <a href="../../../journal/2402.html#feb-2024"
-         class="nav-link ">
-         feb 2024
-      </a>
-    </div>
   
-    <div class="nav-item">
-      <a href="../../../data_science/machine_learning.html#machine-learning"
-         class="nav-link ">
-         machine learning
-      </a>
-    </div>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
-    <div class="nav-item">
-      <a href="../../behavioural_science/alpha_brain/alpha_brain.html#alpha-brain"
-         class="nav-link ">
-         alpha brain
-      </a>
-    </div>
+  <div id="pst-scroll-pixel-helper"></div>
   
-    <div class="nav-item">
-      <a href="universal_principles_of_design.html#universal-principles-of-design"
-         class="nav-link  router-link-active">
-         universal principles of design
-      </a>
-    </div>
-  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-
-
-    </navlinks>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
-</navbar>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
 
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <div class="sidebar-mask" @click="toggleSidebar(false)">
-      </div>
-        <sidebar @toggle-sidebar="toggleSidebar">
-          
-          <navlinks>
-            
-
+    
+    
+    <img src="../../../_static/main_signature.png" class="logo__image only-light" alt="My Journal - Home"/>
+    <script>document.write(`<img src="../../../_static/main_signature.png" class="logo__image only-dark" alt="My Journal - Home"/>`);</script>
   
-    <div class="nav-item">
-      <a href="../../../journal/2402.html#feb-2024"
-         class="nav-link ">
-         feb 2024
-      </a>
-    </div>
   
-    <div class="nav-item">
-      <a href="../../../data_science/machine_learning.html#machine-learning"
-         class="nav-link ">
-         machine learning
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="../../behavioural_science/alpha_brain/alpha_brain.html#alpha-brain"
-         class="nav-link ">
-         alpha brain
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="universal_principles_of_design.html#universal-principles-of-design"
-         class="nav-link  router-link-active">
-         universal principles of design
-      </a>
-    </div>
-  
-
-
-
-            
-          </navlinks><div id="searchbox" class="searchbox" role="search">
-  <div class="caption"><span class="caption-text">Quick search</span>
-    <div class="searchformwrapper">
-      <form class="search" action="../../../search.html" method="get">
-        <input type="text" name="q" />
-        <input type="submit" value="Search" />
-        <input type="hidden" name="check_keywords" value="yes" />
-        <input type="hidden" name="area" value="default" />
-      </form>
-    </div>
+</a></div>
+    
   </div>
-</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
   
-    <div class="sidebar-group">
-      <p class="caption">
-        <span class="caption-text"><a href="../../../journal/2402.html#feb-2024">feb 2024</a></span>
-      </p>
-      <ul class="">
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../../../journal/2402/240205.html" class="reference internal ">5/2/2024</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../../../journal/2402/240206.html" class="reference internal ">6/2/2024</a>
-            
-
-            
-          </li>
-
-        
-      </ul>
-    </div>
-  
-    <div class="sidebar-group">
-      <p class="caption">
-        <span class="caption-text"><a href="../../../data_science/machine_learning.html#machine-learning">machine learning</a></span>
-      </p>
-      <ul class="">
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../../../data_science/machine_learning/notebooks/decision_tree.html" class="reference internal ">Decision Tree</a>
-            
-
-            
-          </li>
-
-        
-      </ul>
-    </div>
-  
-    <div class="sidebar-group">
-      <p class="caption">
-        <span class="caption-text"><a href="../../behavioural_science/alpha_brain/alpha_brain.html#alpha-brain">alpha brain</a></span>
-      </p>
-      <ul class="">
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../../behavioural_science/alpha_brain/ch1_marginal_improvement.html" class="reference internal ">Marginal Improvement</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../../behavioural_science/alpha_brain/ch2_blinded_by_bias.html" class="reference internal ">Blinded by bias</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../../behavioural_science/alpha_brain/ch3_decision_making.html" class="reference internal ">Decision making</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../../behavioural_science/alpha_brain/ch4_decision_analysis.html" class="reference internal ">Decision Analysis</a>
-            
-
-            
-          </li>
-
-        
-      </ul>
-    </div>
-  
-    <div class="sidebar-group">
-      <p class="caption">
-        <span class="caption-text"><a href="universal_principles_of_design.html#universal-principles-of-design">universal principles of design</a></span>
-      </p>
-      <ul class="current">
-        
-          <li class="toctree-l1 current">
-            
-              <a href="#" class="reference internal current">Principles of Design</a>
-            
-
-            
-              <ul>
-                
-                  <li class="toctree-l2"><a href="#principles-of-design" class="reference internal">Principles of Design</a></li>
-                
-                  <li class="toctree-l2"><a href="#abbe-s-law" class="reference internal">1. Abbe’s law</a></li>
-                
-                  <li class="toctree-l2"><a href="#accessibility" class="reference internal">2. Accessibility</a></li>
-                
-                  <li class="toctree-l2"><a href="#ackoffs-law" class="reference internal">3. Ackoff’s Law</a></li>
-                
-                  <li class="toctree-l2"><a href="#aesthetic-usability-effect" class="reference internal">4. Aesthetic-Usability Effect</a></li>
-                
-                  <li class="toctree-l2"><a href="#affordance" class="reference internal">5. Affordance</a></li>
-                
-                  <li class="toctree-l2"><a href="#alignment" class="reference internal">6. Alignment</a></li>
-                
-                  <li class="toctree-l2"><a href="#anchoring" class="reference internal">7. Anchoring</a></li>
-                
-                  <li class="toctree-l2"><a href="#anthropomorphism" class="reference internal">8. Anthropomorphism</a></li>
-                
-                  <li class="toctree-l2"><a href="#aposematism" class="reference internal">9. Aposematism</a></li>
-                
-                  <li class="toctree-l2"><a href="#apparent-motion" class="reference internal">10. Apparent Motion</a></li>
-                
-                  <li class="toctree-l2"><a href="#appeal-to-nature" class="reference internal">11. Appeal to Nature</a></li>
-                
-                  <li class="toctree-l2"><a href="#archetypes-psychological" class="reference internal">12. Archetypes, Psychological</a></li>
-                
-                  <li class="toctree-l2"><a href="#archetypes-system" class="reference internal">13. Archetypes, System</a></li>
-                
-                  <li class="toctree-l2"><a href="#attractiveness-bias" class="reference internal">14. Attractiveness Bias</a></li>
-                
-                  <li class="toctree-l2"><a href="#baby-face-bias" class="reference internal">15. Baby-Face Bias</a></li>
-                
-                  <li class="toctree-l2"><a href="#back-of-the-dresser" class="reference internal">16. Back of the Dresser</a></li>
-                
-                  <li class="toctree-l2"><a href="#biophilia-effect" class="reference internal">17. Biophilia Effect</a></li>
-                
-                  <li class="toctree-l2"><a href="#boxs-law" class="reference internal">18. Box’s Law</a></li>
-                
-                  <li class="toctree-l2"><a href="#brooks-law" class="reference internal">19. Brooks’ Law</a></li>
-                
-                  <li class="toctree-l2"><a href="#brown-m-ms" class="reference internal">20. Brown M&M’s</a></li>
-                
-                  <li class="toctree-l2"><a href="#bus-factor" class="reference internal">21. Bus Factor</a></li>
-                
-                  <li class="toctree-l2"><a href="#cathedral-effect" class="reference internal">22. Cathedral Effect</a></li>
-                
-                  <li class="toctree-l2"><a href="#causal-reductionism" class="reference internal">23. Causal Reductionism</a></li>
-                
-                  <li class="toctree-l2"><a href="#chestertons-fence" class="reference internal">24. Chesterton’s Fence</a></li>
-                
-                  <li class="toctree-l2"><a href="#clarkes-laws" class="reference internal">25. Clarke’s Laws</a></li>
-                
-              </ul>
-            
-          </li>
-
-        
-      </ul>
-    </div>
-  
-</div>
-        </sidebar>
-
-      <page>
-          <div class="body-header" role="navigation" aria-label="navigation">
-  
-  <ul class="breadcrumbs">
-    <li><a href="../../../intro.html">Docs</a> &raquo;</li>
+  <div class="col-lg-9 navbar-header-items">
     
-      <li><a href="universal_principles_of_design.html">Universal Principles of Design</a> &raquo;</li>
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
     
-    <li>Principles of Design</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../journal/2402.html">
+                        Feb 2024
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../data_science/machine_learning.html">
+                        Machine Learning
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../behavioural_science/alpha_brain/alpha_brain.html">
+                        Alpha Brain
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="universal_principles_of_design.html">
+                        Universal Principles of Design
+                      </a>
+                    </li>
+                
   </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
   
 
-  <ul class="page-nav">
-  <li class="prev">
-    <a href="universal_principles_of_design.html"
-       title="previous chapter">← Universal Principles of Design</a>
-  </li>
-</ul>
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
   
 </div>
-<hr>
-          <div class="content" role="main" v-pre>
-            
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../journal/2402.html">
+                        Feb 2024
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../data_science/machine_learning.html">
+                        Machine Learning
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../behavioural_science/alpha_brain/alpha_brain.html">
+                        Alpha Brain
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="universal_principles_of_design.html">
+                        Universal Principles of Design
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Principles of Design</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../intro.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="universal_principles_of_design.html" class="nav-link">Universal Principles of Design</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Principles of Design</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="principles-of-design">
-<h1>Principles of Design<a class="headerlink" href="#principles-of-design" title="Link to this heading">¶</a></h1>
+<h1>Principles of Design<a class="headerlink" href="#principles-of-design" title="Link to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="abbe-s-law">
-<h1>1. Abbe’s law<a class="headerlink" href="#abbe-s-law" title="Link to this heading">¶</a></h1>
+<h1>1. Abbe’s law<a class="headerlink" href="#abbe-s-law" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Beware of Angular Error, which may spiral out of control</p></li>
 </ul>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="accessibility">
-<h1>2. Accessibility<a class="headerlink" href="#accessibility" title="Link to this heading">¶</a></h1>
+<h1>2. Accessibility<a class="headerlink" href="#accessibility" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
 <li><p>Perceptibility — Achieved when everyone can perceive the design, regardless of sensory abilities.</p></li>
 <li><p>Operability — Achieved when everyone can use the design, regardless of physical abilities.</p></li>
@@ -361,99 +429,99 @@ const thebe_selector_output = ".output, .cell_output"
 </ol>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="ackoffs-law">
-<h1>3. Ackoff’s Law<a class="headerlink" href="#ackoffs-law" title="Link to this heading">¶</a></h1>
+<h1>3. Ackoff’s Law<a class="headerlink" href="#ackoffs-law" title="Link to this heading">#</a></h1>
 <p>It is better to do the right things wrong than the wrong things right.</p>
 <p>The right things refer to your vision / goals</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="aesthetic-usability-effect">
-<h1>4. Aesthetic-Usability Effect<a class="headerlink" href="#aesthetic-usability-effect" title="Link to this heading">¶</a></h1>
+<h1>4. Aesthetic-Usability Effect<a class="headerlink" href="#aesthetic-usability-effect" title="Link to this heading">#</a></h1>
 <p>Aesthetic things are perceived to be easier to use than ugly things.
 Aesthetic things are often subjectively rated as easier to use, even when no usability advantage can be objectively measured</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="affordance">
-<h1>5. Affordance<a class="headerlink" href="#affordance" title="Link to this heading">¶</a></h1>
+<h1>5. Affordance<a class="headerlink" href="#affordance" title="Link to this heading">#</a></h1>
 <p>The physical characteristics of a thing that influence its function and use.
 When affordances are good, things perform well and are intuitive to use. When affordances are bad, things perform poorly and are hard to use.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="alignment">
-<h1>6. Alignment<a class="headerlink" href="#alignment" title="Link to this heading">¶</a></h1>
+<h1>6. Alignment<a class="headerlink" href="#alignment" title="Link to this heading">#</a></h1>
 <p>The arrangement of elements along a common axis based on their edges, centers, or areas.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="anchoring">
-<h1>7. Anchoring<a class="headerlink" href="#anchoring" title="Link to this heading">¶</a></h1>
+<h1>7. Anchoring<a class="headerlink" href="#anchoring" title="Link to this heading">#</a></h1>
 <p>The subconscious influence of reference points on decision-making and judgment.
 E.g. Small - Medium - Large French Fries</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="anthropomorphism">
-<h1>8. Anthropomorphism<a class="headerlink" href="#anthropomorphism" title="Link to this heading">¶</a></h1>
+<h1>8. Anthropomorphism<a class="headerlink" href="#anthropomorphism" title="Link to this heading">#</a></h1>
 <p>The attribution of humanlike characteristics to nonhuman things. (e.g. baby shapes)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="aposematism">
-<h1>9. Aposematism<a class="headerlink" href="#aposematism" title="Link to this heading">¶</a></h1>
+<h1>9. Aposematism<a class="headerlink" href="#aposematism" title="Link to this heading">#</a></h1>
 <p>The use of conspicuous markings to grab attention and signal danger. (e.g. warning sign)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="apparent-motion">
-<h1>10. Apparent Motion<a class="headerlink" href="#apparent-motion" title="Link to this heading">¶</a></h1>
+<h1>10. Apparent Motion<a class="headerlink" href="#apparent-motion" title="Link to this heading">#</a></h1>
 <p>The illusion of motion created when images are displayed in rapid succession.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="appeal-to-nature">
-<h1>11. Appeal to Nature<a class="headerlink" href="#appeal-to-nature" title="Link to this heading">¶</a></h1>
+<h1>11. Appeal to Nature<a class="headerlink" href="#appeal-to-nature" title="Link to this heading">#</a></h1>
 <p>The tendency to believe natural things are inherently better than human-created things. (but it’s often wrong)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="archetypes-psychological">
-<h1>12. Archetypes, Psychological<a class="headerlink" href="#archetypes-psychological" title="Link to this heading">¶</a></h1>
+<h1>12. Archetypes, Psychological<a class="headerlink" href="#archetypes-psychological" title="Link to this heading">#</a></h1>
 <p>Patterns that elicit a reflexive attentional or emotional response in humans. (e.g. gruesome pictures)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="archetypes-system">
-<h1>13. Archetypes, System<a class="headerlink" href="#archetypes-system" title="Link to this heading">¶</a></h1>
+<h1>13. Archetypes, System<a class="headerlink" href="#archetypes-system" title="Link to this heading">#</a></h1>
 <p>Universal structures and resulting patterns of behavior found across system types. (e.g. rabbit vs wolf population dynamics)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="attractiveness-bias">
-<h1>14. Attractiveness Bias<a class="headerlink" href="#attractiveness-bias" title="Link to this heading">¶</a></h1>
+<h1>14. Attractiveness Bias<a class="headerlink" href="#attractiveness-bias" title="Link to this heading">#</a></h1>
 <p>A tendency to view attractive people as intelligent, competent, moral, and sociable.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="baby-face-bias">
-<h1>15. Baby-Face Bias<a class="headerlink" href="#baby-face-bias" title="Link to this heading">¶</a></h1>
+<h1>15. Baby-Face Bias<a class="headerlink" href="#baby-face-bias" title="Link to this heading">#</a></h1>
 <p>A tendency to see things with baby-faced features as having the characteristics of babies.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="back-of-the-dresser">
-<h1>16. Back of the Dresser<a class="headerlink" href="#back-of-the-dresser" title="Link to this heading">¶</a></h1>
+<h1>16. Back of the Dresser<a class="headerlink" href="#back-of-the-dresser" title="Link to this heading">#</a></h1>
 <p>All parts of a design, visible and nonvisible, should be held to the same standard of quality. (e.g. Mac internal components)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="biophilia-effect">
-<h1>17. Biophilia Effect<a class="headerlink" href="#biophilia-effect" title="Link to this heading">¶</a></h1>
+<h1>17. Biophilia Effect<a class="headerlink" href="#biophilia-effect" title="Link to this heading">#</a></h1>
 <p>A state of reduced stress and improved concentration resulting from nature views. (e.g. looking at trees)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="boxs-law">
-<h1>18. Box’s Law<a class="headerlink" href="#boxs-law" title="Link to this heading">¶</a></h1>
+<h1>18. Box’s Law<a class="headerlink" href="#boxs-law" title="Link to this heading">#</a></h1>
 <p>All models are wrong, but some are useful. (or right enough to be useful)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="brooks-law">
-<h1>19. Brooks’ Law<a class="headerlink" href="#brooks-law" title="Link to this heading">¶</a></h1>
+<h1>19. Brooks’ Law<a class="headerlink" href="#brooks-law" title="Link to this heading">#</a></h1>
 <p>For certain types of projects, adding people to speed things up inadvertently slows them down.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="brown-m-ms">
-<h1>20. Brown M&amp;M’s<a class="headerlink" href="#brown-m-ms" title="Link to this heading">¶</a></h1>
+<h1>20. Brown M&amp;M’s<a class="headerlink" href="#brown-m-ms" title="Link to this heading">#</a></h1>
 <p>The use of covert, embedded tests to verify that quality standards have been met. (introduce defects / negative cases for testing)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="bus-factor">
-<h1>21. Bus Factor<a class="headerlink" href="#bus-factor" title="Link to this heading">¶</a></h1>
+<h1>21. Bus Factor<a class="headerlink" href="#bus-factor" title="Link to this heading">#</a></h1>
 <p>The number of team members who, if lost, would put a project in jeopardy. (avoid bus factor = 1 using automation, cross-training, code reviews, etc.)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="cathedral-effect">
-<h1>22. Cathedral Effect<a class="headerlink" href="#cathedral-effect" title="Link to this heading">¶</a></h1>
+<h1>22. Cathedral Effect<a class="headerlink" href="#cathedral-effect" title="Link to this heading">#</a></h1>
 <p>High ceilings promote abstract thinking. Low ceilings promote detail-oriented thinking.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="causal-reductionism">
-<h1>23. Causal Reductionism<a class="headerlink" href="#causal-reductionism" title="Link to this heading">¶</a></h1>
+<h1>23. Causal Reductionism<a class="headerlink" href="#causal-reductionism" title="Link to this heading">#</a></h1>
 <p>A tendency to fixate on one cause when solving problems, ignoring the reality of multiple causes. (Root cause is plural)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="chestertons-fence">
-<h1>24. Chesterton’s Fence<a class="headerlink" href="#chestertons-fence" title="Link to this heading">¶</a></h1>
+<h1>24. Chesterton’s Fence<a class="headerlink" href="#chestertons-fence" title="Link to this heading">#</a></h1>
 <p>Seek to understand why things exist the way they do before changing or removing them. (Don’t touch if you don’t understand why it’s there)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="clarkes-laws">
-<h1>25. Clarke’s Laws<a class="headerlink" href="#clarkes-laws" title="Link to this heading">¶</a></h1>
+<h1>25. Clarke’s Laws<a class="headerlink" href="#clarkes-laws" title="Link to this heading">#</a></h1>
 <p>Three maxims that offer insights into the nature of innovation.</p>
 <ol class="arabic simple">
 <li><p>When distinguished scientists state that something is possible, they are almost certainly right. When they state that something is impossible, they are very probably wrong.</p></li>
@@ -482,23 +550,133 @@ E.g. Small - Medium - Large French Fries</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-          </div>
-          <div class="page-nav">
-            <div class="inner"><ul class="page-nav">
-  <li class="prev">
-    <a href="universal_principles_of_design.html"
-       title="previous chapter">← Universal Principles of Design</a>
-  </li>
-</ul><div class="footer" role="contentinfo">
-      &#169; Copyright 2023.
-    <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.6 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="universal_principles_of_design.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Universal Principles of Design</p>
+      </div>
+    </a>
 </div>
+                </footer>
+              
             </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Principles of Design</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abbe-s-law">1. Abbe’s law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">2. Accessibility</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ackoffs-law">3. Ackoff’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aesthetic-usability-effect">4. Aesthetic-Usability Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#affordance">5. Affordance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alignment">6. Alignment</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#anchoring">7. Anchoring</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#anthropomorphism">8. Anthropomorphism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aposematism">9. Aposematism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#apparent-motion">10. Apparent Motion</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#appeal-to-nature">11. Appeal to Nature</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#archetypes-psychological">12. Archetypes, Psychological</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#archetypes-system">13. Archetypes, System</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attractiveness-bias">14. Attractiveness Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#baby-face-bias">15. Baby-Face Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-dresser">16. Back of the Dresser</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#biophilia-effect">17. Biophilia Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#boxs-law">18. Box’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brooks-law">19. Brooks’ Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brown-m-ms">20. Brown M&amp;M’s</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bus-factor">21. Bus Factor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cathedral-effect">22. Cathedral Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-reductionism">23. Causal Reductionism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chestertons-fence">24. Chesterton’s Fence</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clarkes-laws">25. Clarke’s Laws</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/books/design/universal_principles_of_design/principles_of_design.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
           </div>
-      </page>
-    </div></div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
     
+      © Copyright 2023.
+      <br/>
     
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>
