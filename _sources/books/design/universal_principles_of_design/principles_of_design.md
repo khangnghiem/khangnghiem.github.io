@@ -1,108 +1,110 @@
-# 1. Abbe's law
+# Principles of Design
+
+## Abbe's law
 
 - Beware of Angular Error, which may spiral out of control
 
-# 2. Accessibility
+## Accessibility
 
 1. Perceptibility — Achieved when everyone can perceive the design, regardless of sensory abilities.
 2. Operability — Achieved when everyone can use the design, regardless of physical abilities.
 3. Simplicity — Achieved when everyone can easily learn and understand the design, regardless of experience, literacy, or concentration level.
 4. Forgiveness — Achieved when designs minimize the occurrence and consequences of errors.
 
-# 3. Ackoff’s Law
+## Ackoff’s Law
 
 It is better to do the right things wrong than the wrong things right.
 
 The right things refer to your vision / goals
 
-# 4. Aesthetic-Usability Effect
+## Aesthetic-Usability Effect
 
 Aesthetic things are perceived to be easier to use than ugly things.
 Aesthetic things are often subjectively rated as easier to use, even when no usability advantage can be objectively measured
 
-# 5. Affordance
+## Affordance
 
 The physical characteristics of a thing that influence its function and use.
 When affordances are good, things perform well and are intuitive to use. When affordances are bad, things perform poorly and are hard to use.
 
-# 6. Alignment
+## Alignment
 
 The arrangement of elements along a common axis based on their edges, centers, or areas.
 
-# 7. Anchoring
+## Anchoring
 
 The subconscious influence of reference points on decision-making and judgment.
 E.g. Small - Medium - Large French Fries
 
-# 8. Anthropomorphism
+## Anthropomorphism
 
 The attribution of humanlike characteristics to nonhuman things. (e.g. baby shapes)
 
-# 9. Aposematism
+## Aposematism
 
 The use of conspicuous markings to grab attention and signal danger. (e.g. warning sign)
 
-# 10. Apparent Motion
+## Apparent Motion
 
 The illusion of motion created when images are displayed in rapid succession.
 
-# 11. Appeal to Nature
+## Appeal to Nature
 
 The tendency to believe natural things are inherently better than human-created things. (but it's often wrong)
 
-# 12. Archetypes, Psychological
+## Archetypes, Psychological
 
 Patterns that elicit a reflexive attentional or emotional response in humans. (e.g. gruesome pictures)
 
-# 13. Archetypes, System
+## Archetypes, System
 
 Universal structures and resulting patterns of behavior found across system types. (e.g. rabbit vs wolf population dynamics)
 
-# 14. Attractiveness Bias
+## Attractiveness Bias
 
 A tendency to view attractive people as intelligent, competent, moral, and sociable.
 
-# 15. Baby-Face Bias
+## Baby-Face Bias
 
 A tendency to see things with baby-faced features as having the characteristics of babies.
 
-# 16. Back of the Dresser
+## Back of the Dresser
 
 All parts of a design, visible and nonvisible, should be held to the same standard of quality. (e.g. Mac internal components)
 
-# 17. Biophilia Effect
+## Biophilia Effect
 
 A state of reduced stress and improved concentration resulting from nature views. (e.g. looking at trees)
 
-# 18. Box’s Law
+## Box’s Law
 
 All models are wrong, but some are useful. (or right enough to be useful)
 
-# 19. Brooks’ Law
+## Brooks’ Law
 
 For certain types of projects, adding people to speed things up inadvertently slows them down.
 
-# 20. Brown M&M’s
+## Brown M&M’s
 
 The use of covert, embedded tests to verify that quality standards have been met. (introduce defects / negative cases for testing)
 
-# 21. Bus Factor
+## Bus Factor
 
 The number of team members who, if lost, would put a project in jeopardy. (avoid bus factor = 1 using automation, cross-training, code reviews, etc.)
 
-# 22. Cathedral Effect
+## Cathedral Effect
 
 High ceilings promote abstract thinking. Low ceilings promote detail-oriented thinking.
 
-# 23. Causal Reductionism
+## Causal Reductionism
 
 A tendency to fixate on one cause when solving problems, ignoring the reality of multiple causes. (Root cause is plural)
 
-# 24. Chesterton’s Fence
+## Chesterton’s Fence
 
 Seek to understand why things exist the way they do before changing or removing them. (Don't touch if you don't understand why it's there)
 
-# 25. Clarke’s Laws
+## Clarke’s Laws
 
 Three maxims that offer insights into the nature of innovation.
 
