@@ -111,3 +111,56 @@ Three maxims that offer insights into the nature of innovation.
 1. When distinguished scientists state that something is possible, they are almost certainly right. When they state that something is impossible, they are very probably wrong.
 2. The only way of discovering the limits of the possible is to venture a little way past them into the impossible.
 3. Any sufficiently advanced technology is indistinguishable from magic. Any technology distinguishable from magic is insufficiently advanced. Any sufficiently advanced design looks and feels like magic.
+
+# Classical Conditioning
+
+A method of influencing how a person viscerally responds to a thing.
+
+# Closure
+
+The brain automatically completes recognizable forms when they are interrupted or incomplete.
+
+# Cognitive Dissonance
+
+A state of mental discomfort due to incompatible attitudes, thoughts, and beliefs.
+People relieve cognitive dissonance in one of three ways:
+
+Reduce the importance of the conflicting thought
+Add a new thought to counteract it
+Accept the conflicting thought
+
+# Color Effects
+
+The cognitive and behavioral effects triggered by exposure to colors.
+
+# Color Theory
+
+A body of practical knowledge regarding the application and mixing of colors.
+
+- Number of colors
+- Color combinations
+- Saturation
+- Universal effects
+
+# Common Fate
+
+The brain automatically assumes elements moving in similar ways are related.
+
+# Comparison
+
+A method of highlighting relationships by depicting information in controlled ways.
+
+- Apples to apples
+- Single context
+- Benchmarks
+
+# Confirmation
+
+A technique for preventing errors by requiring verification before actions are performed.
+
+- Dialog
+- Two-step operation
+
+# Confirmation Bias
+
+A tendency to favor information that confirms pre-existing views.
