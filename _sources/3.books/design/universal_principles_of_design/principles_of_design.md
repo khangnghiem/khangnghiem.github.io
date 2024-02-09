@@ -297,3 +297,73 @@ The ratio of face to body in an image that influences how the person is perceive
 # 62. Factor of Safety
 
 The design of a system beyond expected loads to offset unknowns and prevent failure.
+Factors of safety are used to offset the potential negative effects of these unknowns.
+
+# Faith Follows Function
+
+Ideological and spiritual considerations should be secondary to functional considerations. Function should be prioritized.
+But often the personal biases, beliefs, and values of designers influence their thinking in ways that run counter to function—i.e., function follows their faith. E.g. Feng shui
+
+# Feature Creep
+
+A continuous expansion or addition of new product features beyond the original scope.
+Feature creep is one of the most common causes of cost and schedule overruns.
+The key driver is the perception that more is better, and therefore features are continuously added and rarely taken away. But adding features adds complexity, and complexity is expensive.
+
+- Features are easy or convenient to add—this is particularly common in software development.
+- Features accumulate over multiple generations of a product.
+- Features are added to appease internal project stakeholders. This is often due to what’s called the internal-audience problem: Designers or marketers think they know what’s best for the customer, but they discover that customers disagree.
+
+# Feedback
+
+Information about status or performance used for confirmation, decision-making, and improvement.
+Note that for targeted feedback to be effective, the recipient must have the time, opportunity, and ability to act on it.2
+Feedback is the foundation for all usability and learning. The rule should be minimum-viable feedback delivered quickly.
+
+# Feedback Loop
+
+A cycle in which output feeds back into a system as input, changing subsequent output.
+
+- Positive feedback loops: Amplify
+- Negative feedback loops: Dampen
+
+# Fibonacci Sequence
+
+A sequence of numbers that forms patterns commonly found in nature.
+
+# Figure-Ground
+
+**FOR LOGO DESIGN** The brain automatically makes elements objects of focus or background.
+
+- The figure has a definite shape, whereas the ground is shapeless.
+- The ground continues behind the figure.
+- The figure seems closer with a clear location in space, whereas the ground seems farther away and has no clear location in space.
+- Elements below a horizon line are likely perceived as figures, whereas elements above a horizon line are likely to be perceived as ground.
+- Elements in the lower regions of a design are likely to be perceived as figures, whereas elements in the upper regions are likely to be perceived as ground
+
+# First Principles
+
+Things we know for certain to be true and that are not derived from anything else.
+First principles are irreducible and immutable
+
+# Fitts’ Law
+
+The time required to touch a target is a function of the target size and the distance to the target.
+
+- A ballistic movement — One large, quick movement toward a target.
+- Homing movements — Fine-adjustment movements
+
+Consider Fitts’ law when designing systems that involve pointing.
+Make sure that pointing targets are near or large, particularly when rapid movements are required and accuracy is important.
+
+# Five Hat Racks
+
+For Sorting and Filtering
+A metaphor representing the five ways information can be organized.
+
+- Category — Organization by similarity or relatedness. E.g. catalog and types of retail merchandise
+- Time — Organization by chronological sequence. E.g. historical timelines, meeting agendas
+- Location — Organization by geographical or spatial reference. E.g. historic sites, emergency exit maps, and travel guides
+- Alphabet — Organization by alphabetical sequence. E.g. dictionaries
+- Continuum — Organization by magnitude (e.g., highest to lowest, best to worst)
+

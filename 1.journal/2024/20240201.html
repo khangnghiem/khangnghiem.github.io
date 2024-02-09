@@ -265,6 +265,15 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
+
+
+
+
+
+
+
 </ul>
 </li>
 </ul>
@@ -462,6 +471,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-9-2024">Feb 9, 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-encoding-categorical-values">Machine Learning - Encoding Categorical Values</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-8-2024">Feb 8, 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-missing-values">Machine Learning - Missing Values</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-7-2024">Feb 7, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-6-2024">Feb 6, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-5-2024">Feb 5, 2024</a></li>
@@ -481,26 +498,65 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="february-2024">
 <h1>February 2024<a class="headerlink" href="#february-2024" title="Link to this heading">#</a></h1>
+<section id="feb-9-2024">
+<h2>Feb 9, 2024<a class="headerlink" href="#feb-9-2024" title="Link to this heading">#</a></h2>
+<section id="machine-learning-encoding-categorical-values">
+<h3>Machine Learning - Encoding Categorical Values<a class="headerlink" href="#machine-learning-encoding-categorical-values" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Strategies when dealing with Categorical values</p>
+<ul>
+<li><p>Drop Categorical Variables</p></li>
+<li><p>OrdinalEncoder</p></li>
+<li><p>OneHotEncoder (pivot with 0s and 1s)</p></li>
+</ul>
+</li>
+<li><p>Get number of unique entries in each column with categorical data</p>
+<ul>
+<li><p>object_nunique = list(map(lambda col: X_train[col].nunique(), object_cols))</p></li>
+<li><p>d = dict(zip(object_cols, object_nunique))</p></li>
+<li><p>sorted(d.items(), key=lambda x: x[1])</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="feb-8-2024">
+<h2>Feb 8, 2024<a class="headerlink" href="#feb-8-2024" title="Link to this heading">#</a></h2>
+<section id="machine-learning-missing-values">
+<h3>Machine Learning - Missing Values<a class="headerlink" href="#machine-learning-missing-values" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>AEON Mall was still crowded today. It will be open during Tet Holidays.</p></li>
+<li><p>Created a Databricks account and wrote my first notebook. (Community Version)</p></li>
+<li><p>Kaggle: filling missing values by using techniques:</p>
+<ul>
+<li><p>drop null columns</p></li>
+<li><p>impute null values with SimpleImputer()</p></li>
+<li><p>impute null values with column extension (col_name_was_missing)</p></li>
+<li><p>impute null values with different strategies: mean, median, etc.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
 <section id="feb-7-2024">
 <h2>Feb 7, 2024<a class="headerlink" href="#feb-7-2024" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Submitted Trusting Social’s Screening Test</p>
+<li><p>Submitted Trusting Social’s Screening Test. Pretty generic. Khang is not allowed to give you details of the test, though. He did use Polars to write all the dataframe manipulation for a lot of his work.</p>
 <ul>
-<li><p>One question about SQL, Group by, Joins, Common Table Expressions</p>
+<li><p>One series of questions about SQL</p>
 <ul>
-<li><p>The CTE is fairly complex, that last question is very tricky in that you need to use a CTE and join with itself to filter out items</p></li>
+<li><p>The CTE was fairly complex and took a large chunk of his time</p></li>
 </ul>
 </li>
-<li><p>One question about Python Data cleaning</p>
+<li><p>One series of questions about Python Data cleaning</p>
 <ul>
 <li><p>Fairly straightforward, mostly renaming, manipulating strings, dtype, replacing with regex, etc.</p></li>
 </ul>
 </li>
-<li><p>One question about Data Analysis.</p>
+<li><p>One series of questions about Data Analysis.</p>
 <ul>
 <li><p>This question requires a bit of thinking and tinkering.</p></li>
 <li><p>You need to play around with the data a bit before choosing which variables are significant and create statistics out of them.</p></li>
-<li><p>Khang used Polars to write all the dataframe manipulation</p></li>
 </ul>
 </li>
 </ul>
@@ -510,7 +566,7 @@ document.write(`
 <ul>
 <li><p>Data: some Software Engineering skills are really needed to become a good Data Analyst/Engineer</p></li>
 <li><p>Gym: Need to focus on Leg days. Planning to do 2 leg days / week from now</p></li>
-<li><p>Exercise: Need to breathe in between reps: rep - breath - rep - breath - etc. This will create a consistent rhythem and help you focus all your strength in the rep while holding that last bit of the rep by breathing out and in quickly.</p></li>
+<li><p>Exercise: Need to breathe in between reps: rep - breath - brace - rep - breath - brace - etc. This will create a consistent rhythem and help you focus all your strength in the rep while holding that last bit of the rep by breathing out and in quickly.</p></li>
 </ul>
 </li>
 </ul>
@@ -522,7 +578,7 @@ document.write(`
 <li><p>Finished Decision Tree Regressor exercises</p>
 <ul>
 <li><p>Actually not that hard.</p></li>
-<li><p>Split train test is very intuitive to validate predictions.</p></li>
+<li><p>Split train test was very intuitive to validate predictions.</p></li>
 </ul>
 </li>
 </ul>
@@ -631,6 +687,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-9-2024">Feb 9, 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-encoding-categorical-values">Machine Learning - Encoding Categorical Values</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-8-2024">Feb 8, 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-missing-values">Machine Learning - Missing Values</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-7-2024">Feb 7, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-6-2024">Feb 6, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-5-2024">Feb 5, 2024</a></li>
