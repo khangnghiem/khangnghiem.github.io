@@ -1,4 +1,4 @@
 # Gym
 
-```{contents}
+```{tableofcontents}
 ```

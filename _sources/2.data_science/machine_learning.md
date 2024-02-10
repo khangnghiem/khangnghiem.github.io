@@ -1,4 +1,4 @@
 # Machine Learning
 
-```{contents}
+```{tableofcontents}
 ```

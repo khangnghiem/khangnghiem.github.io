@@ -285,7 +285,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lifestyle</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="4.lifestyle/gym.html">Gym</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="4.lifestyle/gym.html">Gym</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.lifestyle/gym/leg.html">1. Leg day</a></li>
 </ul>
 </li>
 </ul>
@@ -497,8 +498,15 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="2.data_science/machine_learning.html">Machine Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2.data_science/delta_lake.html">Delta lake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.data_science/machine_learning.html">Machine Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.data_science/machine_learning/notebooks/1.decision_tree.html">1. Decision Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.data_science/machine_learning/notebooks/2.random_forest.html">2. Random Forest</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2.data_science/delta_lake.html">Delta lake</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.data_science/delta_lake/notebooks/delta.html">1. Delta Lake</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -511,7 +519,10 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lifestyle</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="4.lifestyle/gym.html">Gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.lifestyle/gym.html">Gym</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.lifestyle/gym/leg.html">1. Leg day</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>

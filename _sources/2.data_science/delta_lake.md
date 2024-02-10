@@ -1,4 +1,4 @@
 # Delta lake
 
-```{contents}
+```{tableofcontents}
 ```
