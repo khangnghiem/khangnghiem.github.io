@@ -1,0 +1,4 @@
+# Habits
+
+```{tableofcontents}
+```
