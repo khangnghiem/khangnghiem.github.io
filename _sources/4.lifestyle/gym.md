@@ -1,4 +1,4 @@
-# Alpha Brain
+# Gym
 
 ```{contents}
 ```

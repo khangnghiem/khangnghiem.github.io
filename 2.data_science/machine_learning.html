@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '2.data_science/machine_learning';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Random Forest" href="machine_learning/notebooks/1.random_forest.html" />
+    <link rel="next" title="1. Decision Tree" href="machine_learning/notebooks/1.decision_tree.html" />
     <link rel="prev" title="February 2024" href="../1.journal/2024/20240201.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,21 +189,25 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/notebooks/1.random_forest.html">1. Random Forest</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/notebooks/2.decision_tree.html">2. Decision Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/notebooks/1.decision_tree.html">1. Decision Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/notebooks/2.random_forest.html">2. Random Forest</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="delta_lake.html">Delta lake</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="delta_lake/notebooks/delta.html">1. Delta Lake</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Books</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3.books/behavioural_science/alpha_brain/alpha_brain.html">Alpha Brain</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3.books/behavioural_science/alpha_brain/alpha_brain.html">Alpha Brain</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../3.books/behavioural_science/alpha_brain/ch1_marginal_improvement.html">1. Marginal Improvement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3.books/behavioural_science/alpha_brain/ch2_blinded_by_bias.html">2. Blinded by bias</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3.books/behavioural_science/alpha_brain/ch3_decision_making.html">3. Decision making</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3.books/behavioural_science/alpha_brain/ch4_decision_analysis.html">4. Decision Analysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3.books/design/universal_principles_of_design/universal_principles_of_design.html">Universal Principles of Design</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3.books/design/universal_principles_of_design/universal_principles_of_design.html">Universal Principles of Design</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../3.books/design/universal_principles_of_design/principles_of_design.html">1. Principles of Design</a></li>
 
 
@@ -275,6 +279,12 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lifestyle</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4.lifestyle/gym.html">Gym</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -475,7 +485,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="machine-learning">
-<h1>Machine Learning<a class="headerlink" href="#machine-learning" title="Link to this heading">#</a></h1>
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">Machine Learning</a><a class="headerlink" href="#machine-learning" title="Link to this heading">#</a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#machine-learning" id="id1">Machine Learning</a></p></li>
+</ul>
+</nav>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -520,11 +536,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="machine_learning/notebooks/1.random_forest.html"
+       href="machine_learning/notebooks/1.decision_tree.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Random Forest</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Decision Tree</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
