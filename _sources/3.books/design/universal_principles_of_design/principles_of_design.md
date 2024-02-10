@@ -299,12 +299,12 @@ The ratio of face to body in an image that influences how the person is perceive
 The design of a system beyond expected loads to offset unknowns and prevent failure.
 Factors of safety are used to offset the potential negative effects of these unknowns.
 
-# Faith Follows Function
+# 63. Faith Follows Function
 
 Ideological and spiritual considerations should be secondary to functional considerations. Function should be prioritized.
 But often the personal biases, beliefs, and values of designers influence their thinking in ways that run counter to function—i.e., function follows their faith. E.g. Feng shui
 
-# Feature Creep
+# 64. Feature Creep
 
 A continuous expansion or addition of new product features beyond the original scope.
 Feature creep is one of the most common causes of cost and schedule overruns.
@@ -314,24 +314,24 @@ The key driver is the perception that more is better, and therefore features are
 - Features accumulate over multiple generations of a product.
 - Features are added to appease internal project stakeholders. This is often due to what’s called the internal-audience problem: Designers or marketers think they know what’s best for the customer, but they discover that customers disagree.
 
-# Feedback
+# 65. Feedback
 
 Information about status or performance used for confirmation, decision-making, and improvement.
 Note that for targeted feedback to be effective, the recipient must have the time, opportunity, and ability to act on it.2
 Feedback is the foundation for all usability and learning. The rule should be minimum-viable feedback delivered quickly.
 
-# Feedback Loop
+# 66. Feedback Loop
 
 A cycle in which output feeds back into a system as input, changing subsequent output.
 
 - Positive feedback loops: Amplify
 - Negative feedback loops: Dampen
 
-# Fibonacci Sequence
+# 67. Fibonacci Sequence
 
 A sequence of numbers that forms patterns commonly found in nature.
 
-# Figure-Ground
+# 68. Figure-Ground
 
 **FOR LOGO DESIGN** The brain automatically makes elements objects of focus or background.
 
@@ -341,12 +341,12 @@ A sequence of numbers that forms patterns commonly found in nature.
 - Elements below a horizon line are likely perceived as figures, whereas elements above a horizon line are likely to be perceived as ground.
 - Elements in the lower regions of a design are likely to be perceived as figures, whereas elements in the upper regions are likely to be perceived as ground
 
-# First Principles
+# 69. First Principles
 
 Things we know for certain to be true and that are not derived from anything else.
 First principles are irreducible and immutable
 
-# Fitts’ Law
+# 70. Fitts’ Law
 
 The time required to touch a target is a function of the target size and the distance to the target.
 
@@ -356,7 +356,7 @@ The time required to touch a target is a function of the target size and the dis
 Consider Fitts’ law when designing systems that involve pointing.
 Make sure that pointing targets are near or large, particularly when rapid movements are required and accuracy is important.
 
-# Five Hat Racks
+# 71. Five Hat Racks
 
 For Sorting and Filtering
 A metaphor representing the five ways information can be organized.
@@ -367,3 +367,347 @@ A metaphor representing the five ways information can be organized.
 - Alphabet — Organization by alphabetical sequence. E.g. dictionaries
 - Continuum — Organization by magnitude (e.g., highest to lowest, best to worst)
 
+# 72. Five Tenets of Queuing
+
+Five principles for improving the experience of waiting in lines.
+
+# 73. Flexibility Tradeoffs
+
+As the flexibility of a design increases, the performance of the design decreases.
+
+# 74. Flow
+
+Just right!
+A state of immersion so intense that awareness of the real world is lost.
+Nine components of flow have been proposed:
+
+1. Goals—People can achieve the goal with their abilities and skill set.
+2. Concentration—People are able to focus deeply.
+3. Loss of self—People lose awareness of themselves and their thoughts.
+4. Time—People lose the sense of the passage of time.
+5. Feedback—People receive clear and immediate feedback.
+6. Balance—People feel a balance between skill level and the challenge.
+7. Control—People have a sense control over the activity.
+8. Rewarding—People find the activity enjoyable on its own merits.
+9. Immersion—People become absorbed and lost in the activity.
+
+# 75. Forgiveness
+
+Designs should help people avoid errors and protect them from harm when they do occur.
+
+# 76. Form Follows Function
+
+Aesthetic considerations should be secondary to functional considerations.
+
+# 77. Framing
+
+A method of presenting choices in specific ways to influence decision-making and judgment.
+Positive vs Negative Reinforcement
+
+# 78. Freeze-Flight-Fight-Forfeit
+
+The ordered, instinctive response to acute stress.
+
+# 79. Gall’s Law
+
+All successful complex things begin as simple things and become complex through iteration.
+
+# 80. Gamification
+
+Using gaming strategies in nongame contexts to enhance experience and modify behavior.
+The SAPS model purports to list in order the things people most desire:
+
+1. Status
+2. Access
+3. Power
+4. Stuff
+
+# 81. Garbage In–Garbage Out
+
+The quality of system output is largely dependent on the quality of system input.
+
+1. Problems of type - Problems of type are generally caused by a class of errors called mistakes—incorrect actions caused by conscious actions.
+2. Problems of quality - Problems of quality are generally caused by a class of errors called slips—incorrect actions caused by unconscious, accidental actions.
+
+# 82. Gates’ Rule of Automation
+
+Automation applied to an operation will magnify both its efficiencies and deficiencies.
+
+# 83. Gloss Bias
+
+A preference for glossy versus dull objects
+
+# 84. Golden Ratio
+
+A ratio within the elements of a form, such as height to width, approximating 0.618.
+
+# 85. Good Continuation
+
+The brain automatically assumes elements in motion continue in their established directions.
+
+# 86. Groupthink
+
+A decision-making phenomenon that occurs when group harmony is overprioritized.
+Groupthink is a dysfunctional group dynamic that occurs when agreement and conformity are prioritized over critical analysis and debate, often leading to poor decision-making outcomes.
+Proposed symptoms of groupthink include:
+
+1. Culture of compliance
+2. Self-censorship
+3. Mindguards
+4. Apparent unanimity
+5. Illusion of invulnerability
+6. Illusion of morality
+7. Outgroup bias
+8. Confirmation bias
+
+# 87. Gutenberg Diagram
+
+A diagram that describes the pattern followed by the eyes when looking at a page of information.
+The tendency to follow this left-right, top-bottom path is attributed to reading gravity - habit formed from reading.
+
+# 88. Habituation
+
+Repeated exposure to a stimulus reduces the response to that stimulus.
+
+# 89. Hanlon’s Razor
+
+Never attribute to malice what can be adequately explained by incompetence.
+
+# 90. Hick’s Law
+
+Time to make a decision increases as the number of decision options increases.
+All tasks consist of four basic steps:
+
+1. Identify a problem or goal.
+2. Assess the available options to solve the problem or achieve the goal.
+3. Decide on an option.
+4. Implement the option.
+Hick’s law applies to the third step: Decide on an option.
+However, the law does not apply to decisions that involve significant levels of searching, reading, or complex problem solving.
+The law is decreasingly applicable as the complexity of tasks increases.
+
+Menus
+The time to select an item from a simple software menu increases with the number of items.
+
+Predatory Behavior
+The time for a predator to target prey increases with the number of prey.
+
+Simple Tasks
+The time to press the button that matches a changing light color increases with the number of colors.
+
+Test Options
+Hick’s law does not apply to tasks that involve significant levels of reading and problem solving, like taking a test.
+
+Device Settings
+The time to make simple decisions about adjustments on a device increases with the number of controls.
+
+Martial Arts
+The time for a martial artist to block a punch increases with the number of known blocking techniques.
+
+Braking
+The time to press the brakes to avoid hitting an obstacle increases if there is an opportunity to steer around it.
+
+Road Signs
+The time for a driver to make a turn based on a particular road sign increases with the total number of road signs.
+
+# 91. Hierarchy of Needs
+
+A hierarchy of user-centered goals that a design must satisfy to achieve optimal success.
+The hierarchy of needs specifies that a design must serve low-level needs (e.g., it must function) before the higher-level needs, such as creativity, can begin to be addressed.
+The five key levels of needs in the hierarchy from lowest to highest are:
+
+1. Functionality
+2. Reliability
+3. Usability
+4. Proficiency
+5. Creativity
+
+# 92. Highlighting
+
+A technique for focusing attention on an area of text or image.
+Do not highlight more than 10% of a display or else the highlighting effect is weakened
+
+1. Bold, italics, and underlining - Bolding is generally preferred
+2. Typeface (Fonts / UPPERCASE)
+3. Color
+4. Inversing (e.g., white text on a black background)
+5. Blinking - for Emergency purpose. but it is important to be able to turn off the blinking once it is acknowledged
+
+# 93. Horror Vacui
+
+A tendency to fill blank spaces with things rather than leaving spaces empty.
+
+# 94. Icarus Matrix
+
+A 2×2 matrix representing the possible success-failure outcomes of a design iteration.
+
+# 95. Iconic Representation
+
+The use of pictorial images to improve recognition and recall.
+
+![alt text](images/principles_of_design.png)
+
+# 96. Identifiable Victim Effect
+
+A single, identifiable victim elicits more helping behaviors than a group of anonymous victims.
+
+1. Number of victims
+2. Familiarity of victims
+3. Impact of helping
+4. Authenticity of the victim and their plights
+
+A single death is a tragedy; a million deaths is a statistic.
+— Joseph Stalin
+
+# 97. IKEA Effect
+
+The act of creating a thing increases the perceived value of that thing to the creator.
+
+# 98. Inattentional Blindness
+
+A failure to perceive an unexpected stimulus presented in clear view.
+
+Strategies to mitigate inattentional blindness include minimizing distractions in the environment (e.g., reducing auditory and visual noise), reducing cognitive load (e.g., chunking elements), strategically interrupting automatized procedures to heighten situational awareness and engage deliberative thought (e.g., using checklists to confirm steps and statuses), and expressing stimuli through different modalities (e.g., repeating instructions using auditory and textual stimuli).
+
+# 99. Interference Effects
+
+Things that trigger conflicting thought processes, reducing reaction and thinking efficiency.
+
+1. Stroop interference (e.g. green stop = go?)
+2. Distraction interference
+3. Emotional interference (baby vs pointy products)
+4. Proactive interference (existing knowledge interfere with new one)
+5. Retroactive interference (new knowledge interfere with existing one)
+
+# 100. Inverted Pyramid
+
+The presentation of information from most important to least important.
+
+# 101. Iron Triangle
+
+A model that proposes three constraints for all projects: time, cost, and scope.
+The iron triangle is commonly introduced by the expression, You can have it good, fast, or cheap; pick two.
+In most real-world cases, however, project owners can reliably preserve just one constraint, not two.
+
+# 102. Iteration
+
+Designing things in phases, each phase building on the last, until a desired result is achieved.
+
+- Design iteration
+- Development iteration
+
+# 103. Kano Model
+
+A model for understanding customer needs and then prioritizing design features accordingly.
+
+1. Delighter features—Product features that create surprise and delight. Customers are typically unaware of delighters or the problems they solve until they are experienced, after which they can’t imagine life without them. This also means that designers can’t identify delighters by asking or surveying users because customers have no frame of reference for the features.
+2. Performance features—Product features that are known and sought out by customers. Customers typically research and compare products based on performance features to make their buying decisions. Accordingly, performance features can be identified through focus groups and surveys. Some competitive baseline level of performance features must be present for a product to be successful.
+3. Threshold features—Product features that are assumed to be present and to perform well. Customers typically do not consider threshold features, as they are considered too basic and fundamental to merit attention. Products get no credit for having threshold features that work well, but they get severely punished for not having them.
+
+Remember, customers can’t tell you what delighters are and won’t tell you what threshold features are
+Ensure that products have at least one delighter feature (however unrefined), a competitive set of performance features (fairly refined), and a complete set of threshold features (very refined).
+
+# 104. KISS
+
+Simple designs work better and are more reliable than complex designs.
+Simplicity is about subtracting the obvious, and adding the meaningful.
+
+# 105. Knowing-Doing Gap
+
+The divide that exists between knowing how to do something and actually doing it.
+
+Causes:
+(1) talking is mistaken for doing
+(2) resistance to change
+(3) fear of failure
+(4) measuring the wrong things
+(5) internal competition
+
+1. Lead with why—Explain why people are being asked to do something before explaining how to do it.
+2. Be intentional about execution—Classroom instruction and abstract presentations tend not to transfer to the field.
+3. Forgive errors for action—Create a bias for action that is tolerant of mistakes and failure.
+4. Eliminate internal competition—Avoid teams competing with one another, especially when compensation or incentives are involved. Internal competition creates barriers to collaboration and invariably renders customer interests secondary to team interests.
+5. Measure what matters—Focus on measuring the few things that matter most. In the age of big data, it is tempting to engage in kitchen-sink analytics; but this risks distracting from what’s important.
+
+Walk the talk!
+
+# 106. Learnability
+
+The ease with which a new thing can be understood and productively used.
+
+The four pillars of learnability are:
+
+1. Consistency
+2. Discoverability
+3. Responsiveness
+4. Simplicity
+
+Learnability does not mean leading with tutorials or instruction.
+Just the opposite: If a system is learnable, instructions and tutorials aren’t needed.
+
+# 107. Left-Digit Effect
+
+People give more weight to the left-most digits of prices in buying decisions. (e.g. $9.99)
+
+# 108. Legibility
+
+The visual clarity of text, generally based on size, typeface, contrast, line length, and spacing.
+
+# 109. Levels of Invention
+
+A model that classifies inventions based on complexity, nonobviousness, and impact.
+
+Level 1: Minor Improvements
+Solves a simple problem by refining existing designs, leveraging common knowledge and common sense within a domain. These improvements are generally not sufficiently novel or nonobvious to be considered inventions.
+Requires 1 to 10 iterations.2
+
+Level 2: Major Improvement
+Solves a complex problem by improving upon one key aspect of that problem, leveraging expertise and best practices within a domain. Designs at this level and above are considered sufficiently novel and nonobvious to be inventions.
+Requires 10 to 100 iterations.
+
+Level 3: Major Innovation
+Solves a complex problem by conceptualizing it in a new way, leveraging knowledge and best practices from other domains.
+Requires multiple level 2 inventions to be in place and 100 to 1,000 iterations.
+
+Level 4: Significant Innovation
+Solves a newly discovered problem, requiring a design approach that leverages new science and technology.
+Requires multiple level 3 inventions to be in place and 1,000 to 100,000 iterations.3
+
+Level 5: Revolutionary Breakthrough
+Solves a newly discovered problem of great significance, requiring an approach that leverages a new scientific breakthrough.
+Requires multiple level 4 inventions to be in place and 100,000+ iterations.4
+
+# 110. Leverage Point
+
+A place within a system where small changes produce big effects.
+The concept is commonly known by metaphors such as silver bullets, unicorns, miracle cures,
+
+1. Mindsets
+2. Goals
+3. Strategy
+4. Structure
+5. Information
+
+# 111. Most average facial appearance (MAFA) Effect
+
+The average face of a local population is more attractive than any individual face.
+
+# 112. Magic Triangle
+
+A triangular relationship between facial features that creates the illusion of sentience.
+
+# 113. Maintainability
+
+The ease with which a thing can be accessed, inspected, repaired, and serviced.
+
+1. Accessibility
+2. Comprehensibility
+3. Interchangeability
+4. Modularity
+5. Visibility
+
+Prioritize maintainability from the beginning of the design process. Don’t let it be an afterthought. Keep humans in mind as the maintainers.
+
+# 114. Mapping
+
+A correspondence in layout and movement between controls and the things they control.
