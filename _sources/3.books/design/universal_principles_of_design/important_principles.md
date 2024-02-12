@@ -558,26 +558,6 @@ The tendency for people to give back to those who have given to them.
 An element that limits the overall performance of the system of which it is part.
 A reverse salient is a metaphor that borrows from military parlance, referring to a section of an advancing military force that lags behind and impedes the rest of the force from achieving its objective.
 
-# 158. Root Cause
-
-The key initiating cause in a sequence of events that leads to an event of interest.
-
-# 159. Rosetta Stone
-
-A strategy for communicating novel information using elements of common understanding.
-
-# 160. Rule of Thirds
-
-A technique of composition in which a medium is divided into thirds.
-
-# 161. Saint-Venant’s Principle
-
-Local effects of loads on structures have negligible global effects.
-
-# 162. Satisficing
-
-A problem-solving strategy that seeks a satisfactory versus optimal solution.
-
 # 163. Savanna Preference
 
 A preference for savanna-like environments over other types of environments.
@@ -602,43 +582,13 @@ Five tactics are commonly employed to apply the principle of scarcity:
 4. Limited number
 5. Suddenness
 
-# 166. Selection Bias
-
-A bias in the way evidence is collected that distorts analysis and conclusions.
-
-# 167. Self-Similarity
-
-A property in which a thing is composed of similar patterns at multiple levels of scale. (Recursion)
-
-# 168. Serial Position Effects
-
-Things at the beginnings and ends of sequences are more memorable than things in the middle.
-
 # 169. Shaping
 
 Training a target behavior by reinforcing successive approximations of that behavior.
 
-# 170. Signal-to-Noise Ratio
-
-The ratio of relevant to irrelevant information. Good designs have high signal-to-noise ratios.
-
-# 171. Similarity
-
-The brain automatically assumes elements that look alike are related.
-
 # 172. Social Proof
 
 When people don’t know how to act, think, or feel, they tend to copy others.
-
-# 173. Social Trap
-
-A tendency to pursue short-term gains that create long-term losses for the greater group.
-
-Social traps are most problematic when a resource is readily available and highly desirable, when people compete to access and use that resource, and when the long-term costs are not visible or easily monitored. A number of strategies have been proposed to avoid and break the social trap pattern:
-
-1. Turn long-term costs into here-and-now costs—When people pay for the long-term costs as they go, it acts as a negative feedback loop and moderates the offending behavior. For example, charging a small toll to use select stretches of highway and reduce traffic.
-2. Set quotas and penalize freeloaders—A common method of managing natural resources is to set quotas that limit consumption according to a system’s ability to function and regenerate, punishing those who exceed them. For example, setting quota limits for seasonal hunting and fishing based on herd health and population.
-3. Create substitute behaviors—Modify or replace offending behaviors with a substitute that alleviates the long-term costs. For example, substituting other chemicals for chlorofluorocarbons, which were used in aerosols and cooling devices and damaged the ozone layer.
 
 # 174. Status Quo Bias
 
@@ -675,14 +625,6 @@ A bias to search for things where it is easiest.
 What is counted may simply be due to convenience, and what is not counted may simply be due to inconvenience.
 Beware of The path of least resistance
 
-# 178. Structural Forms
-
-There are three ways to create rigid things: solids, frames, and shells.
-
-1. Mass structures
-2. Frame structures
-3. Shell structures
-
 # 179. Sunk Cost Effect
 
 The tendency to keep investing in an endeavor because of past investments in that endeavor.
@@ -692,14 +634,6 @@ Set clear exit criteria from the beginning to disrupt the effect and establish w
 
 Don’t cling to a mistake just because you spent a lot of time making it.
 — Aubrey de Grey
-
-# 180. Supernormal Stimulus
-
-An exaggerated feature that elicits a stronger response than the real feature.
-
-- Baby-faced products
-- Characters with exaggerated proportions
-- Foods
 
 # 181. Survivorship Bias
 
@@ -717,46 +651,9 @@ The Swiss cheese model is a risk management framework based on the metaphor of S
 Bad outcomes result when the latent-failure holes and active-failure holes line up across multiple slices, allowing undesirable things to get through.
 ![alt text](images/principles_of_design-1.png)
 
-# 183. Symmetry
-
-A property of similar or exact correspondence between the configuration of elements.
-
-1. Reflection symmetry—Elements are mirrored around a central axis or mirror line.
-2. Rotation symmetry—Elements are rotated around a common center. E.g. slowflake
-3. Translation symmetry—Elements are repeated in different areas of space. E.g. bee honeycombs, schools of fish
-
-# 184. Testing Pyramid
-
-A multilayered framework to systematize testing and reduce defects.
-
 # 185. Threat Detection
 
 Threatening things are detected more efficiently than nonthreatening things.
-
-# 186. Top-Down Lighting Bias
-
-A tendency to interpret objects as being lit from a single light source from above.
-
-# 187. Uncanny Valley
-
-Abstract and realistic depictions of human faces are appealing but faces in between are not.
-The cause likely regards innate, subconscious mechanisms evolved for pathogen avoidance—i.e., detecting and avoiding people who are sick or dead.
-
-# 188. Uncertainty Principle
-
-Measuring things can change them, often making the results invalid.
-
-- Sensitivity of the variables
-- Invasiveness of the measure
-
-This principle is based on Heisenberg’s uncertainty principle in physics. Heisenberg’s uncertainty principle states that both the position and momentum of an atomic particle cannot be known because the simple act of measuring either one of them affects the other.
-
-# 189. Uniform Connectedness
-
-The brain automatically assumes elements connected by lines or boxes are related.
-
-- Common regions
-- Connecting lines
 
 # 190. User-Centered vs. User-Driven Design
 
@@ -773,39 +670,6 @@ The Veblen effect is potentially applicable when a good or service is:
 2. Strongly associated with status or wealth
 3. Distinguishable from competitors and knockoffs
 4. Priced high relative to competitors
-
-# 192. Visibility
-
-Locate important controls, information, and items to be clearly visible.
-
-# 193. Visuospatial Resonance
-
-A phenomenon in which different images are visible at different distances.
-
-# 194. von Restorff Effect
-
-Uncommon things are easier to recall than common things.
-
-# 195. Wabi-Sabi
-
-An aesthetic style that emphasizes naturalness, simplicity, and subtle imperfection.
-
-- wabi, a kind of transcendental beauty achieved through subtle imperfection, such as pottery that reflects its handmade craftsmanship
-- sabi, beauty that comes with time, such as the patina found on aged copper.
-
-# 196. Waist-to-Hip Ratio
-
-A preference for a particular ratio of waist size to hip size in men and women.
-
-# 197. Wayfinding
-
-The process of using spatial and environmental information to navigate to a destination.
-Whether navigating a college campus, the wilds of a forest, or a website, people use spatial and environmental information to aid navigation. This is known as wayfinding.
-
-1. Orientation
-2. Route decision
-3. Route monitoring
-4. Destination recognition
 
 # 198. Weakest Link
 
@@ -828,8 +692,3 @@ The principle applies to any environment in which a design is translated from on
 
 1. Real-time reflection
 2. Point-in-time previews (Preview)
-
-# 200. Zeigarnik Effect
-
-Incomplete or interrupted tasks are more likely to hold attention and be remembered.
-This occurs because the unconscious mind seeks closure and completion.
