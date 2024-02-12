@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Random Forest &#8212; My Journal</title>
+    <title>Palmer’s Penguins &#8212; My Journal</title>
   
   
   
@@ -65,11 +65,9 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2.data_science/machine_learning/notebooks/2.random_forest';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2.data_science/machine_learning/constants/acknowledgement';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Alpha Brain" href="../../../3.books/behavioural_science/alpha_brain.html" />
-    <link rel="prev" title="1. Decision Tree" href="1.decision_tree.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,6 +129,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -187,10 +187,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../../1.journal/2024/20240201.html">February 2024</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../machine_learning.html">Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1.decision_tree.html">1. Decision Tree</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2. Random Forest</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../machine_learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/1.decision_tree.html">1. Decision Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/2.random_forest.html">2. Random Forest</a></li>
 </ul>
 </li>
 </ul>
@@ -566,7 +566,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.data_science/machine_learning/notebooks/2.random_forest.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.data_science/machine_learning/constants/acknowledgement.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -596,7 +596,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/2.data_science/machine_learning/notebooks/2.random_forest.ipynb" target="_blank"
+      <li><a href="../../../_sources/2.data_science/machine_learning/constants/acknowledgement.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -606,7 +606,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -678,7 +678,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Random Forest</h1>
+    <h1>Palmer’s Penguins</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -692,34 +692,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="random-forest">
-<h1><span class="section-number">2. </span>Random Forest<a class="headerlink" href="#random-forest" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
-<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
-
-<span class="c1"># Generate a sample regression dataset</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-<span class="c1"># Create a random forest regressor</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">()</span>
-
-<span class="c1"># Perform cross-validation and calculate mean squared error</span>
-<span class="n">mse_scores</span> <span class="o">=</span> <span class="o">-</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">rf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">mean_mse</span> <span class="o">=</span> <span class="n">mse_scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean Squared Error: </span><span class="si">{</span><span class="n">mean_mse</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error: 14398.750231976112
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="palmer-s-penguins">
+<h1>Palmer’s Penguins<a class="headerlink" href="#palmer-s-penguins" title="Link to this heading">#</a></h1>
+<p>Dataset Acknowledgment</p>
+<p>Data from the Palmer LTER data repository was supported by the Office of Polar Programs, NSF Grants OPP-9011927, OPP-9632763, and OPP-0217282.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -735,7 +711,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./2.data_science/machine_learning/notebooks"
+            path: "./2.data_science/machine_learning/constants"
         },
         predefinedOutput: true
     }
@@ -752,24 +728,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="1.decision_tree.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Decision Tree</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../../../3.books/behavioural_science/alpha_brain.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Alpha Brain</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
