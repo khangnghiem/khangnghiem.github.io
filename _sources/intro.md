@@ -1,7 +1,7 @@
 # About Khang
 
 At National Australia Bank (NAB), Khang is a Data Analyst and a Quality Engineer.\
-At Heart, Khang is a Teacher. He cares deeply about the wellbeing of those around him.\
+At Heart, Khang is a Teacher. He cares deeply about the wellbeing of those around him.
 
 Having a passion for Data Science, he has set his goal to become a Data Scientist.\
 This journal is a record of things he has been doing to reach that goal.\
