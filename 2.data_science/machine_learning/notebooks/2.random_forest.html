@@ -714,226 +714,148 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s2">&quot;../data/penguins.parquet&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">subset</span><span class="o">=</span><span class="p">[</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="p">)</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">49</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="c1"># let init-time option registration happen</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="kn">import</span> <span class="nn">pandas.core.config_init</span>  <span class="c1"># pyright: ignore[reportUnusedImport] # noqa: F401</span>
-<span class="ne">---&gt; </span><span class="mi">49</span> <span class="kn">from</span> <span class="nn">pandas.core.api</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="c1"># dtype</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="n">ArrowDtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>     <span class="n">Int8Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>     <span class="n">Int16Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="n">Int32Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span>     <span class="n">Int64Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">UInt8Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="n">UInt16Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="n">UInt32Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="n">UInt64Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="n">Float32Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="n">Float64Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span>     <span class="n">CategoricalDtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span>     <span class="n">PeriodDtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span>     <span class="n">IntervalDtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span>     <span class="n">DatetimeTZDtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>     <span class="n">StringDtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="n">BooleanDtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">68</span>     <span class="c1"># missing</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>     <span class="n">NA</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span>     <span class="n">isna</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="n">isnull</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="n">notna</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="n">notnull</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="c1"># indexes</span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="n">Index</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span>     <span class="n">CategoricalIndex</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>     <span class="n">RangeIndex</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span>     <span class="n">MultiIndex</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span>     <span class="n">IntervalIndex</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span>     <span class="n">TimedeltaIndex</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>     <span class="n">DatetimeIndex</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>     <span class="n">PeriodIndex</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="n">IndexSlice</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span>     <span class="c1"># tseries</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="n">NaT</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="n">Period</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="n">period_range</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="n">Timedelta</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="n">timedelta_range</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="n">Timestamp</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span>     <span class="n">date_range</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span>     <span class="n">bdate_range</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span>     <span class="n">Interval</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">interval_range</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">DateOffset</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="c1"># conversion</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span>     <span class="n">to_numeric</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="n">to_datetime</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="n">to_timedelta</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span>     <span class="c1"># misc</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="n">Flags</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span>     <span class="n">Grouper</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span>     <span class="n">factorize</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span>     <span class="n">unique</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">105</span>     <span class="n">value_counts</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span>     <span class="n">NamedAgg</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span>     <span class="n">array</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span>     <span class="n">Categorical</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span>     <span class="n">set_eng_float_format</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span>     <span class="n">Series</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>     <span class="n">DataFrame</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span> <span class="kn">from</span> <span class="nn">pandas.core.dtypes.dtypes</span> <span class="kn">import</span> <span class="n">SparseDtype</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span> <span class="kn">from</span> <span class="nn">pandas.tseries.api</span> <span class="kn">import</span> <span class="n">infer_freq</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">api</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">28</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">pandas.core.dtypes.missing</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">isna</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">isnull</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">notna</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">notnull</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">from</span> <span class="nn">pandas.core.algorithms</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">factorize</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">unique</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">value_counts</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">28</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays</span> <span class="kn">import</span> <span class="n">Categorical</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays.boolean</span> <span class="kn">import</span> <span class="n">BooleanDtype</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays.floating</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">Float32Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="n">Float64Dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="p">)</span>
-
-<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">arrays</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays.arrow</span> <span class="kn">import</span> <span class="n">ArrowExtensionArray</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays.base</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">ExtensionArray</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">ExtensionOpsMixin</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">ExtensionScalarOpsMixin</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays.boolean</span> <span class="kn">import</span> <span class="n">BooleanArray</span>
-
-<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">arrays</span><span class="o">/</span><span class="n">arrow</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays.arrow.accessors</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">ListAccessor</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">StructAccessor</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">pandas.core.arrays.arrow.array</span> <span class="kn">import</span> <span class="n">ArrowExtensionArray</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ArrowExtensionArray&quot;</span><span class="p">,</span> <span class="s2">&quot;StructAccessor&quot;</span><span class="p">,</span> <span class="s2">&quot;ListAccessor&quot;</span><span class="p">]</span>
-
-<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">arrays</span><span class="o">/</span><span class="n">arrow</span><span class="o">/</span><span class="n">accessors</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">23</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">pa_version_under10p1</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="kn">import</span> <span class="nn">pyarrow</span> <span class="k">as</span> <span class="nn">pa</span>
-<span class="ne">---&gt; </span><span class="mi">23</span>     <span class="kn">import</span> <span class="nn">pyarrow.compute</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="kn">from</span> <span class="nn">pandas.core.dtypes.dtypes</span> <span class="kn">import</span> <span class="n">ArrowDtype</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
-
-<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyarrow</span><span class="o">/</span><span class="n">compute</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">18</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Licensed to the Apache Software Foundation (ASF) under one</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># or more contributor license agreements.  See the NOTICE file</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># distributed with this work for additional information</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="c1"># specific language governing permissions and limitations</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># under the License.</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">pyarrow._compute</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">Function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">FunctionOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">FunctionRegistry</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="n">HashAggregateFunction</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">HashAggregateKernel</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">Kernel</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">ScalarAggregateFunction</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">ScalarAggregateKernel</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="n">ScalarFunction</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">ScalarKernel</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">VectorFunction</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="n">VectorKernel</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="c1"># Option classes</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="n">ArraySortOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span>     <span class="n">AssumeTimezoneOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="n">CastOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span>     <span class="n">CountOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span>     <span class="n">CumulativeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="n">CumulativeSumOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span>     <span class="n">DayOfWeekOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span>     <span class="n">DictionaryEncodeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="n">RunEndEncodeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">ElementWiseAggregateOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="n">ExtractRegexOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">FilterOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="n">IndexOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span>     <span class="n">JoinOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="n">ListSliceOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>     <span class="n">MakeStructOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span>     <span class="n">MapLookupOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">MatchSubstringOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">ModeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="n">NullOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>     <span class="n">PadOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>     <span class="n">PairwiseOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="n">PartitionNthOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span>     <span class="n">QuantileOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">RandomOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="n">RankOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="n">ReplaceSliceOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="n">ReplaceSubstringOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="n">RoundBinaryOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="n">RoundOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span>     <span class="n">RoundTemporalOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span>     <span class="n">RoundToMultipleOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span>     <span class="n">ScalarAggregateOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span>     <span class="n">SelectKOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>     <span class="n">SetLookupOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="n">SliceOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">68</span>     <span class="n">SortOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>     <span class="n">SplitOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span>     <span class="n">SplitPatternOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="n">StrftimeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="n">StrptimeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="n">StructFieldOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="n">TakeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="n">TDigestOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span>     <span class="n">TrimOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>     <span class="n">Utf8NormalizeOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span>     <span class="n">VarianceOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span>     <span class="n">WeekOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span>     <span class="c1"># Functions</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>     <span class="n">call_function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>     <span class="n">function_registry</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="n">get_function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span>     <span class="n">list_functions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="c1"># Udf</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="n">call_tabular_function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="n">register_scalar_function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="n">register_tabular_function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="n">register_aggregate_function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="n">register_vector_function</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span>     <span class="n">UdfContext</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span>     <span class="c1"># Expressions</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span>     <span class="n">Expression</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span> <span class="kn">import</span> <span class="nn">inspect</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:405,</span> in <span class="ni">parent</span><span class="nt">(self)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>141</th>
+      <td>Adelie</td>
+      <td>Dream</td>
+      <td>40.6</td>
+      <td>17.2</td>
+      <td>187.0</td>
+      <td>3475.0</td>
+      <td>male</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>219</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>49.5</td>
+      <td>16.2</td>
+      <td>229.0</td>
+      <td>5800.0</td>
+      <td>male</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Adelie</td>
+      <td>Dream</td>
+      <td>40.9</td>
+      <td>18.9</td>
+      <td>184.0</td>
+      <td>3900.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>36.4</td>
+      <td>17.1</td>
+      <td>184.0</td>
+      <td>2850.0</td>
+      <td>female</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>209</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>45.5</td>
+      <td>15.0</td>
+      <td>220.0</td>
+      <td>5000.0</td>
+      <td>male</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>262</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>50.5</td>
+      <td>15.2</td>
+      <td>216.0</td>
+      <td>5000.0</td>
+      <td>female</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Adelie</td>
+      <td>Dream</td>
+      <td>37.2</td>
+      <td>18.1</td>
+      <td>178.0</td>
+      <td>3900.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>51.1</td>
+      <td>16.5</td>
+      <td>225.0</td>
+      <td>5250.0</td>
+      <td>male</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>332</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>45.2</td>
+      <td>16.6</td>
+      <td>191.0</td>
+      <td>3250.0</td>
+      <td>female</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>286</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>46.6</td>
+      <td>17.8</td>
+      <td>193.0</td>
+      <td>3800.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
