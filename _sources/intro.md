@@ -11,6 +11,6 @@ For contact information, feel free to reach him via his email: <khangnghiem@gmai
 
 </br>
 </br>
-<i>Khang in the office. This is where it all started.</i>
-</br>
-<img src="images/intro.png" width="320" />
+<i>Khang can get very serious at times.</i>
+
+![alt text](images/intro-2.png)
