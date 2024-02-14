@@ -10,7 +10,6 @@ If you care to join him in his journey, you are more than welcome to.
 For contact information, feel free to reach him via his email: <khangnghiem@gmail.com>
 
 </br>
-</br>
 <i>Khang can get very serious at times.</i>
 
 ![alt text](images/intro-2.png)
