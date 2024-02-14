@@ -12,4 +12,4 @@ For contact information, feel free to reach him via his email: <khangnghiem@gmai
 </br>
 <i>Khang can get very serious at times.</i>
 
-![alt text](images/intro-2.png)
+![alt text](images/intro.png)
