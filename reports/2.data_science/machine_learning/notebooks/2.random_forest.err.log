@@ -1,7 +1,20 @@
 Traceback (most recent call last):
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 782, in _async_poll_for_reply
+    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khangnghiem/.local/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 189, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/Users/khangnghiem/.local/lib/python3.11/site-packages/jupyter_client/channels.py", line 315, in get_msg
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/khangnghiem/.local/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
@@ -10,158 +23,22 @@ Traceback (most recent call last):
   File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
     await self.async_execute_cell(
-  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
-    await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
-    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
-nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
-------------------
-from operator import index
-
-
-y = df["body_mass_g"]
-X = df.drop(["body_mass_g"])
-
-X_train, X_valid, y_train, y_valid = train_test_split(
-    X, y, train_size=0.8, test_size=0.2, random_state=0
-)
-
-numerical_cols = [
-    col for col in X_train.columns if X_train[col].dtype in [pl.Float64, pl.Int64]
-]
-categorical_columns = [
-    col for col in X_train.columns if X[col].dtype in [pl.Categorical, pl.Utf8]
-]
-numerical_transformer = SimpleImputer(strategy="median")
-categorical_transformer = Pipeline(
-    steps=[
-        ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("onehot", OneHotEncoder(handle_unknown="ignore")),
-    ]
-)
-
-preprocessor = ColumnTransformer(
-    transformers=[
-        ("num", numerical_transformer, numerical_cols),
-        ("cat", categorical_transformer, categorical_columns),
-    ]
-)
-
-model = RandomForestRegressor(n_estimators=100, random_state=0)
-
-pipeline = Pipeline(
-    steps=[
-        ("preprocessor", preprocessor),
-        ("model", model),
-    ]
-)
-
-# scikit-learn not working with polars!
-X_train = X_train.to_pandas().reset_index(drop=True)
-y_train = y_train.to_pandas().reset_index(drop=True)
-X_valid = X_valid.to_pandas().reset_index(drop=True)
-y_valid = y_valid.to_pandas().reset_index(drop=True)
-
-pipeline.fit(X_train, y_train)
-
-y_pred = pipeline.predict(X_valid)
-y_pred
-------------------
-
-
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[2], line 7[0m
-[1;32m      4[0m y [38;5;241m=[39m df[[38;5;124m"[39m[38;5;124mbody_mass_g[39m[38;5;124m"[39m]
-[1;32m      5[0m X [38;5;241m=[39m df[38;5;241m.[39mdrop([[38;5;124m"[39m[38;5;124mbody_mass_g[39m[38;5;124m"[39m])
-[0;32m----> 7[0m X_train, X_valid, y_train, y_valid [38;5;241m=[39m [43mtrain_test_split[49m[43m([49m
-[1;32m      8[0m [43m    [49m[43mX[49m[43m,[49m[43m [49m[43my[49m[43m,[49m[43m [49m[43mtrain_size[49m[38;5;241;43m=[39;49m[38;5;241;43m0.8[39;49m[43m,[49m[43m [49m[43mtest_size[49m[38;5;241;43m=[39;49m[38;5;241;43m0.2[39;49m[43m,[49m[43m [49m[43mrandom_state[49m[38;5;241;43m=[39;49m[38;5;241;43m0[39;49m
-[1;32m      9[0m [43m)[49m
-[1;32m     11[0m numerical_cols [38;5;241m=[39m [
-[1;32m     12[0m     col [38;5;28;01mfor[39;00m col [38;5;129;01min[39;00m X_train[38;5;241m.[39mcolumns [38;5;28;01mif[39;00m X_train[col][38;5;241m.[39mdtype [38;5;129;01min[39;00m [pl[38;5;241m.[39mFloat64, pl[38;5;241m.[39mInt64]
-[1;32m     13[0m ]
-[1;32m     14[0m categorical_columns [38;5;241m=[39m [
-[1;32m     15[0m     col [38;5;28;01mfor[39;00m col [38;5;129;01min[39;00m X_train[38;5;241m.[39mcolumns [38;5;28;01mif[39;00m X[col][38;5;241m.[39mdtype [38;5;129;01min[39;00m [pl[38;5;241m.[39mCategorical, pl[38;5;241m.[39mUtf8]
-[1;32m     16[0m ]
-
-File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sklearn/utils/_param_validation.py:213[0m, in [0;36mvalidate_params.<locals>.decorator.<locals>.wrapper[0;34m(*args, **kwargs)[0m
-[1;32m    207[0m [38;5;28;01mtry[39;00m:
-[1;32m    208[0m     [38;5;28;01mwith[39;00m config_context(
-[1;32m    209[0m         skip_parameter_validation[38;5;241m=[39m(
-[1;32m    210[0m             prefer_skip_nested_validation [38;5;129;01mor[39;00m global_skip_validation
-[1;32m    211[0m         )
-[1;32m    212[0m     ):
-[0;32m--> 213[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-[1;32m    214[0m [38;5;28;01mexcept[39;00m InvalidParameterError [38;5;28;01mas[39;00m e:
-[1;32m    215[0m     [38;5;66;03m# When the function is just a wrapper around an estimator, we allow[39;00m
-[1;32m    216[0m     [38;5;66;03m# the function to delegate validation to the estimator, but we replace[39;00m
-[1;32m    217[0m     [38;5;66;03m# the name of the estimator by the name of the function in the error[39;00m
-[1;32m    218[0m     [38;5;66;03m# message to avoid confusion.[39;00m
-[1;32m    219[0m     msg [38;5;241m=[39m re[38;5;241m.[39msub(
-[1;32m    220[0m         [38;5;124mr[39m[38;5;124m"[39m[38;5;124mparameter of [39m[38;5;124m\[39m[38;5;124mw+ must be[39m[38;5;124m"[39m,
-[1;32m    221[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mparameter of [39m[38;5;132;01m{[39;00mfunc[38;5;241m.[39m[38;5;18m__qualname__[39m[38;5;132;01m}[39;00m[38;5;124m must be[39m[38;5;124m"[39m,
-[1;32m    222[0m         [38;5;28mstr[39m(e),
-[1;32m    223[0m     )
-
-File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sklearn/model_selection/_split.py:2683[0m, in [0;36mtrain_test_split[0;34m(test_size, train_size, random_state, shuffle, stratify, *arrays)[0m
-[1;32m   2679[0m     cv [38;5;241m=[39m CVClass(test_size[38;5;241m=[39mn_test, train_size[38;5;241m=[39mn_train, random_state[38;5;241m=[39mrandom_state)
-[1;32m   2681[0m     train, test [38;5;241m=[39m [38;5;28mnext[39m(cv[38;5;241m.[39msplit(X[38;5;241m=[39marrays[[38;5;241m0[39m], y[38;5;241m=[39mstratify))
-[0;32m-> 2683[0m [38;5;28;01mreturn[39;00m [38;5;28;43mlist[39;49m[43m([49m
-[1;32m   2684[0m [43m    [49m[43mchain[49m[38;5;241;43m.[39;49m[43mfrom_iterable[49m[43m([49m
-[1;32m   2685[0m [43m        [49m[43m([49m[43m_safe_indexing[49m[43m([49m[43ma[49m[43m,[49m[43m [49m[43mtrain[49m[43m)[49m[43m,[49m[43m [49m[43m_safe_indexing[49m[43m([49m[43ma[49m[43m,[49m[43m [49m[43mtest[49m[43m)[49m[43m)[49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43ma[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43marrays[49m
-[1;32m   2686[0m [43m    [49m[43m)[49m
-[1;32m   2687[0m [43m[49m[43m)[49m
-
-File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sklearn/model_selection/_split.py:2685[0m, in [0;36m<genexpr>[0;34m(.0)[0m
-[1;32m   2679[0m     cv [38;5;241m=[39m CVClass(test_size[38;5;241m=[39mn_test, train_size[38;5;241m=[39mn_train, random_state[38;5;241m=[39mrandom_state)
-[1;32m   2681[0m     train, test [38;5;241m=[39m [38;5;28mnext[39m(cv[38;5;241m.[39msplit(X[38;5;241m=[39marrays[[38;5;241m0[39m], y[38;5;241m=[39mstratify))
-[1;32m   2683[0m [38;5;28;01mreturn[39;00m [38;5;28mlist[39m(
-[1;32m   2684[0m     chain[38;5;241m.[39mfrom_iterable(
-[0;32m-> 2685[0m         ([43m_safe_indexing[49m[43m([49m[43ma[49m[43m,[49m[43m [49m[43mtrain[49m[43m)[49m, _safe_indexing(a, test)) [38;5;28;01mfor[39;00m a [38;5;129;01min[39;00m arrays
-[1;32m   2686[0m     )
-[1;32m   2687[0m )
-
-File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sklearn/utils/__init__.py:386[0m, in [0;36m_safe_indexing[0;34m(X, indices, axis)[0m
-[1;32m    384[0m     [38;5;28;01mreturn[39;00m _polars_indexing(X, indices, indices_dtype, axis[38;5;241m=[39maxis)
-[1;32m    385[0m [38;5;28;01melif[39;00m [38;5;28mhasattr[39m(X, [38;5;124m"[39m[38;5;124mshape[39m[38;5;124m"[39m):
-[0;32m--> 386[0m     [38;5;28;01mreturn[39;00m [43m_array_indexing[49m[43m([49m[43mX[49m[43m,[49m[43m [49m[43mindices[49m[43m,[49m[43m [49m[43mindices_dtype[49m[43m,[49m[43m [49m[43maxis[49m[38;5;241;43m=[39;49m[43maxis[49m[43m)[49m
-[1;32m    387[0m [38;5;28;01melse[39;00m:
-[1;32m    388[0m     [38;5;28;01mreturn[39;00m _list_indexing(X, indices, indices_dtype)
-
-File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/sklearn/utils/__init__.py:196[0m, in [0;36m_array_indexing[0;34m(array, key, key_dtype, axis)[0m
-[1;32m    194[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(key, [38;5;28mtuple[39m):
-[1;32m    195[0m     key [38;5;241m=[39m [38;5;28mlist[39m(key)
-[0;32m--> 196[0m [38;5;28;01mreturn[39;00m [43marray[49m[43m[[49m[43mkey[49m[43m,[49m[43m [49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[43m][49m [38;5;28;01mif[39;00m axis [38;5;241m==[39m [38;5;241m0[39m [38;5;28;01melse[39;00m array[:, key]
-
-File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/polars/series/series.py:1352[0m, in [0;36mSeries.__getitem__[0;34m(self, item)[0m
-[1;32m   1346[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_take_with_series(idx_series)
-[1;32m   1348[0m msg [38;5;241m=[39m (
-[1;32m   1349[0m     [38;5;124mf[39m[38;5;124m"[39m[38;5;124mcannot use `__getitem__` on Series of dtype [39m[38;5;132;01m{[39;00m[38;5;28mself[39m[38;5;241m.[39mdtype[38;5;132;01m!r}[39;00m[38;5;124m"[39m
-[1;32m   1350[0m     [38;5;124mf[39m[38;5;124m"[39m[38;5;124m with argument [39m[38;5;132;01m{[39;00mitem[38;5;132;01m!r}[39;00m[38;5;124m of type [39m[38;5;132;01m{[39;00m[38;5;28mtype[39m(item)[38;5;241m.[39m[38;5;18m__name__[39m[38;5;132;01m!r}[39;00m[38;5;124m"[39m
-[1;32m   1351[0m )
-[0;32m-> 1352[0m [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m(msg)
-
-[0;31mTypeError[0m: cannot use `__getitem__` on Series of dtype Float64 with argument (array([232,  22, 275, 136,  66, 233,  12, 283, 135,  17, 241, 103, 271,
-       250,  89, 240, 170, 306, 101, 153, 341,  81,   1, 171,   8, 237,
-       213, 133, 264, 307, 176, 248, 221,   5,  33, 321, 106,  34, 308,
-        97,  85, 204, 210, 158,  45, 134, 220, 311, 236, 234, 108, 230,
-        90,  46, 269, 331, 226,  73, 334, 324, 142, 144,  29, 214, 278,
-        27, 198, 299, 146, 164, 173, 212, 218,  35, 260, 305, 200, 199,
-        44, 168, 129,  93, 111, 216, 338,  18, 224,  79, 266,  71, 194,
-       286, 328, 263, 160, 217, 161,  83, 339, 118, 310, 319, 110, 336,
-       157, 152,  16,  75, 109, 239, 219, 139,   4,  96, 225,  61,  67,
-       270, 154, 191, 261, 208, 318,  40, 253,  13, 107, 259,   3, 215,
-       125,  24,  30,  77, 188, 184, 316, 255, 252,  19, 291, 293, 182,
-       303,  80,  51,   2,  11, 104, 245,  86,  10,  36, 325,  58,  41,
-        14, 155,  50, 209, 268, 282, 322, 281, 335, 123, 222, 274,  62,
-       258, 332, 130, 187,  23, 249, 186,  43, 114, 138,   0, 272, 201,
-       149, 231, 112, 205, 287,  98, 178, 256,  94, 326,  95, 298, 169,
-        69,  48, 207, 227, 148, 143, 180, 131, 304, 340, 262, 203,  84,
-       121, 330, 313,  91,  82, 267, 119,  57, 257, 302,  42, 105, 273,
-       300,  38,  53, 294, 128, 290,  28, 183, 163, 151, 244, 202,  31,
-        32, 127, 185, 317, 288, 309, 147, 285, 315, 177,  99, 197, 243,
-       115, 265,  72,  25, 165, 327, 174, 329,  39, 193, 314,  88,  70,
-        87, 292, 242, 277, 211,   9, 195, 251, 323, 192, 117,  47, 172]), Ellipsis) of type 'tuple'
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 1005, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 806, in _async_poll_for_reply
+    error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 856, in _async_handle_timeout
+    raise CellTimeoutError.error_from_timeout_and_cell(
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
+The message was: Cell execution timed out.
+Here is a preview of the cell contents:
+-------------------
+['from sklearn.model_selection import train_test_split', 'from sklearn.compose import ColumnTransformer', 'from sklearn.pipeline import Pipeline', 'from sklearn.impute import SimpleImputer', 'from sklearn.preprocessing import OneHotEncoder']
+...
+['        "body_mass_g",', '    ]', ')', '', 'df.sample(10)']
+-------------------
 
