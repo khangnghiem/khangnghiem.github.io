@@ -11,6 +11,6 @@ For contact information, feel free to reach him via his email: <khangnghiem@gmai
 
 </br>
 </br>
-<i>This is where it all started - Etown Central</i>
-
-![Khang in the office](images/intro.png)
+<i>Khang in the office. This is where it all started.</i>
+</br>
+<img src="images/intro.png" width="320" />
