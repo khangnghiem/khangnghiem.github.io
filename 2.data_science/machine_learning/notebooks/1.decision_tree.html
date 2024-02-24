@@ -440,29 +440,103 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  species     island  bill_length_mm  bill_depth_mm  flipper_length_mm  \
-0  Adelie  Torgersen            39.1           18.7              181.0   
-1  Adelie  Torgersen            39.5           17.4              186.0   
-2  Adelie  Torgersen            40.3           18.0              195.0   
-4  Adelie  Torgersen            36.7           19.3              193.0   
-5  Adelie  Torgersen            39.3           20.6              190.0   
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-   body_mass_g     sex  year  
-0       3750.0    male  2007  
-1       3800.0  female  2007  
-2       3250.0  female  2007  
-4       3450.0  female  2007  
-5       3650.0    male  2007  
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3250., 3550., 4450., 3750., 3650., 4050., 5300., 3625., 5550.,
-       3950., 3000., 4600., 3950., 3900., 3750., 4300., 4375., 5050.,
-       4600., 3200., 4150., 3550., 3900., 4850., 3600., 3000., 5000.,
-       3800., 5000., 5550., 3150., 4100., 4250., 4500., 4875., 3400.,
-       4050., 5500., 3500., 3975., 3600., 4100., 4450., 5000., 3650.,
-       4200., 4800., 5400., 5000., 4250., 3975., 3250., 4250., 4050.,
-       3200., 3550., 5400., 3350., 3975., 3200., 3975., 3950., 4450.,
-       5050., 3075., 3200., 3550., 4300., 4250.])
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">sklearn</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">87</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="c1"># We are not importing the rest of scikit-learn during the build</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="c1"># process, as it may not be compiled yet</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span> <span class="k">else</span><span class="p">:</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span>     <span class="c1"># later is linked to the OpenMP runtime to make it possible to introspect</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span>     <span class="c1"># it and importing it first would fail if the OpenMP dll cannot be found.</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>         <span class="n">__check_build</span><span class="p">,</span>  <span class="c1"># noqa: F401</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>         <span class="n">_distributor_init</span><span class="p">,</span>  <span class="c1"># noqa: F401</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">87</span>     <span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">clone</span>
+<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="kn">from</span> <span class="nn">.utils._show_versions</span> <span class="kn">import</span> <span class="n">show_versions</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">     </span><span class="mi">91</span>         <span class="s2">&quot;calibration&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">92</span>         <span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s2">&quot;show_versions&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="p">]</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">sklearn</span><span class="o">/</span><span class="n">base</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">19</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">._config</span> <span class="kn">import</span> <span class="n">config_context</span><span class="p">,</span> <span class="n">get_config</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="n">InconsistentVersionWarning</span>
+<span class="ne">---&gt; </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">_IS_32BIT</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">.utils._estimator_html_repr</span> <span class="kn">import</span> <span class="n">_HTMLDocumentationLinkMixin</span><span class="p">,</span> <span class="n">estimator_html_repr</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">.utils._metadata_requests</span> <span class="kn">import</span> <span class="n">_MetadataRequester</span><span class="p">,</span> <span class="n">_routing_enabled</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">sklearn</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">22</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_joblib</span><span class="p">,</span> <span class="n">metadata_routing</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">._bunch</span> <span class="kn">import</span> <span class="n">Bunch</span>
+<span class="ne">---&gt; </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">._estimator_html_repr</span> <span class="kn">import</span> <span class="n">estimator_html_repr</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">from</span> <span class="nn">._param_validation</span> <span class="kn">import</span> <span class="n">Integral</span><span class="p">,</span> <span class="n">Interval</span><span class="p">,</span> <span class="n">validate_params</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="kn">from</span> <span class="nn">.class_weight</span> <span class="kn">import</span> <span class="n">compute_class_weight</span><span class="p">,</span> <span class="n">compute_sample_weight</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">sklearn</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">_estimator_html_repr</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">Template</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">__version__</span><span class="p">,</span> <span class="n">config_context</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">.fixes</span> <span class="kn">import</span> <span class="n">parse_version</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">class</span> <span class="nc">_IDCounter</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Generate sequential ids with a prefix.&quot;&quot;&quot;</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">sklearn</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">fixes</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">17</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">import</span> <span class="nn">scipy</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">import</span> <span class="nn">scipy.sparse.linalg</span>
+<span class="ne">---&gt; </span><span class="mi">17</span> <span class="kn">import</span> <span class="nn">scipy.stats</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">import</span> <span class="nn">threadpoolctl</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">import</span> <span class="nn">sklearn</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">scipy</span><span class="o">/</span><span class="n">stats</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">605</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> .. _statsrefmanual:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">600</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">601</span><span class="sd"> &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+<span class="g g-Whitespace">    </span><span class="mi">603</span> <span class="kn">from</span> <span class="nn">._warnings_errors</span> <span class="kn">import</span> <span class="p">(</span><span class="n">ConstantInputWarning</span><span class="p">,</span> <span class="n">NearConstantInputWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">604</span>                                <span class="n">DegenerateDataWarning</span><span class="p">,</span> <span class="n">FitError</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">605</span> <span class="kn">from</span> <span class="nn">._stats_py</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">    </span><span class="mi">606</span> <span class="kn">from</span> <span class="nn">._variation</span> <span class="kn">import</span> <span class="n">variation</span>
+<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="kn">from</span> <span class="nn">.distributions</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">scipy</span><span class="o">/</span><span class="n">stats</span><span class="o">/</span><span class="n">_stats_py</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">38</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">asarray</span><span class="p">,</span> <span class="n">ma</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">cdist</span>
+<span class="ne">---&gt; </span><span class="mi">38</span> <span class="kn">from</span> <span class="nn">scipy.ndimage</span> <span class="kn">import</span> <span class="n">_measurements</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="kn">from</span> <span class="nn">scipy._lib._util</span> <span class="kn">import</span> <span class="p">(</span><span class="n">check_random_state</span><span class="p">,</span> <span class="n">MapWrapper</span><span class="p">,</span> <span class="n">_get_nan</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span>                               <span class="n">rng_integers</span><span class="p">,</span> <span class="n">_rename_parameter</span><span class="p">,</span> <span class="n">_contains_nan</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>                               <span class="n">AxisError</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="nn">special</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">scipy</span><span class="o">/</span><span class="n">ndimage</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">159</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span> <span class="kn">from</span> <span class="nn">._morphology</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">    </span><span class="mi">158</span> <span class="c1"># Deprecated namespaces, to be removed in v2.0.0</span>
+<span class="ne">--&gt; </span><span class="mi">159</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">filters</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">fourier</span>
+<span class="g g-Whitespace">    </span><span class="mi">161</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">interpolation</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1176,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1147,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:690,</span> in <span class="ni">_load_unlocked</span><span class="nt">(spec)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:936,</span> in <span class="ni">exec_module</span><span class="nt">(self, module)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1032,</span> in <span class="ni">get_code</span><span class="nt">(self, fullname)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1130,</span> in <span class="ni">get_data</span><span class="nt">(self, path)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

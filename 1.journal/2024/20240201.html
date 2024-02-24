@@ -380,6 +380,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-24-2024-error-leakage">Feb 24, 2024 - Error &amp; Leakage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-23-2024-high-impact-score">Feb 23, 2024 - High Impact Score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-22-2024-kickboxing-basics">Feb 22, 2024 - Kickboxing Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-21-2024-polars">Feb 21, 2024 - Polars</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-20-2024-kickboxing-punch">Feb 20, 2024 - Kickboxing Punch</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-19-2024-guest-day">Feb 19, 2024 - Guest Day</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-18-2024-preparing-for-nab-s-executive-visit">Feb 18, 2024 - Preparing for NAB’s executive visit</a></li>
@@ -415,6 +419,44 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="february-2024">
 <h1>February 2024<a class="headerlink" href="#february-2024" title="Link to this heading">#</a></h1>
+<section id="feb-24-2024-error-leakage">
+<h2>Feb 24, 2024 - Error &amp; Leakage<a class="headerlink" href="#feb-24-2024-error-leakage" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>MAE = X meaning “On average, our predictions are off by about X.”</p></li>
+<li><p>“In-Sample” Scores: a single “sample” of data is used for both building the model and evaluating it. –&gt; The model will appear accurate in the training data.</p></li>
+<li><p>Data leakage (or leakage) happens when thte training data contains information about the target, but similar data will not be available when the model is used for prediction.</p></li>
+<li><p>Two types of leakage:</p>
+<ul>
+<li><p>Target leakage:  the timing or chronological order that data becomes available. Some data will not be available at the time predictions are made. E.g. patients may not receive medications after getting pneumonia</p></li>
+<li><p>Train-Test Contamination: For example, fitting an imputer for missing values before calling train_test_split(). The end result: The model may get good validation scores, giving us great confidence in it, but perform poorly when we deploy it to make decisions.</p></li>
+</ul>
+</li>
+<li><p>When using cross-validation, it’s even more critical that we do preprocessing inside the pipeline! (scikit-learn)</p></li>
+</ul>
+</section>
+<section id="feb-23-2024-high-impact-score">
+<h2>Feb 23, 2024 - High Impact Score<a class="headerlink" href="#feb-23-2024-high-impact-score" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Khang met NAB’s HeadOfs of his ‘current’ team for the first time.</p></li>
+<li><p>He told Khang that the data he collected, cleaned, processed and provided were shared all across NAB and his work was highly appreciated and very impactful.</p></li>
+<li><p>Upon hearing that, it was all it took to make his day fulfilled.</p></li>
+</ul>
+</section>
+<section id="feb-22-2024-kickboxing-basics">
+<h2>Feb 22, 2024 - Kickboxing Basics<a class="headerlink" href="#feb-22-2024-kickboxing-basics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Turns out Khang did it all wrong!</p></li>
+<li><p>Spent a whole sessions fixing his basic punches and stance</p></li>
+<li><p>Punching has a lot of pivoting to do</p></li>
+</ul>
+</section>
+<section id="feb-21-2024-polars">
+<h2>Feb 21, 2024 - Polars<a class="headerlink" href="#feb-21-2024-polars" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Refactoring codes, preparing to transfer Polars code to his colleagues.</p></li>
+<li><p>Khang can’t wait for Polars 1.0.0 release!</p></li>
+</ul>
+</section>
 <section id="feb-20-2024-kickboxing-punch">
 <h2>Feb 20, 2024 - Kickboxing Punch<a class="headerlink" href="#feb-20-2024-kickboxing-punch" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -727,6 +769,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-24-2024-error-leakage">Feb 24, 2024 - Error &amp; Leakage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-23-2024-high-impact-score">Feb 23, 2024 - High Impact Score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-22-2024-kickboxing-basics">Feb 22, 2024 - Kickboxing Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-21-2024-polars">Feb 21, 2024 - Polars</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-20-2024-kickboxing-punch">Feb 20, 2024 - Kickboxing Punch</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-19-2024-guest-day">Feb 19, 2024 - Guest Day</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-18-2024-preparing-for-nab-s-executive-visit">Feb 18, 2024 - Preparing for NAB’s executive visit</a></li>
