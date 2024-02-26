@@ -440,141 +440,29 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s2">&quot;../data/penguins.parquet&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">subset</span><span class="o">=</span><span class="p">[</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1"># Only use numerial data for now</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1"># categorical_cols = [col for col in df.columns if df[col].dtype not in [pl.Float64, pl.Int64]]</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  species     island  bill_length_mm  bill_depth_mm  flipper_length_mm  \
+0  Adelie  Torgersen            39.1           18.7              181.0   
+1  Adelie  Torgersen            39.5           17.4              186.0   
+2  Adelie  Torgersen            40.3           18.0              195.0   
+4  Adelie  Torgersen            36.7           19.3              193.0   
+5  Adelie  Torgersen            39.3           20.6              190.0   
 
-<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:667,</span> in <span class="ni">read_parquet</span><span class="nt">(path, engine, columns, storage_options, use_nullable_dtypes, dtype_backend, filesystem, filters, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">use_nullable_dtypes</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="g g-Whitespace">    </span><span class="mi">665</span> <span class="n">check_dtype_backend</span><span class="p">(</span><span class="n">dtype_backend</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">667</span> <span class="k">return</span> <span class="n">impl</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">668</span>     <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">669</span>     <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">670</span>     <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">671</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">672</span>     <span class="n">use_nullable_dtypes</span><span class="o">=</span><span class="n">use_nullable_dtypes</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">673</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">674</span>     <span class="n">filesystem</span><span class="o">=</span><span class="n">filesystem</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">675</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">676</span> <span class="p">)</span>
-
-<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:274,</span> in <span class="ni">PyArrowImpl.read</span><span class="nt">(self, path, columns, filters, use_nullable_dtypes, dtype_backend, storage_options, filesystem, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span> <span class="n">path_or_handle</span><span class="p">,</span> <span class="n">handles</span><span class="p">,</span> <span class="n">filesystem</span> <span class="o">=</span> <span class="n">_get_path_or_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span>     <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span>     <span class="n">filesystem</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>     <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rb&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">274</span>     <span class="n">pa_table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">parquet</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span>         <span class="n">path_or_handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span>         <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="n">filesystem</span><span class="o">=</span><span class="n">filesystem</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">pa_table</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">(</span><span class="o">**</span><span class="n">to_pandas_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span>     <span class="k">if</span> <span class="n">manager</span> <span class="o">==</span> <span class="s2">&quot;array&quot;</span><span class="p">:</span>
-
-<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pyarrow/parquet/core.py:1776,</span> in <span class="ni">read_table</span><span class="nt">(source, columns, use_threads, schema, use_pandas_metadata, read_dictionary, memory_map, buffer_size, partitioning, filesystem, filters, use_legacy_dataset, ignore_prefixes, pre_buffer, coerce_int96_timestamp_unit, decryption_properties, thrift_string_size_limit, thrift_container_size_limit, page_checksum_verification)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1770</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1771</span>         <span class="s2">&quot;Passing &#39;use_legacy_dataset&#39; is deprecated as of pyarrow 15.0.0 &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1772</span>         <span class="s2">&quot;and will be removed in a future version.&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1773</span>         <span class="ne">FutureWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1775</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1776</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">ParquetDataset</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1777</span>         <span class="n">source</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1778</span>         <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1779</span>         <span class="n">filesystem</span><span class="o">=</span><span class="n">filesystem</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1780</span>         <span class="n">partitioning</span><span class="o">=</span><span class="n">partitioning</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1781</span>         <span class="n">memory_map</span><span class="o">=</span><span class="n">memory_map</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1782</span>         <span class="n">read_dictionary</span><span class="o">=</span><span class="n">read_dictionary</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1783</span>         <span class="n">buffer_size</span><span class="o">=</span><span class="n">buffer_size</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1784</span>         <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1785</span>         <span class="n">ignore_prefixes</span><span class="o">=</span><span class="n">ignore_prefixes</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1786</span>         <span class="n">pre_buffer</span><span class="o">=</span><span class="n">pre_buffer</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1787</span>         <span class="n">coerce_int96_timestamp_unit</span><span class="o">=</span><span class="n">coerce_int96_timestamp_unit</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1788</span>         <span class="n">thrift_string_size_limit</span><span class="o">=</span><span class="n">thrift_string_size_limit</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1789</span>         <span class="n">thrift_container_size_limit</span><span class="o">=</span><span class="n">thrift_container_size_limit</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1790</span>         <span class="n">page_checksum_verification</span><span class="o">=</span><span class="n">page_checksum_verification</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1791</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1792</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1793</span>     <span class="c1"># fall back on ParquetFile for simple cases when pyarrow.dataset</span>
-<span class="g g-Whitespace">   </span><span class="mi">1794</span>     <span class="c1"># module is not available</span>
-<span class="g g-Whitespace">   </span><span class="mi">1795</span>     <span class="k">if</span> <span class="n">filters</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pyarrow/parquet/core.py:1272,</span> in <span class="ni">ParquetDataset.__init__</span><span class="nt">(self, path_or_paths, filesystem, schema, filters, read_dictionary, memory_map, buffer_size, partitioning, ignore_prefixes, pre_buffer, coerce_int96_timestamp_unit, decryption_properties, thrift_string_size_limit, thrift_container_size_limit, page_checksum_verification, use_legacy_dataset)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1266</span> <span class="k">if</span> <span class="n">use_legacy_dataset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1267</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1268</span>         <span class="s2">&quot;Passing &#39;use_legacy_dataset&#39; is deprecated as of pyarrow 15.0.0 &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1269</span>         <span class="s2">&quot;and will be removed in a future version.&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1270</span>         <span class="ne">FutureWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1272</span> <span class="kn">import</span> <span class="nn">pyarrow.dataset</span> <span class="k">as</span> <span class="nn">ds</span>
-<span class="g g-Whitespace">   </span><span class="mi">1274</span> <span class="c1"># map format arguments</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="n">read_options</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="s2">&quot;pre_buffer&quot;</span><span class="p">:</span> <span class="n">pre_buffer</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="s2">&quot;coerce_int96_timestamp_unit&quot;</span><span class="p">:</span> <span class="n">coerce_int96_timestamp_unit</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="s2">&quot;page_checksum_verification&quot;</span><span class="p">:</span> <span class="n">page_checksum_verification</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1281</span> <span class="p">}</span>
-
-<span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.11.4</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyarrow</span><span class="o">/</span><span class="n">dataset</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">24</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">pyarrow.util</span> <span class="kn">import</span> <span class="n">_is_iterable</span><span class="p">,</span> <span class="n">_stringify_path</span><span class="p">,</span> <span class="n">_is_path_like</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">24</span>     <span class="kn">from</span> <span class="nn">pyarrow._dataset</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>         <span class="n">CsvFileFormat</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>         <span class="n">CsvFragmentScanOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>         <span class="n">JsonFileFormat</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>         <span class="n">JsonFragmentScanOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>         <span class="n">Dataset</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>         <span class="n">DatasetFactory</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span>         <span class="n">DirectoryPartitioning</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span>         <span class="n">FeatherFileFormat</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span>         <span class="n">FilenamePartitioning</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span>         <span class="n">FileFormat</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span>         <span class="n">FileFragment</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span>         <span class="n">FileSystemDataset</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span>         <span class="n">FileSystemDatasetFactory</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span>         <span class="n">FileSystemFactoryOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span>         <span class="n">FileWriteOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span>         <span class="n">Fragment</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>         <span class="n">FragmentScanOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span>         <span class="n">HivePartitioning</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>         <span class="n">IpcFileFormat</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">44</span>         <span class="n">IpcFileWriteOptions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span>         <span class="n">InMemoryDataset</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span>         <span class="n">Partitioning</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>         <span class="n">PartitioningFactory</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="n">Scanner</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>         <span class="n">TaggedRecordBatch</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="n">UnionDataset</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>         <span class="n">UnionDatasetFactory</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="n">WrittenFile</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>         <span class="n">get_partition_keys</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>         <span class="n">get_partition_keys</span> <span class="k">as</span> <span class="n">_get_partition_keys</span><span class="p">,</span>  <span class="c1"># keep for backwards compatibility</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span>         <span class="n">_filesystemdataset_write</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>         <span class="sa">f</span><span class="s2">&quot;The pyarrow installation is not built with support for &#39;dataset&#39; (</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
-
-<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pyarrow/_dataset.pyx:1,</span> in <span class="ni">init pyarrow._dataset</span><span class="nt">()</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:405,</span> in <span class="ni">parent</span><span class="nt">(self)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+   body_mass_g     sex  year  
+0       3750.0    male  2007  
+1       3800.0  female  2007  
+2       3250.0  female  2007  
+4       3450.0  female  2007  
+5       3650.0    male  2007  
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3250., 3550., 4450., 3750., 3650., 4050., 5300., 3625., 5550.,
+       3950., 3000., 4600., 3950., 3900., 3750., 4300., 4375., 5050.,
+       4600., 3200., 4150., 3550., 3900., 4850., 3600., 3000., 5000.,
+       3800., 5000., 5550., 3150., 4100., 4250., 4500., 4875., 3400.,
+       4050., 5500., 3500., 3975., 3600., 4100., 4450., 5000., 3650.,
+       4200., 4800., 5400., 5000., 4250., 3975., 3250., 4250., 4050.,
+       3200., 3550., 5400., 3350., 3975., 3200., 3975., 3950., 4450.,
+       5050., 3075., 3200., 3550., 4300., 4250.])
 </pre></div>
 </div>
 </div>
