@@ -1,0 +1,7 @@
+jupyter-book
+matplotlib
+numpy
+polars
+hvplot
+scikit-learn
+ghp-import

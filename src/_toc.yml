@@ -1,0 +1,42 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Khang's Journal
+    title: Khang's Journal
+    expand_sections: true
+    chapters:
+      - glob: 1.journal/2024/*
+  - caption: Data Science
+    # title: Data Science
+    # numbered: True
+    chapters:
+    - file: 2.data_science/machine_learning
+      options:
+        numbered: true
+      sections:
+      - glob: 2.data_science/machine_learning/notebooks/*
+    # - file: 2.data_science/delta_lake
+    #   options:
+    #     numbered: true
+    #   sections:
+    #   - glob: 2.data_science/delta_lake/notebooks/*
+  # - caption: Books 
+  #   chapters:
+  #   - file: 3.books/behavioural_science/alpha_brain
+  #     options:
+  #       numbered: true
+  #     sections:
+  #     - glob: 3.books/behavioural_science/alpha_brain/*
+  #   - file: 3.books/design/universal_principles_of_design
+  #     sections:
+  #     - glob: 3.books/design/universal_principles_of_design/*
+  # - caption: Lifestyle
+  #   chapters:
+  #   - file: 4.lifestyle/gym
+  #     options:
+  #       numbered: true
+  #     sections:
+  #     - glob: 4.lifestyle/gym/*

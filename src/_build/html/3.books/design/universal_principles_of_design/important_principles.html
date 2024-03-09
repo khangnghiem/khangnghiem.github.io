@@ -1,0 +1,1387 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Important Principles of Design &#8212; My Journal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3.books/design/universal_principles_of_design/important_principles';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../../_static/KhangNghiem.png" class="logo__image only-light" alt="My Journal - Home"/>
+    <script>document.write(`<img src="../../../_static/KhangNghiem.png" class="logo__image only-dark" alt="My Journal - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    About Khang
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Khang's Journal</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../1.journal/2024/20240201.html">February 2024</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2.data_science/machine_learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2.data_science/machine_learning/notebooks/1.decision_tree.html">1. Decision Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2.data_science/machine_learning/notebooks/2.random_forest.html">2. Random Forest</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F3.books/design/universal_principles_of_design/important_principles.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/3.books/design/universal_principles_of_design/important_principles.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Important Principles of Design</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Important Principles of Design</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abbe-s-law">1. Abbe’s law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">2. Accessibility</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ackoffs-law">3. Ackoff’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aesthetic-usability-effect">4. Aesthetic-Usability Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#affordance">5. Affordance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aposematism">9. Aposematism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attractiveness-bias">14. Attractiveness Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#baby-face-bias">15. Baby-Face Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-dresser">16. Back of the Dresser</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#biophilia-effect">17. Biophilia Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brooks-law">19. Brooks’ Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bus-factor">21. Bus Factor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-reductionism">23. Causal Reductionism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cognitive-dissonance">28. Cognitive Dissonance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">32. Comparison</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#control">38. Control</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creator-blindness">42. Creator Blindness</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#death-spiral">44. Death Spiral</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#depth-of-processing">46. Depth of Processing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#design-by-committee">47. Design by Committee</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#desire-line">48. Desire Line</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dont-eat-the-daisies">51. Don’t Eat the Daisies</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dunning-kruger-effect">53. Dunning-Kruger Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entry-point">54. Entry Point</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-effects">57. Expectation Effects</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#faith-follows-function">62. Faith Follows Function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-creep">63. Feature Creep</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">64. Feedback</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback-loop">65. Feedback Loop</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-ground">67. Figure-Ground</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principles">68. First Principles</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#five-hat-racks">70. Five Hat Racks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibility-tradeoffs">72. Flexibility Tradeoffs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#flow">73. Flow</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#forgiveness">74. Forgiveness</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#form-follows-function">75. Form Follows Function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#framing">76. Framing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gamification">79. Gamification</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#garbage-ingarbage-out">80. Garbage In–Garbage Out</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gates-rule-of-automation">81. Gates’ Rule of Automation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#groupthink">85. Groupthink</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gutenberg-diagram">86. Gutenberg Diagram</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hanlons-razor">88. Hanlon’s Razor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hicks-law">89. Hick’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy-of-needs">90. Hierarchy of Needs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iconic-representation">94. Iconic Representation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#identifiable-victim-effect">95. Identifiable Victim Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iron-triangle">100. Iron Triangle</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kano-model">102. Kano Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knowing-doing-gap">104. Knowing-Doing Gap</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#learnability">105. Learnability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#levels-of-invention">108. Levels of Invention</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#leverage-point">109. Leverage Point</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maintainability">112. Maintainability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maslows-hammer">114. Maslow’s Hammer</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#most-advanced-yet-acceptable-maya">115. Most Advanced Yet Acceptable (MAYA)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#millers-law">117. Miller’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mimicry">118. Mimicry</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#not-invented-here">125. Not Invented Here</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nudge">126. Nudge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paradox-of-great-ideas">131. Paradox of Great Ideas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-end-rule">134. Peak-End Rule</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-vs-preference">136. Performance vs. Preference</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perverse-incentive">138. Perverse Incentive</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phonetic-symbolism">139. Phonetic Symbolism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#play-preferences">141. Play Preferences</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#premature-optimization">143. Premature Optimization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#process-eats-goal">145. Process Eats Goal</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#progressive-disclosure">147. Progressive Disclosure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#progressive-subtraction">148. Progressive Subtraction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#propositional-density">149. Propositional Density</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prospect-refuge">150. Prospect-Refuge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reciprocity">154. Reciprocity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-salient">157. Reverse Salient</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#savanna-preference">163. Savanna Preference</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-fallacy">164. Scaling Fallacy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scarcity">165. Scarcity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shaping">169. Shaping</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#social-proof">172. Social Proof</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#status-quo-bias">174. Status Quo Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stickiness">175. Stickiness</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#storytelling">176. Storytelling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#streetlight-effect">177. Streetlight Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sunk-cost-effect">179. Sunk Cost Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#survivorship-bias">181. Survivorship Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#swiss-cheese-model">182. Swiss Cheese Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#threat-detection">185. Threat Detection</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#user-centered-vs-user-driven-design">190. User-Centered vs. User-Driven Design</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#veblen-effect">191. Veblen Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#weakest-link">198. Weakest Link</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg">199. WYSIWYG</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="important-principles-of-design">
+<h1>Important Principles of Design<a class="headerlink" href="#important-principles-of-design" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="abbe-s-law">
+<h1>1. Abbe’s law<a class="headerlink" href="#abbe-s-law" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Beware of Angular Error, which may spiral out of control</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="accessibility">
+<h1>2. Accessibility<a class="headerlink" href="#accessibility" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Perceptibility — Achieved when everyone can perceive the design, regardless of sensory abilities.</p></li>
+<li><p>Operability — Achieved when everyone can use the design, regardless of physical abilities.</p></li>
+<li><p>Simplicity — Achieved when everyone can easily learn and understand the design, regardless of experience, literacy, or concentration level.</p></li>
+<li><p>Forgiveness — Achieved when designs minimize the occurrence and consequences of errors.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ackoffs-law">
+<h1>3. Ackoff’s Law<a class="headerlink" href="#ackoffs-law" title="Link to this heading">#</a></h1>
+<p>It is better to do the right things wrong than the wrong things right.</p>
+<p>The right things refer to your vision / goals</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aesthetic-usability-effect">
+<h1>4. Aesthetic-Usability Effect<a class="headerlink" href="#aesthetic-usability-effect" title="Link to this heading">#</a></h1>
+<p>Aesthetic things are perceived to be easier to use than ugly things.
+Aesthetic things are often subjectively rated as easier to use, even when no usability advantage can be objectively measured</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="affordance">
+<h1>5. Affordance<a class="headerlink" href="#affordance" title="Link to this heading">#</a></h1>
+<p>The physical characteristics of a thing that influence its function and use.
+When affordances are good, things perform well and are intuitive to use. When affordances are bad, things perform poorly and are hard to use.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aposematism">
+<h1>9. Aposematism<a class="headerlink" href="#aposematism" title="Link to this heading">#</a></h1>
+<p>The use of conspicuous markings to grab attention and signal danger. (e.g. warning sign)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="attractiveness-bias">
+<h1>14. Attractiveness Bias<a class="headerlink" href="#attractiveness-bias" title="Link to this heading">#</a></h1>
+<p>A tendency to view attractive people as intelligent, competent, moral, and sociable.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="baby-face-bias">
+<h1>15. Baby-Face Bias<a class="headerlink" href="#baby-face-bias" title="Link to this heading">#</a></h1>
+<p>A tendency to see things with baby-faced features as having the characteristics of babies.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="back-of-the-dresser">
+<h1>16. Back of the Dresser<a class="headerlink" href="#back-of-the-dresser" title="Link to this heading">#</a></h1>
+<p>All parts of a design, visible and nonvisible, should be held to the same standard of quality. (e.g. Mac internal components)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="biophilia-effect">
+<h1>17. Biophilia Effect<a class="headerlink" href="#biophilia-effect" title="Link to this heading">#</a></h1>
+<p>A state of reduced stress and improved concentration resulting from nature views. (e.g. looking at trees)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="brooks-law">
+<h1>19. Brooks’ Law<a class="headerlink" href="#brooks-law" title="Link to this heading">#</a></h1>
+<p>For certain types of projects, adding people to speed things up inadvertently slows them down.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bus-factor">
+<h1>21. Bus Factor<a class="headerlink" href="#bus-factor" title="Link to this heading">#</a></h1>
+<p>The number of team members who, if lost, would put a project in jeopardy. (avoid bus factor = 1 using automation, cross-training, code reviews, etc.)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="causal-reductionism">
+<h1>23. Causal Reductionism<a class="headerlink" href="#causal-reductionism" title="Link to this heading">#</a></h1>
+<p>A tendency to fixate on one cause when solving problems, ignoring the reality of multiple causes. (Root cause is plural)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cognitive-dissonance">
+<h1>28. Cognitive Dissonance<a class="headerlink" href="#cognitive-dissonance" title="Link to this heading">#</a></h1>
+<p>A state of mental discomfort due to incompatible attitudes, thoughts, and beliefs.
+People relieve cognitive dissonance in one of three ways:</p>
+<ul class="simple">
+<li><p>Reduce the importance of the conflicting thought</p></li>
+<li><p>Add a new thought to counteract it</p></li>
+<li><p>Accept the conflicting thought</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="comparison">
+<h1>32. Comparison<a class="headerlink" href="#comparison" title="Link to this heading">#</a></h1>
+<p>A method of highlighting relationships by depicting information in controlled ways.</p>
+<ul class="simple">
+<li><p>Apples to apples</p></li>
+<li><p>Single context</p></li>
+<li><p>Benchmarks</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="control">
+<h1>38. Control<a class="headerlink" href="#control" title="Link to this heading">#</a></h1>
+<p>The level of user control should be related to the proficiency and experience of the user.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="creator-blindness">
+<h1>42. Creator Blindness<a class="headerlink" href="#creator-blindness" title="Link to this heading">#</a></h1>
+<p>The inability of a creator to see fundamental flaws in their creation.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="death-spiral">
+<h1>44. Death Spiral<a class="headerlink" href="#death-spiral" title="Link to this heading">#</a></h1>
+<p>A phenomenon in which a social organization persists in behaviors that lead to self-destruction.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="depth-of-processing">
+<h1>46. Depth of Processing<a class="headerlink" href="#depth-of-processing" title="Link to this heading">#</a></h1>
+<p>Thinking hard about a thing improves the likelihood that it can be recalled.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="design-by-committee">
+<h1>47. Design by Committee<a class="headerlink" href="#design-by-committee" title="Link to this heading">#</a></h1>
+<p>A design process based on consensus building, group decision-making, and extensive iteration.</p>
+<ol class="arabic simple">
+<li><p>Favor design by dictator when projects are time- or budget-driven, requirements are relatively straightforward, consequences of error are tolerable, and stakeholder buy-in is unimportant. E.g. Startups</p></li>
+<li><p>Favor design by committee when requirements are highly complex, tolerance for risk is low, consequences of error are serious, and stakeholder buy-in is important. E.g. NASA</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="desire-line">
+<h1>48. Desire Line<a class="headerlink" href="#desire-line" title="Link to this heading">#</a></h1>
+<p>Traces of use or wear that indicate preferred methods of interaction.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dont-eat-the-daisies">
+<h1>51. Don’t Eat the Daisies<a class="headerlink" href="#dont-eat-the-daisies" title="Link to this heading">#</a></h1>
+<p>The fallacy that exhaustive requirements and specification documents lead to better design.
+Emphasize essential requirements and specifications, detailing lesser requirements separately.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dunning-kruger-effect">
+<h1>53. Dunning-Kruger Effect<a class="headerlink" href="#dunning-kruger-effect" title="Link to this heading">#</a></h1>
+<p>A tendency for unskilled people to overestimate their competence and performance.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="entry-point">
+<h1>54. Entry Point<a class="headerlink" href="#entry-point" title="Link to this heading">#</a></h1>
+<p>A point of physical or attentional entry that sets the emotional tone for subsequent interactions.</p>
+<ul class="simple">
+<li><p>Minimal barriers</p></li>
+<li><p>Points of prospect</p></li>
+<li><p>Progressive lures</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="expectation-effects">
+<h1>57. Expectation Effects<a class="headerlink" href="#expectation-effects" title="Link to this heading">#</a></h1>
+<p>Changes in perception or behavior resulting from personal expectations or expectations of others.</p>
+<ul class="simple">
+<li><p>Halo effect</p></li>
+<li><p>Hawthorne effect</p></li>
+<li><p>Pygmalion effect</p></li>
+<li><p>Placebo effect</p></li>
+<li><p>Rosenthal effect</p></li>
+<li><p>Demand characteristics</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="faith-follows-function">
+<h1>62. Faith Follows Function<a class="headerlink" href="#faith-follows-function" title="Link to this heading">#</a></h1>
+<p>Ideological and spiritual considerations should be secondary to functional considerations. Function should be prioritized.
+But often the personal biases, beliefs, and values of designers influence their thinking in ways that run counter to function—i.e., function follows their faith. E.g. Feng shui</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="feature-creep">
+<h1>63. Feature Creep<a class="headerlink" href="#feature-creep" title="Link to this heading">#</a></h1>
+<p>A continuous expansion or addition of new product features beyond the original scope.
+Feature creep is one of the most common causes of cost and schedule overruns.
+The key driver is the perception that more is better, and therefore features are continuously added and rarely taken away. But adding features adds complexity, and complexity is expensive.</p>
+<ul class="simple">
+<li><p>Features are easy or convenient to add—this is particularly common in software development.</p></li>
+<li><p>Features accumulate over multiple generations of a product.</p></li>
+<li><p>Features are added to appease internal project stakeholders. This is often due to what’s called the internal-audience problem: Designers or marketers think they know what’s best for the customer, but they discover that customers disagree.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="feedback">
+<h1>64. Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h1>
+<p>Information about status or performance used for confirmation, decision-making, and improvement.
+Note that for targeted feedback to be effective, the recipient must have the time, opportunity, and ability to act on it.2
+Feedback is the foundation for all usability and learning. The rule should be minimum-viable feedback delivered quickly.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="feedback-loop">
+<h1>65. Feedback Loop<a class="headerlink" href="#feedback-loop" title="Link to this heading">#</a></h1>
+<p>A cycle in which output feeds back into a system as input, changing subsequent output.</p>
+<ul class="simple">
+<li><p>Positive feedback loops: Amplify</p></li>
+<li><p>Negative feedback loops: Dampen</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="figure-ground">
+<h1>67. Figure-Ground<a class="headerlink" href="#figure-ground" title="Link to this heading">#</a></h1>
+<p><strong>FOR LOGO DESIGN</strong> The brain automatically makes elements objects of focus or background.</p>
+<ul class="simple">
+<li><p>The figure has a definite shape, whereas the ground is shapeless.</p></li>
+<li><p>The ground continues behind the figure.</p></li>
+<li><p>The figure seems closer with a clear location in space, whereas the ground seems farther away and has no clear location in space.</p></li>
+<li><p>Elements below a horizon line are likely perceived as figures, whereas elements above a horizon line are likely to be perceived as ground.</p></li>
+<li><p>Elements in the lower regions of a design are likely to be perceived as figures, whereas elements in the upper regions are likely to be perceived as ground</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="first-principles">
+<h1>68. First Principles<a class="headerlink" href="#first-principles" title="Link to this heading">#</a></h1>
+<p>Things we know for certain to be true and that are not derived from anything else.
+First principles are irreducible and immutable</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="five-hat-racks">
+<h1>70. Five Hat Racks<a class="headerlink" href="#five-hat-racks" title="Link to this heading">#</a></h1>
+<p>For Sorting and Filtering
+A metaphor representing the five ways information can be organized.</p>
+<ul class="simple">
+<li><p>Category — Organization by similarity or relatedness. E.g. catalog and types of retail merchandise</p></li>
+<li><p>Time — Organization by chronological sequence. E.g. historical timelines, meeting agendas</p></li>
+<li><p>Location — Organization by geographical or spatial reference. E.g. historic sites, emergency exit maps, and travel guides</p></li>
+<li><p>Alphabet — Organization by alphabetical sequence. E.g. dictionaries</p></li>
+<li><p>Continuum — Organization by magnitude (e.g., highest to lowest, best to worst)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="flexibility-tradeoffs">
+<h1>72. Flexibility Tradeoffs<a class="headerlink" href="#flexibility-tradeoffs" title="Link to this heading">#</a></h1>
+<p>As the flexibility of a design increases, the performance of the design decreases.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="flow">
+<h1>73. Flow<a class="headerlink" href="#flow" title="Link to this heading">#</a></h1>
+<p>Just right!
+A state of immersion so intense that awareness of the real world is lost.
+Nine components of flow have been proposed:</p>
+<ol class="arabic simple">
+<li><p>Goals—People can achieve the goal with their abilities and skill set.</p></li>
+<li><p>Concentration—People are able to focus deeply.</p></li>
+<li><p>Loss of self—People lose awareness of themselves and their thoughts.</p></li>
+<li><p>Time—People lose the sense of the passage of time.</p></li>
+<li><p>Feedback—People receive clear and immediate feedback.</p></li>
+<li><p>Balance—People feel a balance between skill level and the challenge.</p></li>
+<li><p>Control—People have a sense control over the activity.</p></li>
+<li><p>Rewarding—People find the activity enjoyable on its own merits.</p></li>
+<li><p>Immersion—People become absorbed and lost in the activity.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="forgiveness">
+<h1>74. Forgiveness<a class="headerlink" href="#forgiveness" title="Link to this heading">#</a></h1>
+<p>Designs should help people avoid errors and protect them from harm when they do occur.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="form-follows-function">
+<h1>75. Form Follows Function<a class="headerlink" href="#form-follows-function" title="Link to this heading">#</a></h1>
+<p>Aesthetic considerations should be secondary to functional considerations.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="framing">
+<h1>76. Framing<a class="headerlink" href="#framing" title="Link to this heading">#</a></h1>
+<p>A method of presenting choices in specific ways to influence decision-making and judgment.
+Positive vs Negative Reinforcement</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="gamification">
+<h1>79. Gamification<a class="headerlink" href="#gamification" title="Link to this heading">#</a></h1>
+<p>Using gaming strategies in nongame contexts to enhance experience and modify behavior.
+The SAPS model purports to list in order the things people most desire:</p>
+<ol class="arabic simple">
+<li><p>Status</p></li>
+<li><p>Access</p></li>
+<li><p>Power</p></li>
+<li><p>Stuff</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="garbage-ingarbage-out">
+<h1>80. Garbage In–Garbage Out<a class="headerlink" href="#garbage-ingarbage-out" title="Link to this heading">#</a></h1>
+<p>The quality of system output is largely dependent on the quality of system input.</p>
+<ol class="arabic simple">
+<li><p>Problems of type - Problems of type are generally caused by a class of errors called mistakes—incorrect actions caused by conscious actions.</p></li>
+<li><p>Problems of quality - Problems of quality are generally caused by a class of errors called slips—incorrect actions caused by unconscious, accidental actions.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="gates-rule-of-automation">
+<h1>81. Gates’ Rule of Automation<a class="headerlink" href="#gates-rule-of-automation" title="Link to this heading">#</a></h1>
+<p>Automation applied to an operation will magnify both its efficiencies and deficiencies.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="groupthink">
+<h1>85. Groupthink<a class="headerlink" href="#groupthink" title="Link to this heading">#</a></h1>
+<p>A decision-making phenomenon that occurs when group harmony is overprioritized.
+Groupthink is a dysfunctional group dynamic that occurs when agreement and conformity are prioritized over critical analysis and debate, often leading to poor decision-making outcomes.
+Proposed symptoms of groupthink include:</p>
+<ol class="arabic simple">
+<li><p>Culture of compliance</p></li>
+<li><p>Self-censorship</p></li>
+<li><p>Mindguards</p></li>
+<li><p>Apparent unanimity</p></li>
+<li><p>Illusion of invulnerability</p></li>
+<li><p>Illusion of morality</p></li>
+<li><p>Outgroup bias</p></li>
+<li><p>Confirmation bias</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="gutenberg-diagram">
+<h1>86. Gutenberg Diagram<a class="headerlink" href="#gutenberg-diagram" title="Link to this heading">#</a></h1>
+<p>A diagram that describes the pattern followed by the eyes when looking at a page of information.
+The tendency to follow this left-right, top-bottom path is attributed to reading gravity - habit formed from reading.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hanlons-razor">
+<h1>88. Hanlon’s Razor<a class="headerlink" href="#hanlons-razor" title="Link to this heading">#</a></h1>
+<p>Never attribute to malice what can be adequately explained by incompetence.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hicks-law">
+<h1>89. Hick’s Law<a class="headerlink" href="#hicks-law" title="Link to this heading">#</a></h1>
+<p>Time to make a decision increases as the number of decision options increases.
+All tasks consist of four basic steps:</p>
+<ol class="arabic simple">
+<li><p>Identify a problem or goal.</p></li>
+<li><p>Assess the available options to solve the problem or achieve the goal.</p></li>
+<li><p>Decide on an option.</p></li>
+<li><p>Implement the option.
+Hick’s law applies to the third step: Decide on an option.
+However, the law does not apply to decisions that involve significant levels of searching, reading, or complex problem solving.
+The law is decreasingly applicable as the complexity of tasks increases.</p></li>
+</ol>
+<p>Menus
+The time to select an item from a simple software menu increases with the number of items.</p>
+<p>Predatory Behavior
+The time for a predator to target prey increases with the number of prey.</p>
+<p>Simple Tasks
+The time to press the button that matches a changing light color increases with the number of colors.</p>
+<p>Test Options
+Hick’s law does not apply to tasks that involve significant levels of reading and problem solving, like taking a test.</p>
+<p>Device Settings
+The time to make simple decisions about adjustments on a device increases with the number of controls.</p>
+<p>Martial Arts
+The time for a martial artist to block a punch increases with the number of known blocking techniques.</p>
+<p>Braking
+The time to press the brakes to avoid hitting an obstacle increases if there is an opportunity to steer around it.</p>
+<p>Road Signs
+The time for a driver to make a turn based on a particular road sign increases with the total number of road signs.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hierarchy-of-needs">
+<h1>90. Hierarchy of Needs<a class="headerlink" href="#hierarchy-of-needs" title="Link to this heading">#</a></h1>
+<p>A hierarchy of user-centered goals that a design must satisfy to achieve optimal success.
+The hierarchy of needs specifies that a design must serve low-level needs (e.g., it must function) before the higher-level needs, such as creativity, can begin to be addressed.
+The five key levels of needs in the hierarchy from lowest to highest are:</p>
+<ol class="arabic simple">
+<li><p>Functionality</p></li>
+<li><p>Reliability</p></li>
+<li><p>Usability</p></li>
+<li><p>Proficiency</p></li>
+<li><p>Creativity</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="iconic-representation">
+<h1>94. Iconic Representation<a class="headerlink" href="#iconic-representation" title="Link to this heading">#</a></h1>
+<p>The use of pictorial images to improve recognition and recall.</p>
+<p><img alt="alt text" src="../../../_images/principles_of_design.png" /></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="identifiable-victim-effect">
+<h1>95. Identifiable Victim Effect<a class="headerlink" href="#identifiable-victim-effect" title="Link to this heading">#</a></h1>
+<p>A single, identifiable victim elicits more helping behaviors than a group of anonymous victims.</p>
+<ol class="arabic simple">
+<li><p>Number of victims</p></li>
+<li><p>Familiarity of victims</p></li>
+<li><p>Impact of helping</p></li>
+<li><p>Authenticity of the victim and their plights</p></li>
+</ol>
+<p>A single death is a tragedy; a million deaths is a statistic.
+— Joseph Stalin</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="iron-triangle">
+<h1>100. Iron Triangle<a class="headerlink" href="#iron-triangle" title="Link to this heading">#</a></h1>
+<p>A model that proposes three constraints for all projects: time, cost, and scope.
+The iron triangle is commonly introduced by the expression, You can have it good, fast, or cheap; pick two.
+In most real-world cases, however, project owners can reliably preserve just one constraint, not two.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="kano-model">
+<h1>102. Kano Model<a class="headerlink" href="#kano-model" title="Link to this heading">#</a></h1>
+<p>A model for understanding customer needs and then prioritizing design features accordingly.</p>
+<ol class="arabic simple">
+<li><p>Delighter features—Product features that create surprise and delight. Customers are typically unaware of delighters or the problems they solve until they are experienced, after which they can’t imagine life without them. This also means that designers can’t identify delighters by asking or surveying users because customers have no frame of reference for the features.</p></li>
+<li><p>Performance features—Product features that are known and sought out by customers. Customers typically research and compare products based on performance features to make their buying decisions. Accordingly, performance features can be identified through focus groups and surveys. Some competitive baseline level of performance features must be present for a product to be successful.</p></li>
+<li><p>Threshold features—Product features that are assumed to be present and to perform well. Customers typically do not consider threshold features, as they are considered too basic and fundamental to merit attention. Products get no credit for having threshold features that work well, but they get severely punished for not having them.</p></li>
+</ol>
+<p>Remember, customers can’t tell you what delighters are and won’t tell you what threshold features are
+Ensure that products have at least one delighter feature (however unrefined), a competitive set of performance features (fairly refined), and a complete set of threshold features (very refined).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="knowing-doing-gap">
+<h1>104. Knowing-Doing Gap<a class="headerlink" href="#knowing-doing-gap" title="Link to this heading">#</a></h1>
+<p>The divide that exists between knowing how to do something and actually doing it.</p>
+<p>Causes:
+(1) talking is mistaken for doing
+(2) resistance to change
+(3) fear of failure
+(4) measuring the wrong things
+(5) internal competition</p>
+<ol class="arabic simple">
+<li><p>Lead with why—Explain why people are being asked to do something before explaining how to do it.</p></li>
+<li><p>Be intentional about execution—Classroom instruction and abstract presentations tend not to transfer to the field.</p></li>
+<li><p>Forgive errors for action—Create a bias for action that is tolerant of mistakes and failure.</p></li>
+<li><p>Eliminate internal competition—Avoid teams competing with one another, especially when compensation or incentives are involved. Internal competition creates barriers to collaboration and invariably renders customer interests secondary to team interests.</p></li>
+<li><p>Measure what matters—Focus on measuring the few things that matter most. In the age of big data, it is tempting to engage in kitchen-sink analytics; but this risks distracting from what’s important.</p></li>
+</ol>
+<p>Walk the talk!</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="learnability">
+<h1>105. Learnability<a class="headerlink" href="#learnability" title="Link to this heading">#</a></h1>
+<p>The ease with which a new thing can be understood and productively used.</p>
+<p>The four pillars of learnability are:</p>
+<ol class="arabic simple">
+<li><p>Consistency</p></li>
+<li><p>Discoverability</p></li>
+<li><p>Responsiveness</p></li>
+<li><p>Simplicity</p></li>
+</ol>
+<p>Learnability does not mean leading with tutorials or instruction.
+Just the opposite: If a system is learnable, instructions and tutorials aren’t needed.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="levels-of-invention">
+<h1>108. Levels of Invention<a class="headerlink" href="#levels-of-invention" title="Link to this heading">#</a></h1>
+<p>A model that classifies inventions based on complexity, nonobviousness, and impact.</p>
+<p>Level 1: Minor Improvements
+Solves a simple problem by refining existing designs, leveraging common knowledge and common sense within a domain. These improvements are generally not sufficiently novel or nonobvious to be considered inventions.
+Requires 1 to 10 iterations.2</p>
+<p>Level 2: Major Improvement
+Solves a complex problem by improving upon one key aspect of that problem, leveraging expertise and best practices within a domain. Designs at this level and above are considered sufficiently novel and nonobvious to be inventions.
+Requires 10 to 100 iterations.</p>
+<p>Level 3: Major Innovation
+Solves a complex problem by conceptualizing it in a new way, leveraging knowledge and best practices from other domains.
+Requires multiple level 2 inventions to be in place and 100 to 1,000 iterations.</p>
+<p>Level 4: Significant Innovation
+Solves a newly discovered problem, requiring a design approach that leverages new science and technology.
+Requires multiple level 3 inventions to be in place and 1,000 to 100,000 iterations.3</p>
+<p>Level 5: Revolutionary Breakthrough
+Solves a newly discovered problem of great significance, requiring an approach that leverages a new scientific breakthrough.
+Requires multiple level 4 inventions to be in place and 100,000+ iterations.4</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="leverage-point">
+<h1>109. Leverage Point<a class="headerlink" href="#leverage-point" title="Link to this heading">#</a></h1>
+<p>A place within a system where small changes produce big effects.
+The concept is commonly known by metaphors such as silver bullets, unicorns, miracle cures,</p>
+<ol class="arabic simple">
+<li><p>Mindsets</p></li>
+<li><p>Goals</p></li>
+<li><p>Strategy</p></li>
+<li><p>Structure</p></li>
+<li><p>Information</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="maintainability">
+<h1>112. Maintainability<a class="headerlink" href="#maintainability" title="Link to this heading">#</a></h1>
+<p>The ease with which a thing can be accessed, inspected, repaired, and serviced.</p>
+<ol class="arabic simple">
+<li><p>Accessibility</p></li>
+<li><p>Comprehensibility</p></li>
+<li><p>Interchangeability</p></li>
+<li><p>Modularity</p></li>
+<li><p>Visibility</p></li>
+</ol>
+<p>Prioritize maintainability from the beginning of the design process. Don’t let it be an afterthought. Keep humans in mind as the maintainers.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="maslows-hammer">
+<h1>114. Maslow’s Hammer<a class="headerlink" href="#maslows-hammer" title="Link to this heading">#</a></h1>
+<p>The tendency to approach problems based on the tools and expertise at hand.
+“If the only tool you have is a hammer, [it is tempting] to treat everything as if it were a nail”
+functional fixedness, which limits a person’s ability to “think outside the tool”</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="most-advanced-yet-acceptable-maya">
+<h1>115. Most Advanced Yet Acceptable (MAYA)<a class="headerlink" href="#most-advanced-yet-acceptable-maya" title="Link to this heading">#</a></h1>
+<p>A strategy for determining the most commercially viable aesthetic for a design.
+a balancing act between two variables: typicality and novelty</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="millers-law">
+<h1>117. Miller’s Law<a class="headerlink" href="#millers-law" title="Link to this heading">#</a></h1>
+<p>The number of objects an average person can hold in working memory is 7±2.
+More recent studies put the number of things one can remember at 4±1</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mimicry">
+<h1>118. Mimicry<a class="headerlink" href="#mimicry" title="Link to this heading">#</a></h1>
+<p>Copying properties from familiar things in order to realize benefits of those properties.</p>
+<ol class="arabic simple">
+<li><p>Surface mimicry</p></li>
+<li><p>Behavioral mimicry</p></li>
+<li><p>Functional mimicry - Should be performed with caution</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="not-invented-here">
+<h1>125. Not Invented Here<a class="headerlink" href="#not-invented-here" title="Link to this heading">#</a></h1>
+<p>A tendency to oppose ideas and innovations that originate outside of your social group.</p>
+<p>Four social dynamics underlie NIH:2</p>
+<ol class="arabic simple">
+<li><p>Belief that internal capabilities are superior to external capabilities</p></li>
+<li><p>Fear of losing control</p></li>
+<li><p>Desire for credit and status</p></li>
+<li><p>Significant emotional and financial investment in internal initiatives</p></li>
+</ol>
+<p>The best way to address NIH is through prevention.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="nudge">
+<h1>126. Nudge<a class="headerlink" href="#nudge" title="Link to this heading">#</a></h1>
+<p>A method of influencing behavior without restricting options or changing incentives.</p>
+<ol class="arabic simple">
+<li><p>Smart defaults - do the least harm and greatest good</p></li>
+<li><p>Clear feedback - reinforce desired actions / punish undesired behaviors</p></li>
+<li><p>Aligned incentives</p></li>
+<li><p>Structured choices</p></li>
+<li><p>Visible goal</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="paradox-of-great-ideas">
+<h1>131. Paradox of Great Ideas<a class="headerlink" href="#paradox-of-great-ideas" title="Link to this heading">#</a></h1>
+<p>Great ideas are indistinguishable from crazy ideas when first introduced.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="peak-end-rule">
+<h1>134. Peak-End Rule<a class="headerlink" href="#peak-end-rule" title="Link to this heading">#</a></h1>
+<p>People remember and judge an experience based on its most intense moment and its end.
+Designers should therefore prioritize the beginnings, peaks, and ends of experiences in their design, disproportionately investing in them to ensure people will remember the overall experience more fondly.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="performance-vs-preference">
+<h1>136. Performance vs. Preference<a class="headerlink" href="#performance-vs-preference" title="Link to this heading">#</a></h1>
+<p>Increasing performance does not necessarily increase desirability.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="perverse-incentive">
+<h1>138. Perverse Incentive<a class="headerlink" href="#perverse-incentive" title="Link to this heading">#</a></h1>
+<p>An incentive that unintentionally worsens the problem it seeks to solve.</p>
+<ol class="arabic simple">
+<li><p>Boomerang effects - Backfire</p></li>
+<li><p>Cheating - cheat to get incentives</p></li>
+<li><p>Collateral damage</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="phonetic-symbolism">
+<h1>139. Phonetic Symbolism<a class="headerlink" href="#phonetic-symbolism" title="Link to this heading">#</a></h1>
+<p>The meaning conveyed by the sounds of words.
+s, f, v, z, e (bee), i (sit), a (hate), e (best) — are associated with smallness, femininity, and passivity
+p, k, t, b, g, d, k, o (dome), o (cot), a (can), u (food), u (put), u (luck), a (father) - are associated with largeness, masculinity, and aggression.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="play-preferences">
+<h1>141. Play Preferences<a class="headerlink" href="#play-preferences" title="Link to this heading">#</a></h1>
+<p>A tendency for male children and female children to like different kinds of play.
+Male children tend to engage in play activities that emulate hunting-related behaviors, whereas female children tend to engage in play activities that emulate nurturing-related behaviors.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="premature-optimization">
+<h1>143. Premature Optimization<a class="headerlink" href="#premature-optimization" title="Link to this heading">#</a></h1>
+<p>Making elements of a design efficient before they are recognized as important or even needed.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="process-eats-goal">
+<h1>145. Process Eats Goal<a class="headerlink" href="#process-eats-goal" title="Link to this heading">#</a></h1>
+<p>A situation in which people follow a process that undermines the greater goal.</p>
+<p>Causes:</p>
+<ol class="arabic simple">
+<li><p>Inflexible, rule-based cultures</p></li>
+<li><p>Process focus versus goal focus</p></li>
+<li><p>Misaligned incentives—Incentives that improve process</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="progressive-disclosure">
+<h1>147. Progressive Disclosure<a class="headerlink" href="#progressive-disclosure" title="Link to this heading">#</a></h1>
+<p>A method of managing complexity in which only necessary or requested information is displayed.
+Progressive disclosure involves separating information into multiple layers and only presenting layers that are necessary or relevant.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="progressive-subtraction">
+<h1>148. Progressive Subtraction<a class="headerlink" href="#progressive-subtraction" title="Link to this heading">#</a></h1>
+<p>Reducing the number of perceptible elements in a design over time.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="propositional-density">
+<h1>149. Propositional Density<a class="headerlink" href="#propositional-density" title="Link to this heading">#</a></h1>
+<p>The number of independent meanings conveyed by a design.</p>
+<ol class="arabic simple">
+<li><p>Surface propositions</p></li>
+<li><p>Deep propositions</p></li>
+</ol>
+<p>PD &gt; 1 are more interesting and engaging</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prospect-refuge">
+<h1>150. Prospect-Refuge<a class="headerlink" href="#prospect-refuge" title="Link to this heading">#</a></h1>
+<p>A preference for environments where people can see without being seen.
+The prospect-refuge principle suggests that people prefer:</p>
+<ol class="arabic simple">
+<li><p>The edges, rather than the middles of spaces</p></li>
+<li><p>Spaces with ceilings or covers overhead</p></li>
+<li><p>Spaces with few access points (protected at the back or side)</p></li>
+<li><p>Spaces that provide unobstructed views from multiple vantage points</p></li>
+<li><p>Spaces that provide a sense of safety and concealment</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="reciprocity">
+<h1>154. Reciprocity<a class="headerlink" href="#reciprocity" title="Link to this heading">#</a></h1>
+<p>The tendency for people to give back to those who have given to them.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="reverse-salient">
+<h1>157. Reverse Salient<a class="headerlink" href="#reverse-salient" title="Link to this heading">#</a></h1>
+<p>An element that limits the overall performance of the system of which it is part.
+A reverse salient is a metaphor that borrows from military parlance, referring to a section of an advancing military force that lags behind and impedes the rest of the force from achieving its objective.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="savanna-preference">
+<h1>163. Savanna Preference<a class="headerlink" href="#savanna-preference" title="Link to this heading">#</a></h1>
+<p>A preference for savanna-like environments over other types of environments.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="scaling-fallacy">
+<h1>164. Scaling Fallacy<a class="headerlink" href="#scaling-fallacy" title="Link to this heading">#</a></h1>
+<p>The assumption that designs that work at one scale will work at smaller or larger scales.
+There are two basic kinds of scaling assumptions to avoid</p>
+<ol class="arabic simple">
+<li><p>Load Assumptions</p></li>
+<li><p>Interaction Assumptions</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="scarcity">
+<h1>165. Scarcity<a class="headerlink" href="#scarcity" title="Link to this heading">#</a></h1>
+<p>Things become more desirable when they are in short supply or occur infrequently.</p>
+<p>Five tactics are commonly employed to apply the principle of scarcity:</p>
+<ol class="arabic simple">
+<li><p>Exclusive information</p></li>
+<li><p>Limited access</p></li>
+<li><p>Limited time</p></li>
+<li><p>Limited number</p></li>
+<li><p>Suddenness</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="shaping">
+<h1>169. Shaping<a class="headerlink" href="#shaping" title="Link to this heading">#</a></h1>
+<p>Training a target behavior by reinforcing successive approximations of that behavior.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="social-proof">
+<h1>172. Social Proof<a class="headerlink" href="#social-proof" title="Link to this heading">#</a></h1>
+<p>When people don’t know how to act, think, or feel, they tend to copy others.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="status-quo-bias">
+<h1>174. Status Quo Bias<a class="headerlink" href="#status-quo-bias" title="Link to this heading">#</a></h1>
+<p>A preference for things as they are, even when a change would improve things.
+The status quo bias refers to a preference for avoiding change and maintaining the current situation.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="stickiness">
+<h1>175. Stickiness<a class="headerlink" href="#stickiness" title="Link to this heading">#</a></h1>
+<p>Properties of information that increase recognition, recall, and voluntary sharing.
+Stickiness refers to the ability of certain ideas to become lodged in the cultural consciousness.</p>
+<ol class="arabic simple">
+<li><p>Simplicity</p></li>
+<li><p>Surprise</p></li>
+<li><p>Concreteness</p></li>
+<li><p>Credibility</p></li>
+<li><p>Emotion</p></li>
+<li><p>Story</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="storytelling">
+<h1>176. Storytelling<a class="headerlink" href="#storytelling" title="Link to this heading">#</a></h1>
+<p>Evoking imagery, emotions, and understanding through the presentation of events.</p>
+<ol class="arabic simple">
+<li><p>Setting</p></li>
+<li><p>Characters</p></li>
+<li><p>Plot</p></li>
+<li><p>Invisibility</p></li>
+<li><p>Mood—Music</p></li>
+<li><p>Movement</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="streetlight-effect">
+<h1>177. Streetlight Effect<a class="headerlink" href="#streetlight-effect" title="Link to this heading">#</a></h1>
+<p>A bias to search for things where it is easiest.
+“‘Not everything that can be counted counts, and not everything that counts can be counted”.
+What is counted may simply be due to convenience, and what is not counted may simply be due to inconvenience.
+Beware of The path of least resistance</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sunk-cost-effect">
+<h1>179. Sunk Cost Effect<a class="headerlink" href="#sunk-cost-effect" title="Link to this heading">#</a></h1>
+<p>The tendency to keep investing in an endeavor because of past investments in that endeavor.
+People are susceptible to the sunk cost effect because they are motivated to believe they made competent decisions, because they fear losses more than they desire gains, and because they do not want to feel or appear wasteful.
+Recognizing the sunk cost effect is the first step to managing it. In decisionmaking contexts, focus on current cost-benefits only.
+Set clear exit criteria from the beginning to disrupt the effect and establish when investments should stop. Beware the words, “We have too much invested to quit”.</p>
+<p>Don’t cling to a mistake just because you spent a lot of time making it.
+— Aubrey de Grey</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="survivorship-bias">
+<h1>181. Survivorship Bias<a class="headerlink" href="#survivorship-bias" title="Link to this heading">#</a></h1>
+<p>The tendency to overemphasize things that survive a selection process.
+The survivorship bias is a type of selection bias that occurs when conclusions are drawn based on a group that survived some selection process, ignoring the group that didn’t survive</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="swiss-cheese-model">
+<h1>182. Swiss Cheese Model<a class="headerlink" href="#swiss-cheese-model" title="Link to this heading">#</a></h1>
+<p>A model describing how risks combine to cause accidents and other bad outcomes.
+The Swiss cheese model is a risk management framework based on the metaphor of Swiss cheese slices stacked next to one another. Each slice of cheese represents a layer of defense against an undesirable outcome, and the holes in the slices represent weaknesses or gaps in those defenses.</p>
+<ul class="simple">
+<li><p>Active failures—Unsafe acts committed by people.</p></li>
+<li><p>Latent failures—Poorly designed elements in procedures, systems, buildings, etc. that lend themselves to errors.</p></li>
+</ul>
+<p>Bad outcomes result when the latent-failure holes and active-failure holes line up across multiple slices, allowing undesirable things to get through.
+<img alt="alt text" src="../../../_images/principles_of_design-1.png" /></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="threat-detection">
+<h1>185. Threat Detection<a class="headerlink" href="#threat-detection" title="Link to this heading">#</a></h1>
+<p>Threatening things are detected more efficiently than nonthreatening things.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="user-centered-vs-user-driven-design">
+<h1>190. User-Centered vs. User-Driven Design<a class="headerlink" href="#user-centered-vs-user-driven-design" title="Link to this heading">#</a></h1>
+<p>A focus on understanding and meeting user needs versus simply implementing user requests.
+Designers should listen to everyone but trust no one; record how people say they act, but then observe what they actually do.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="veblen-effect">
+<h1>191. Veblen Effect<a class="headerlink" href="#veblen-effect" title="Link to this heading">#</a></h1>
+<p>A tendency to find a product more desirable because it has a high price.</p>
+<p>The Veblen effect is potentially applicable when a good or service is:</p>
+<ol class="arabic simple">
+<li><p>Plainly visible to others</p></li>
+<li><p>Strongly associated with status or wealth</p></li>
+<li><p>Distinguishable from competitors and knockoffs</p></li>
+<li><p>Priced high relative to competitors</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="weakest-link">
+<h1>198. Weakest Link<a class="headerlink" href="#weakest-link" title="Link to this heading">#</a></h1>
+<p>An element designed to fail in order to protect more important elements from harm.</p>
+<ol class="arabic simple">
+<li><p>Fail and passively minimize damage—For example, electrical circuits are protected by fuses, which are designed to fail so that a power surge doesn’t damage the circuit. The fuse is the weakest link in the system but, in failing, passively protects the system.</p></li>
+<li><p>Fail and activate additional systems that minimize damage—For example, automatic sprinkler systems in a building are typically activated by components that fail (e.g., liquid in a glass cell that expands to break the glass when heated), which then activate the release of the water to extinguish a fire.</p></li>
+</ol>
+<p>Applying the weakest link principle involves several steps:</p>
+<ol class="arabic simple">
+<li><p>Identify a failure condition.</p></li>
+<li><p>Identify or define the weakest link in the system for that failure condition.</p></li>
+<li><p>Further weaken the weakest link and strengthen the other links as necessary to address the failure condition.</p></li>
+<li><p>Ensure that the weakest link will only fail under the appropriate, predefined failure conditions.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="wysiwyg">
+<h1>199. WYSIWYG<a class="headerlink" href="#wysiwyg" title="Link to this heading">#</a></h1>
+<p>What a person sees in a design context should be what they get in a delivery context.
+The principle applies to any environment in which a design is translated from one context or medium to another</p>
+<ol class="arabic simple">
+<li><p>Real-time reflection</p></li>
+<li><p>Point-in-time previews (Preview)</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./3.books/design/universal_principles_of_design"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Important Principles of Design</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abbe-s-law">1. Abbe’s law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">2. Accessibility</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ackoffs-law">3. Ackoff’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aesthetic-usability-effect">4. Aesthetic-Usability Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#affordance">5. Affordance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aposematism">9. Aposematism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attractiveness-bias">14. Attractiveness Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#baby-face-bias">15. Baby-Face Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-dresser">16. Back of the Dresser</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#biophilia-effect">17. Biophilia Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brooks-law">19. Brooks’ Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bus-factor">21. Bus Factor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-reductionism">23. Causal Reductionism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cognitive-dissonance">28. Cognitive Dissonance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">32. Comparison</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#control">38. Control</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creator-blindness">42. Creator Blindness</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#death-spiral">44. Death Spiral</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#depth-of-processing">46. Depth of Processing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#design-by-committee">47. Design by Committee</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#desire-line">48. Desire Line</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dont-eat-the-daisies">51. Don’t Eat the Daisies</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dunning-kruger-effect">53. Dunning-Kruger Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entry-point">54. Entry Point</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-effects">57. Expectation Effects</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#faith-follows-function">62. Faith Follows Function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-creep">63. Feature Creep</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">64. Feedback</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback-loop">65. Feedback Loop</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-ground">67. Figure-Ground</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principles">68. First Principles</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#five-hat-racks">70. Five Hat Racks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibility-tradeoffs">72. Flexibility Tradeoffs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#flow">73. Flow</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#forgiveness">74. Forgiveness</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#form-follows-function">75. Form Follows Function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#framing">76. Framing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gamification">79. Gamification</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#garbage-ingarbage-out">80. Garbage In–Garbage Out</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gates-rule-of-automation">81. Gates’ Rule of Automation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#groupthink">85. Groupthink</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gutenberg-diagram">86. Gutenberg Diagram</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hanlons-razor">88. Hanlon’s Razor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hicks-law">89. Hick’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy-of-needs">90. Hierarchy of Needs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iconic-representation">94. Iconic Representation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#identifiable-victim-effect">95. Identifiable Victim Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iron-triangle">100. Iron Triangle</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kano-model">102. Kano Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knowing-doing-gap">104. Knowing-Doing Gap</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#learnability">105. Learnability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#levels-of-invention">108. Levels of Invention</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#leverage-point">109. Leverage Point</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maintainability">112. Maintainability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maslows-hammer">114. Maslow’s Hammer</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#most-advanced-yet-acceptable-maya">115. Most Advanced Yet Acceptable (MAYA)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#millers-law">117. Miller’s Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mimicry">118. Mimicry</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#not-invented-here">125. Not Invented Here</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nudge">126. Nudge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paradox-of-great-ideas">131. Paradox of Great Ideas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-end-rule">134. Peak-End Rule</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-vs-preference">136. Performance vs. Preference</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perverse-incentive">138. Perverse Incentive</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phonetic-symbolism">139. Phonetic Symbolism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#play-preferences">141. Play Preferences</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#premature-optimization">143. Premature Optimization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#process-eats-goal">145. Process Eats Goal</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#progressive-disclosure">147. Progressive Disclosure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#progressive-subtraction">148. Progressive Subtraction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#propositional-density">149. Propositional Density</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prospect-refuge">150. Prospect-Refuge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reciprocity">154. Reciprocity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-salient">157. Reverse Salient</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#savanna-preference">163. Savanna Preference</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-fallacy">164. Scaling Fallacy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scarcity">165. Scarcity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shaping">169. Shaping</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#social-proof">172. Social Proof</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#status-quo-bias">174. Status Quo Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stickiness">175. Stickiness</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#storytelling">176. Storytelling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#streetlight-effect">177. Streetlight Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sunk-cost-effect">179. Sunk Cost Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#survivorship-bias">181. Survivorship Bias</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#swiss-cheese-model">182. Swiss Cheese Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#threat-detection">185. Threat Detection</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#user-centered-vs-user-driven-design">190. User-Centered vs. User-Driven Design</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#veblen-effect">191. Veblen Effect</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#weakest-link">198. Weakest Link</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg">199. WYSIWYG</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Khang Nghiem
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
