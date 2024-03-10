@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Linear Regression &#8212; My Journal</title>
+    <title>1. 1. Why Linear Regression? &#8212; My Journal</title>
   
   
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/1.linear_regression';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2. Decision Tree" href="11.decision_tree.html" />
+    <link rel="next" title="3. Decision Tree" href="11.decision_tree.html" />
     <link rel="prev" title="Linear Regression" href="../linear_regression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,9 +183,10 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_regression.html">Linear Regression</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1. Linear Regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="11.decision_tree.html">2. Decision Tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12.random_forest.html">3. Random Forest</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1. 1. Why Linear Regression?</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="11.decision_tree.html">3. Decision Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.random_forest.html">4. Random Forest</a></li>
 </ul>
 </li>
 </ul>
@@ -373,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Linear Regression</h1>
+    <h1>1. Why Linear Regression?</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,10 +384,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">1.1. Linear Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">1.2. Multivariate Linear Regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">1.3. Linear Regression Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. 1. Why Linear Regression?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-studies-gates-foundation">1.1. 1.1. Case Studies - Gates Foundation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#context">1.1.1. 1.1.1 Context</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">1.1.2. 1.1.2 Data Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-flaws">1.1.3. 1.1.3 The Flaws</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-learned">1.1.4. 1.1.5 Lesson Learned</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">2. 2. Linear Regression</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">2.1. 2.1 Linear Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">2.2. 2.2 Multivariate Linear Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">2.3. 2.3 Linear Regression Algorithm</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -397,34 +412,51 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="linear-regression">
-<h1><span class="section-number">1. </span>Linear Regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="why-linear-regression">
+<h1><span class="section-number">1. </span>1. Why Linear Regression?<a class="headerlink" href="#why-linear-regression" title="Link to this heading">#</a></h1>
+<section id="case-studies-gates-foundation">
+<h2><span class="section-number">1.1. </span>1.1. Case Studies - Gates Foundation<a class="headerlink" href="#case-studies-gates-foundation" title="Link to this heading">#</a></h2>
+<section id="context">
+<h3><span class="section-number">1.1.1. </span>1.1.1 Context<a class="headerlink" href="#context" title="Link to this heading">#</a></h3>
+<p>In the late 1990s, the argument that smaller schools produced better results was gaining steam and powerful adherents. Research, such as that based on test results from the Pennsylvania System of School Assessments, had made a compelling argument in favor of smaller schools.</p>
+</section>
+<section id="data-analysis">
+<h3><span class="section-number">1.1.2. </span>1.1.2 Data Analysis<a class="headerlink" href="#data-analysis" title="Link to this heading">#</a></h3>
+<p>They’d gathered scores from 3rd‐, 5th‐, 8th‐, and 11th‐grade math and reading tests, plus writing scores for 6th, 9th, and 11th grade. In analyzing the data provided by 1662 separate schools, they found that of the 50 top‐scoring schools (the top 3%), 6 of them were among the 50 smallest (the smallest 3%). If the size of the school were unrelated to performance, the smallest schools should have represented just 3% of the top 50, but according to the data they actually represented 12% (6 out of 50). That’s an overrepresentation by a factor of four!</p>
+<p>The Gates Foundation was sold. They began pouring money into programs designed to support small schools, nationwide. By 2001, they provided roughly $1.7 billion in grants to education projects and were quickly joined by the upper echelon of not‐for‐profits</p>
+</section>
+<section id="the-flaws">
+<h3><span class="section-number">1.1.3. </span>1.1.3 The Flaws<a class="headerlink" href="#the-flaws" title="Link to this heading">#</a></h3>
+<p>Then, in 2005, the Gates Foundation made a stunning announcement. They were moving away from converting large schools into smaller ones. They decided that improving classroom instruction was more important to improving schools rather than breaking down the size. What led them to stop after leading the charge seemingly midcourse? Turns out their initial analysis was severely flawed, and both it and the follow‐up data made a very strong case that not only were smaller schools not better, they may actually be worse.</p>
+</section>
+<section id="lesson-learned">
+<h3><span class="section-number">1.1.4. </span>1.1.5 Lesson Learned<a class="headerlink" href="#lesson-learned" title="Link to this heading">#</a></h3>
+<p>Among the 50 worst‐performing schools, you will find that 9 of them were among the 50 smallest schools. In others words, there was an overrepresentation by a factor of 6! Far bigger even than what they found on the positive side. Truth is, drawing conclusions based solely on that information would have been just as flawed as the other way around.</p>
+<p>All it proved is that smaller samples generate data with greater variance. When a regression was done of all the data it showed no relationship between results and school size. However, when applied to those of high school students only, the regression line showed a significant positive slope. In other words, the larger the high school the better the scores.</p>
+<p>–&gt; All this wouldn’t have happened if the regression line was drawn across all data in the beginning.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="linear-regression">
+<h1><span class="section-number">2. </span>2. Linear Regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h1>
 <section id="linear-equation">
-<h2><span class="section-number">1.1. </span>Linear Equation<a class="headerlink" href="#linear-equation" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.1. </span>2.1 Linear Equation<a class="headerlink" href="#linear-equation" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Linear Equation: $<span class="math notranslate nohighlight">\(y = m(x) + b + (error)\)</span>$
-b: bias
-m: weight</p></li>
+b: bias, m: weight</p></li>
 </ul>
 </section>
 <section id="multivariate-linear-regression">
-<h2><span class="section-number">1.2. </span>Multivariate Linear Regression<a class="headerlink" href="#multivariate-linear-regression" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2. </span>2.2 Multivariate Linear Regression<a class="headerlink" href="#multivariate-linear-regression" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Multivariate Linear Regression: $<span class="math notranslate nohighlight">\(y = a_1(x_1) + a_2(x_2) + ... + a_n(x_n) + b + (error)\)</span>$</p></li>
 </ul>
 </section>
 <section id="linear-regression-algorithm">
-<h2><span class="section-number">1.3. </span>Linear Regression Algorithm<a class="headerlink" href="#linear-regression-algorithm" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>2.3 Linear Regression Algorithm<a class="headerlink" href="#linear-regression-algorithm" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Linear Regression algorithm: a repeating step in which we move a line closer to a data point until the regression line is closer to all the data points</p></li>
+<li><p>Linear Regression Algorithm: a repeating step in which we move a line closer to a data point until the regression line is closer to all the data points</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -472,7 +504,7 @@ m: weight</p></li>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Decision Tree</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Decision Tree</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -492,10 +524,24 @@ m: weight</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">1.1. Linear Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">1.2. Multivariate Linear Regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">1.3. Linear Regression Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. 1. Why Linear Regression?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-studies-gates-foundation">1.1. 1.1. Case Studies - Gates Foundation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#context">1.1.1. 1.1.1 Context</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">1.1.2. 1.1.2 Data Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-flaws">1.1.3. 1.1.3 The Flaws</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-learned">1.1.4. 1.1.5 Lesson Learned</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">2. 2. Linear Regression</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">2.1. 2.1 Linear Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">2.2. 2.2 Multivariate Linear Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">2.3. 2.3 Linear Regression Algorithm</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
