@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Decision Tree &#8212; My Journal</title>
+    <title>Decision Tree &#8212; My Journal</title>
   
   
   
@@ -57,11 +57,9 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/11.decision_tree';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/training_process/notebooks/11.decision_tree';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3. Random Forest" href="12.random_forest.html" />
-    <link rel="prev" title="1. Why Linear Regression?" href="1.linear_regression_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,6 +121,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,13 +179,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../1.journal/2024/20240201.html">February 2024</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_regression.html">Linear Regression</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1.linear_regression_intro.html">1. Why Linear Regression?</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2. Decision Tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12.random_forest.html">3. Random Forest</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">4. Thoughts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.linear_regression_algorithm.html">5. Linear Regression</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../linear_regression/linear_regression.html">Linear Regression</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../linear_regression/notebooks/1.linear_regression_intro.html">1. Why Linear Regression?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../linear_regression/notebooks/2.thoughts.html">2. Thoughts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../linear_regression/notebooks/3.linear_regression_algorithm.html">3. Linear Regression</a></li>
 </ul>
 </li>
 </ul>
@@ -259,7 +257,7 @@
       
       
       
-      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/linear_regression/notebooks/11.decision_tree.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/training_process/notebooks/11.decision_tree.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +287,7 @@
       
       
       
-      <li><a href="../../../_sources/2.machine_learning/linear_regression/notebooks/11.decision_tree.ipynb" target="_blank"
+      <li><a href="../../../_sources/2.machine_learning/training_process/notebooks/11.decision_tree.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +381,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palmer-s-penguins-dataset">2.1. Palmer’s Penguins Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palmer-s-penguins-dataset">Palmer’s Penguins Dataset</a></li>
 </ul>
             </nav>
         </div>
@@ -396,9 +394,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="decision-tree">
-<h1><span class="section-number">2. </span>Decision Tree<a class="headerlink" href="#decision-tree" title="Link to this heading">#</a></h1>
+<h1>Decision Tree<a class="headerlink" href="#decision-tree" title="Link to this heading">#</a></h1>
 <section id="palmer-s-penguins-dataset">
-<h2><span class="section-number">2.1. </span>Palmer’s Penguins Dataset<a class="headerlink" href="#palmer-s-penguins-dataset" title="Link to this heading">#</a></h2>
+<h2>Palmer’s Penguins Dataset<a class="headerlink" href="#palmer-s-penguins-dataset" title="Link to this heading">#</a></h2>
 <p>Predicting body mass of penguins based on numerous factors</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -443,29 +441,80 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  species     island  bill_length_mm  bill_depth_mm  flipper_length_mm  \
-0  Adelie  Torgersen            39.1           18.7              181.0   
-1  Adelie  Torgersen            39.5           17.4              186.0   
-2  Adelie  Torgersen            40.3           18.0              195.0   
-4  Adelie  Torgersen            36.7           19.3              193.0   
-5  Adelie  Torgersen            39.3           20.6              190.0   
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s2">&quot;../data/penguins.parquet&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">subset</span><span class="o">=</span><span class="p">[</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1"># Only use numerial data for now</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1"># categorical_cols = [col for col in df.columns if df[col].dtype not in [pl.Float64, pl.Int64]]</span>
 
-   body_mass_g     sex  year  
-0       3750.0    male  2007  
-1       3800.0  female  2007  
-2       3250.0  female  2007  
-4       3450.0  female  2007  
-5       3650.0    male  2007  
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3250., 3550., 4450., 3750., 3650., 4050., 5300., 3625., 5550.,
-       3950., 3000., 4600., 3950., 3900., 3750., 4300., 4375., 5050.,
-       4600., 3200., 4150., 3550., 3900., 4850., 3600., 3000., 5000.,
-       3800., 5000., 5550., 3150., 4100., 4250., 4500., 4875., 3400.,
-       4050., 5500., 3500., 3975., 3600., 4100., 4450., 5000., 3650.,
-       4200., 4800., 5400., 5000., 4250., 3975., 3250., 4250., 4050.,
-       3200., 3550., 5400., 3350., 3975., 3200., 3975., 3950., 4450.,
-       5050., 3075., 3200., 3550., 4300., 4250.])
+<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:667,</span> in <span class="ni">read_parquet</span><span class="nt">(path, engine, columns, storage_options, use_nullable_dtypes, dtype_backend, filesystem, filters, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">use_nullable_dtypes</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">665</span> <span class="n">check_dtype_backend</span><span class="p">(</span><span class="n">dtype_backend</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">667</span> <span class="k">return</span> <span class="n">impl</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">668</span>     <span class="n">path</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">669</span>     <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">670</span>     <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">671</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">672</span>     <span class="n">use_nullable_dtypes</span><span class="o">=</span><span class="n">use_nullable_dtypes</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">673</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">674</span>     <span class="n">filesystem</span><span class="o">=</span><span class="n">filesystem</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">675</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">676</span> <span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:267,</span> in <span class="ni">PyArrowImpl.read</span><span class="nt">(self, path, columns, filters, use_nullable_dtypes, dtype_backend, storage_options, filesystem, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="k">if</span> <span class="n">manager</span> <span class="o">==</span> <span class="s2">&quot;array&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">265</span>     <span class="n">to_pandas_kwargs</span><span class="p">[</span><span class="s2">&quot;split_blocks&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># type: ignore[assignment]</span>
+<span class="ne">--&gt; </span><span class="mi">267</span> <span class="n">path_or_handle</span><span class="p">,</span> <span class="n">handles</span><span class="p">,</span> <span class="n">filesystem</span> <span class="o">=</span> <span class="n">_get_path_or_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">268</span>     <span class="n">path</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">269</span>     <span class="n">filesystem</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span>     <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rb&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">274</span>     <span class="n">pa_table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">parquet</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span>         <span class="n">path_or_handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>         <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:140,</span> in <span class="ni">_get_path_or_handle</span><span class="nt">(path, fs, storage_options, mode, is_dir)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span> <span class="n">handles</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span> <span class="k">if</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span>     <span class="ow">not</span> <span class="n">fs</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>     <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_dir</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span>     <span class="c1"># fsspec resources can also point to directories</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span>     <span class="c1"># this branch is used for example when reading from non-fsspec URLs</span>
+<span class="ne">--&gt; </span><span class="mi">140</span>     <span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span>         <span class="n">path_or_handle</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">is_text</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="n">fs</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">144</span>     <span class="n">path_or_handle</span> <span class="o">=</span> <span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File ~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/common.py:882,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
+<span class="ne">--&gt; </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span>     <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">885</span> <span class="c1"># Convert BytesIO or file objects passed with an encoding</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../data/penguins.parquet&#39;
 </pre></div>
 </div>
 </div>
@@ -500,7 +549,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./2.machine_learning/linear_regression/notebooks"
+            path: "./2.machine_learning/training_process/notebooks"
         },
         predefinedOutput: true
     }
@@ -517,24 +566,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="1.linear_regression_intro.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Why Linear Regression?</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="12.random_forest.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Random Forest</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -551,7 +582,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palmer-s-penguins-dataset">2.1. Palmer’s Penguins Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palmer-s-penguins-dataset">Palmer’s Penguins Dataset</a></li>
 </ul>
   </nav></div>
 

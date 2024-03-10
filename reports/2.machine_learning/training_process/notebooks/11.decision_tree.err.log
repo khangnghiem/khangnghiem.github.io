@@ -1,0 +1,135 @@
+Traceback (most recent call last):
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khangnghiem/.local/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/khangnghiem/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from sklearn.model_selection import train_test_split
+import polars as pl
+import pandas as pd
+from sklearn.tree import DecisionTreeRegressor
+
+df = pd.read_parquet("../data/penguins.parquet")
+
+df = df.dropna(
+    subset=[
+        "bill_length_mm",
+        "bill_depth_mm",
+        "flipper_length_mm",
+        "body_mass_g",
+    ]
+)
+
+# Only use numerial data for now
+# categorical_cols = [col for col in df.columns if df[col].dtype not in [pl.Float64, pl.Int64]]
+categorical_cols = [col for col in df.columns if df[col].dtype not in ["float64", "int64"]]
+y = df["body_mass_g"]
+X = df.drop(categorical_cols + ["body_mass_g"], axis=1)
+
+X_train, X_valid, y_train, y_valid = train_test_split(
+    X, y, train_size=0.8, test_size=0.2, random_state=0
+)
+
+# # scikit-learn not working with polars!
+# X_train = X_train.to_pandas().reset_index(drop=True)
+# y_train = y_train.to_pandas().reset_index(drop=True)
+# X_valid = X_valid.to_pandas().reset_index(drop=True)
+# y_valid = y_valid.to_pandas().reset_index(drop=True)
+
+body_mass_model = DecisionTreeRegressor(random_state=0)
+body_mass_model.fit(X_train, y_train)
+body_mass_preds = body_mass_model.predict(X_valid)
+print(df.head())
+body_mass_preds
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[1], line 6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mtree[39;00m [38;5;28;01mimport[39;00m DecisionTreeRegressor
+[0;32m----> 6[0m df [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_parquet[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43m../data/penguins.parquet[39;49m[38;5;124;43m"[39;49m[43m)[49m
+[1;32m      8[0m df [38;5;241m=[39m df[38;5;241m.[39mdropna(
+[1;32m      9[0m     subset[38;5;241m=[39m[
+[1;32m     10[0m         [38;5;124m"[39m[38;5;124mbill_length_mm[39m[38;5;124m"[39m,
+[0;32m   (...)[0m
+[1;32m     14[0m     ]
+[1;32m     15[0m )
+[1;32m     17[0m [38;5;66;03m# Only use numerial data for now[39;00m
+[1;32m     18[0m [38;5;66;03m# categorical_cols = [col for col in df.columns if df[col].dtype not in [pl.Float64, pl.Int64]][39;00m
+
+File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:667[0m, in [0;36mread_parquet[0;34m(path, engine, columns, storage_options, use_nullable_dtypes, dtype_backend, filesystem, filters, **kwargs)[0m
+[1;32m    664[0m     use_nullable_dtypes [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+[1;32m    665[0m check_dtype_backend(dtype_backend)
+[0;32m--> 667[0m [38;5;28;01mreturn[39;00m [43mimpl[49m[38;5;241;43m.[39;49m[43mread[49m[43m([49m
+[1;32m    668[0m [43m    [49m[43mpath[49m[43m,[49m
+[1;32m    669[0m [43m    [49m[43mcolumns[49m[38;5;241;43m=[39;49m[43mcolumns[49m[43m,[49m
+[1;32m    670[0m [43m    [49m[43mfilters[49m[38;5;241;43m=[39;49m[43mfilters[49m[43m,[49m
+[1;32m    671[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
+[1;32m    672[0m [43m    [49m[43muse_nullable_dtypes[49m[38;5;241;43m=[39;49m[43muse_nullable_dtypes[49m[43m,[49m
+[1;32m    673[0m [43m    [49m[43mdtype_backend[49m[38;5;241;43m=[39;49m[43mdtype_backend[49m[43m,[49m
+[1;32m    674[0m [43m    [49m[43mfilesystem[49m[38;5;241;43m=[39;49m[43mfilesystem[49m[43m,[49m
+[1;32m    675[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
+[1;32m    676[0m [43m[49m[43m)[49m
+
+File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:267[0m, in [0;36mPyArrowImpl.read[0;34m(self, path, columns, filters, use_nullable_dtypes, dtype_backend, storage_options, filesystem, **kwargs)[0m
+[1;32m    264[0m [38;5;28;01mif[39;00m manager [38;5;241m==[39m [38;5;124m"[39m[38;5;124marray[39m[38;5;124m"[39m:
+[1;32m    265[0m     to_pandas_kwargs[[38;5;124m"[39m[38;5;124msplit_blocks[39m[38;5;124m"[39m] [38;5;241m=[39m [38;5;28;01mTrue[39;00m  [38;5;66;03m# type: ignore[assignment][39;00m
+[0;32m--> 267[0m path_or_handle, handles, filesystem [38;5;241m=[39m [43m_get_path_or_handle[49m[43m([49m
+[1;32m    268[0m [43m    [49m[43mpath[49m[43m,[49m
+[1;32m    269[0m [43m    [49m[43mfilesystem[49m[43m,[49m
+[1;32m    270[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
+[1;32m    271[0m [43m    [49m[43mmode[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[1;32m    272[0m [43m[49m[43m)[49m
+[1;32m    273[0m [38;5;28;01mtry[39;00m:
+[1;32m    274[0m     pa_table [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mapi[38;5;241m.[39mparquet[38;5;241m.[39mread_table(
+[1;32m    275[0m         path_or_handle,
+[1;32m    276[0m         columns[38;5;241m=[39mcolumns,
+[0;32m   (...)[0m
+[1;32m    279[0m         [38;5;241m*[39m[38;5;241m*[39mkwargs,
+[1;32m    280[0m     )
+
+File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/parquet.py:140[0m, in [0;36m_get_path_or_handle[0;34m(path, fs, storage_options, mode, is_dir)[0m
+[1;32m    130[0m handles [38;5;241m=[39m [38;5;28;01mNone[39;00m
+[1;32m    131[0m [38;5;28;01mif[39;00m (
+[1;32m    132[0m     [38;5;129;01mnot[39;00m fs
+[1;32m    133[0m     [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m is_dir
+[0;32m   (...)[0m
+[1;32m    138[0m     [38;5;66;03m# fsspec resources can also point to directories[39;00m
+[1;32m    139[0m     [38;5;66;03m# this branch is used for example when reading from non-fsspec URLs[39;00m
+[0;32m--> 140[0m     handles [38;5;241m=[39m [43mget_handle[49m[43m([49m
+[1;32m    141[0m [43m        [49m[43mpath_or_handle[49m[43m,[49m[43m [49m[43mmode[49m[43m,[49m[43m [49m[43mis_text[49m[38;5;241;43m=[39;49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m[43m [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m
+[1;32m    142[0m [43m    [49m[43m)[49m
+[1;32m    143[0m     fs [38;5;241m=[39m [38;5;28;01mNone[39;00m
+[1;32m    144[0m     path_or_handle [38;5;241m=[39m handles[38;5;241m.[39mhandle
+
+File [0;32m~/.pyenv/versions/3.11.4/lib/python3.11/site-packages/pandas/io/common.py:882[0m, in [0;36mget_handle[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
+[1;32m    873[0m         handle [38;5;241m=[39m [38;5;28mopen[39m(
+[1;32m    874[0m             handle,
+[1;32m    875[0m             ioargs[38;5;241m.[39mmode,
+[0;32m   (...)[0m
+[1;32m    878[0m             newline[38;5;241m=[39m[38;5;124m"[39m[38;5;124m"[39m,
+[1;32m    879[0m         )
+[1;32m    880[0m     [38;5;28;01melse[39;00m:
+[1;32m    881[0m         [38;5;66;03m# Binary mode[39;00m
+[0;32m--> 882[0m         handle [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[43mhandle[49m[43m,[49m[43m [49m[43mioargs[49m[38;5;241;43m.[39;49m[43mmode[49m[43m)[49m
+[1;32m    883[0m     handles[38;5;241m.[39mappend(handle)
+[1;32m    885[0m [38;5;66;03m# Convert BytesIO or file objects passed with an encoding[39;00m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '../data/penguins.parquet'
+
