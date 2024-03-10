@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Random Forest &#8212; My Journal</title>
+    <title>3. Random Forest &#8212; My Journal</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/12.random_forest';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="prev" title="3. Decision Tree" href="11.decision_tree.html" />
+    <link rel="prev" title="2. Decision Tree" href="11.decision_tree.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,10 +180,9 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_regression.html">Linear Regression</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1.linear_regression.html">1. 1. Why Linear Regression?</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="11.decision_tree.html">3. Decision Tree</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4. Random Forest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.linear_regression.html">1. Why Linear Regression?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.decision_tree.html">2. Decision Tree</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Random Forest</a></li>
 </ul>
 </li>
 </ul>
@@ -384,7 +383,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="random-forest">
-<h1><span class="section-number">4. </span>Random Forest<a class="headerlink" href="#random-forest" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Random Forest<a class="headerlink" href="#random-forest" title="Link to this heading">#</a></h1>
 <p>Again, predicting body mass of penguins but this time with Random Forest model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -444,114 +443,114 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>184</th>
+      <th>187</th>
       <td>Gentoo</td>
       <td>Biscoe</td>
-      <td>45.1</td>
-      <td>14.5</td>
-      <td>207.0</td>
-      <td>5050.0</td>
-      <td>female</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>194</th>
-      <td>Gentoo</td>
-      <td>Biscoe</td>
-      <td>45.3</td>
-      <td>13.7</td>
-      <td>210.0</td>
-      <td>4300.0</td>
-      <td>female</td>
+      <td>48.4</td>
+      <td>16.3</td>
+      <td>220.0</td>
+      <td>5400.0</td>
+      <td>male</td>
       <td>2008</td>
     </tr>
     <tr>
-      <th>297</th>
-      <td>Chinstrap</td>
+      <th>140</th>
+      <td>Adelie</td>
       <td>Dream</td>
-      <td>48.5</td>
-      <td>17.5</td>
-      <td>191.0</td>
+      <td>40.2</td>
+      <td>17.1</td>
+      <td>193.0</td>
       <td>3400.0</td>
-      <td>male</td>
-      <td>2007</td>
+      <td>female</td>
+      <td>2009</td>
     </tr>
     <tr>
-      <th>95</th>
+      <th>117</th>
       <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>37.3</td>
+      <td>20.5</td>
+      <td>199.0</td>
+      <td>3775.0</td>
+      <td>male</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>37.9</td>
+      <td>18.6</td>
+      <td>193.0</td>
+      <td>2925.0</td>
+      <td>female</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>302</th>
+      <td>Chinstrap</td>
       <td>Dream</td>
-      <td>40.8</td>
-      <td>18.9</td>
-      <td>208.0</td>
-      <td>4300.0</td>
+      <td>50.5</td>
+      <td>18.4</td>
+      <td>200.0</td>
+      <td>3400.0</td>
+      <td>female</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>213</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>46.2</td>
+      <td>14.9</td>
+      <td>221.0</td>
+      <td>5300.0</td>
       <td>male</td>
       <td>2008</td>
     </tr>
     <tr>
-      <th>19</th>
+      <th>113</th>
       <td>Adelie</td>
-      <td>Torgersen</td>
-      <td>46.0</td>
-      <td>21.5</td>
-      <td>194.0</td>
-      <td>4200.0</td>
+      <td>Biscoe</td>
+      <td>42.2</td>
+      <td>19.5</td>
+      <td>197.0</td>
+      <td>4275.0</td>
       <td>male</td>
-      <td>2007</td>
+      <td>2009</td>
     </tr>
     <tr>
-      <th>300</th>
-      <td>Chinstrap</td>
-      <td>Dream</td>
-      <td>46.7</td>
-      <td>17.9</td>
-      <td>195.0</td>
-      <td>3300.0</td>
-      <td>female</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>247</th>
+      <th>210</th>
       <td>Gentoo</td>
       <td>Biscoe</td>
-      <td>50.8</td>
-      <td>15.7</td>
-      <td>226.0</td>
-      <td>5200.0</td>
-      <td>male</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>Adelie</td>
-      <td>Torgersen</td>
-      <td>41.5</td>
-      <td>18.3</td>
-      <td>195.0</td>
-      <td>4300.0</td>
-      <td>male</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>Adelie</td>
-      <td>Torgersen</td>
-      <td>43.1</td>
-      <td>19.2</td>
-      <td>197.0</td>
-      <td>3500.0</td>
-      <td>male</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Adelie</td>
-      <td>Torgersen</td>
-      <td>41.1</td>
-      <td>17.6</td>
-      <td>182.0</td>
-      <td>3200.0</td>
+      <td>43.2</td>
+      <td>14.5</td>
+      <td>208.0</td>
+      <td>4450.0</td>
       <td>female</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>46.3</td>
+      <td>15.8</td>
+      <td>215.0</td>
+      <td>5050.0</td>
+      <td>male</td>
       <td>2007</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>45.2</td>
+      <td>13.8</td>
+      <td>215.0</td>
+      <td>4750.0</td>
+      <td>female</td>
+      <td>2008</td>
     </tr>
   </tbody>
 </table>
@@ -697,7 +696,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Decision Tree</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Decision Tree</p>
       </div>
     </a>
 </div>
