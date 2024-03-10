@@ -180,7 +180,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_regression.html">Linear Regression</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1.linear_regression.html">1. Linear Regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.linear_regression.html">1. Why Linear Regression?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.decision_tree.html">2. Decision Tree</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Random Forest</a></li>
 </ul>
@@ -443,81 +443,59 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>103</th>
+      <th>63</th>
       <td>Adelie</td>
       <td>Biscoe</td>
-      <td>37.8</td>
-      <td>20.0</td>
-      <td>190.0</td>
-      <td>4250.0</td>
+      <td>41.1</td>
+      <td>18.2</td>
+      <td>192.0</td>
+      <td>4050.0</td>
       <td>male</td>
-      <td>2009</td>
+      <td>2008</td>
     </tr>
     <tr>
-      <th>267</th>
+      <th>46</th>
+      <td>Adelie</td>
+      <td>Dream</td>
+      <td>41.1</td>
+      <td>19.0</td>
+      <td>182.0</td>
+      <td>3425.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>157</th>
       <td>Gentoo</td>
       <td>Biscoe</td>
-      <td>55.1</td>
-      <td>16.0</td>
-      <td>230.0</td>
-      <td>5850.0</td>
-      <td>male</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>309</th>
-      <td>Chinstrap</td>
-      <td>Dream</td>
-      <td>51.0</td>
-      <td>18.8</td>
-      <td>203.0</td>
-      <td>4100.0</td>
-      <td>male</td>
-      <td>2008</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>Adelie</td>
-      <td>Dream</td>
-      <td>40.3</td>
-      <td>18.5</td>
-      <td>196.0</td>
-      <td>4350.0</td>
-      <td>male</td>
-      <td>2008</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>Adelie</td>
-      <td>Torgersen</td>
-      <td>38.8</td>
-      <td>17.6</td>
-      <td>191.0</td>
-      <td>3275.0</td>
-      <td>female</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>290</th>
-      <td>Chinstrap</td>
-      <td>Dream</td>
-      <td>45.9</td>
-      <td>17.1</td>
-      <td>190.0</td>
-      <td>3575.0</td>
+      <td>46.5</td>
+      <td>13.5</td>
+      <td>210.0</td>
+      <td>4550.0</td>
       <td>female</td>
       <td>2007</td>
     </tr>
     <tr>
-      <th>27</th>
-      <td>Adelie</td>
+      <th>161</th>
+      <td>Gentoo</td>
       <td>Biscoe</td>
-      <td>40.5</td>
-      <td>17.9</td>
-      <td>187.0</td>
-      <td>3200.0</td>
-      <td>female</td>
+      <td>46.8</td>
+      <td>15.4</td>
+      <td>215.0</td>
+      <td>5150.0</td>
+      <td>male</td>
       <td>2007</td>
+    </tr>
+    <tr>
+      <th>321</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>50.8</td>
+      <td>18.5</td>
+      <td>201.0</td>
+      <td>4450.0</td>
+      <td>male</td>
+      <td>2009</td>
     </tr>
     <tr>
       <th>0</th>
@@ -531,25 +509,47 @@ document.write(`
       <td>2007</td>
     </tr>
     <tr>
-      <th>229</th>
-      <td>Gentoo</td>
+      <th>54</th>
+      <td>Adelie</td>
       <td>Biscoe</td>
-      <td>51.1</td>
-      <td>16.3</td>
-      <td>220.0</td>
-      <td>6000.0</td>
-      <td>male</td>
+      <td>34.5</td>
+      <td>18.1</td>
+      <td>187.0</td>
+      <td>2900.0</td>
+      <td>female</td>
       <td>2008</td>
     </tr>
     <tr>
-      <th>43</th>
-      <td>Adelie</td>
+      <th>278</th>
+      <td>Chinstrap</td>
       <td>Dream</td>
-      <td>44.1</td>
-      <td>19.7</td>
-      <td>196.0</td>
-      <td>4400.0</td>
+      <td>51.3</td>
+      <td>19.2</td>
+      <td>193.0</td>
+      <td>3650.0</td>
       <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>42.7</td>
+      <td>18.3</td>
+      <td>196.0</td>
+      <td>4075.0</td>
+      <td>male</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>41.1</td>
+      <td>17.6</td>
+      <td>182.0</td>
+      <td>3200.0</td>
+      <td>female</td>
       <td>2007</td>
     </tr>
   </tbody>
