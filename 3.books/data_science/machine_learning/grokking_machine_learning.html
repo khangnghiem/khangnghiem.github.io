@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Delta Lake &#8212; My Journal</title>
+    <title>Intro to Machine Learning &#8212; My Journal</title>
   
   
   
@@ -57,7 +57,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2.data_science/delta_lake/notebooks/delta';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3.books/data_science/machine_learning/grokking_machine_learning';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -180,9 +180,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../machine_learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../machine_learning/notebooks/1.decision_tree.html">1. Decision Tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../machine_learning/notebooks/2.random_forest.html">2. Random Forest</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2.data_science/theory/machine_learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2.data_science/theory/machine_learning/linear_regression.html">1. Linear Regression</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +255,7 @@
       
       
       
-      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.data_science/delta_lake/notebooks/delta.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F3.books/data_science/machine_learning/grokking_machine_learning.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +285,7 @@
       
       
       
-      <li><a href="../../../_sources/2.data_science/delta_lake/notebooks/delta.ipynb" target="_blank"
+      <li><a href="../../../_sources/3.books/data_science/machine_learning/grokking_machine_learning.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +295,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -357,7 +356,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -368,11 +369,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Delta Lake</h1>
+    <h1>Intro to Machine Learning</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Intro to Machine Learning</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types">3 types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labeled-vs-unlabeled-data">Labeled vs Unlabeled data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-vs-classification">Regression vs Classification</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -382,8 +398,30 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="delta-lake">
-<h1>Delta Lake<a class="headerlink" href="#delta-lake" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="intro-to-machine-learning">
+<h1>Intro to Machine Learning<a class="headerlink" href="#intro-to-machine-learning" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Remember: look at the previous data.</p></li>
+<li><p>Formulate: build a model, or a rule, based on this data.</p></li>
+<li><p>Predict: use the model to make predictions about future data.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="types-of-machine-learning">
+<h1>Types of Machine Learning<a class="headerlink" href="#types-of-machine-learning" title="Link to this heading">#</a></h1>
+<section id="types">
+<h2>3 types<a class="headerlink" href="#types" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>supervised</p></li>
+<li><p>unsupervised</p></li>
+<li><p>reinforcement learning</p></li>
+</ul>
+</section>
+<section id="labeled-vs-unlabeled-data">
+<h2>Labeled vs Unlabeled data<a class="headerlink" href="#labeled-vs-unlabeled-data" title="Link to this heading">#</a></h2>
+</section>
+<section id="regression-vs-classification">
+<h2>Regression vs Classification<a class="headerlink" href="#regression-vs-classification" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -399,7 +437,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./2.data_science/delta_lake/notebooks"
+            path: "./3.books/data_science/machine_learning"
         },
         predefinedOutput: true
     }
@@ -423,7 +461,27 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Intro to Machine Learning</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types">3 types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labeled-vs-unlabeled-data">Labeled vs Unlabeled data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-vs-classification">Regression vs Classification</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

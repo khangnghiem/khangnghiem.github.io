@@ -57,10 +57,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1.journal/2024/20240201';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Machine Learning" href="../../2.data_science/machine_learning.html" />
+    <link rel="next" title="Machine Learning" href="../../2.data_science/theory/machine_learning.html" />
     <link rel="prev" title="About Khang" href="../../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,9 +182,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../2.data_science/machine_learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../2.data_science/machine_learning/notebooks/1.decision_tree.html">1. Decision Tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../2.data_science/machine_learning/notebooks/2.random_forest.html">2. Random Forest</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../2.data_science/theory/machine_learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2.data_science/theory/machine_learning/linear_regression.html">1. Linear Regression</a></li>
 </ul>
 </li>
 </ul>
@@ -380,7 +381,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-06-mar-31-2024">Mar 06 - Mar 31, 2024</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-10-2024-linear-regression">Mar 10, 2024 - Linear Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-09-2024-foundation-of-machine-learning">Mar 09, 2024 - Foundation of Machine Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-06-2024-vacation">Mar 06, 2024 - Vacation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-05-2024-rejections">Mar 05, 2024 - Rejections</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-04-2024">Mar 04, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-03-2024-kingsmith-walking-pad">Mar 03, 2024 - Kingsmith Walking Pad</a></li>
@@ -430,8 +433,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="february-2024">
 <h1>February 2024<a class="headerlink" href="#february-2024" title="Link to this heading">#</a></h1>
-<section id="mar-06-mar-31-2024">
-<h2>Mar 06 - Mar 31, 2024<a class="headerlink" href="#mar-06-mar-31-2024" title="Link to this heading">#</a></h2>
+<section id="mar-10-2024-linear-regression">
+<h2>Mar 10, 2024 - Linear Regression<a class="headerlink" href="#mar-10-2024-linear-regression" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>LaTeX can be embedded in Markdown</p></li>
+<li><p>Linear Equation: $<span class="math notranslate nohighlight">\(y = m(x) + b + (error)\)</span>$
+b: bias
+m: weight</p></li>
+<li><p>Multivariate Linear Regression: $<span class="math notranslate nohighlight">\(y = a_1(x_1) + a_2(x_2) + ... + a_n(x_n) + b + (error)\)</span>$</p></li>
+<li><p>Linear Regression algorithm: a repeating step in which we move a line closer to a data point until the regression line is closer to all the data points</p></li>
+</ul>
+</section>
+<section id="mar-09-2024-foundation-of-machine-learning">
+<h2>Mar 09, 2024 - Foundation of Machine Learning<a class="headerlink" href="#mar-09-2024-foundation-of-machine-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Machine Learning, like Human Learning, begins with Remember (Data), Formulate (Model), Predict</p></li>
+<li><p>Khang thinks he should get started with supervised learning</p></li>
+</ul>
+</section>
+<section id="mar-06-2024-vacation">
+<h2>Mar 06, 2024 - Vacation<a class="headerlink" href="#mar-06-2024-vacation" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Vacation</p></li>
 </ul>
@@ -831,7 +852,7 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../../2.data_science/machine_learning.html"
+       href="../../2.data_science/theory/machine_learning.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -855,7 +876,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-06-mar-31-2024">Mar 06 - Mar 31, 2024</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-10-2024-linear-regression">Mar 10, 2024 - Linear Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-09-2024-foundation-of-machine-learning">Mar 09, 2024 - Foundation of Machine Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-06-2024-vacation">Mar 06, 2024 - Vacation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-05-2024-rejections">Mar 05, 2024 - Rejections</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-04-2024">Mar 04, 2024</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-03-2024-kingsmith-walking-pad">Mar 03, 2024 - Kingsmith Walking Pad</a></li>
