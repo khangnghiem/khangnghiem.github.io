@@ -57,9 +57,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/1.linear_regression';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/1.linear_regression_intro';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="2. Decision Tree" href="11.decision_tree.html" />
@@ -186,6 +184,8 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1. Why Linear Regression?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.decision_tree.html">2. Decision Tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.random_forest.html">3. Random Forest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">4. Thoughts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.linear_regression_algorithm.html">5. Linear Regression</a></li>
 </ul>
 </li>
 </ul>
@@ -259,7 +259,7 @@
       
       
       
-      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/linear_regression/notebooks/1.linear_regression.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/linear_regression/notebooks/1.linear_regression_intro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +289,7 @@
       
       
       
-      <li><a href="../../../_sources/2.machine_learning/linear_regression/notebooks/1.linear_regression.ipynb" target="_blank"
+      <li><a href="../../../_sources/2.machine_learning/linear_regression/notebooks/1.linear_regression_intro.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -390,12 +390,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-learned">1.1.4. Lesson Learned</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">1.2. Linear Regression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">1.2.1. Linear Equation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">1.2.2. Multivariate Linear Regression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">1.2.3. Linear Regression Algorithm</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -430,28 +424,6 @@ document.write(`
 <p>Among the 50 worst‐performing schools, you will find that 9 of them were among the 50 smallest schools. In others words, there was an overrepresentation by a factor of 6! Far bigger even than what they found on the positive side. Truth is, drawing conclusions based solely on that information would have been just as flawed as the other way around.</p>
 <p>All it proved is that smaller samples generate data with greater variance. When a regression was done of all the data it showed no relationship between results and school size. However, when applied to those of high school students only, the regression line showed a significant positive slope. In other words, the larger the high school the better the scores.</p>
 <p>–&gt; All this wouldn’t have happened if the regression line was drawn across all data in the beginning.</p>
-</section>
-</section>
-<section id="linear-regression">
-<h2><span class="section-number">1.2. </span>Linear Regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h2>
-<section id="linear-equation">
-<h3><span class="section-number">1.2.1. </span>Linear Equation<a class="headerlink" href="#linear-equation" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Linear Equation: $<span class="math notranslate nohighlight">\(y = m(x) + b + (error)\)</span>$
-b: bias, m: weight</p></li>
-</ul>
-</section>
-<section id="multivariate-linear-regression">
-<h3><span class="section-number">1.2.2. </span>Multivariate Linear Regression<a class="headerlink" href="#multivariate-linear-regression" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Multivariate Linear Regression: $<span class="math notranslate nohighlight">\(y = a_1(x_1) + a_2(x_2) + ... + a_n(x_n) + b + (error)\)</span>$</p></li>
-</ul>
-</section>
-<section id="linear-regression-algorithm">
-<h3><span class="section-number">1.2.3. </span>Linear Regression Algorithm<a class="headerlink" href="#linear-regression-algorithm" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Linear Regression Algorithm: a repeating step in which we move a line closer to a data point until the regression line is closer to all the data points</p></li>
-</ul>
 </section>
 </section>
 </section>
@@ -525,12 +497,6 @@ b: bias, m: weight</p></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">1.1.2. Data Analysis</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-flaws">1.1.3. The Flaws</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-learned">1.1.4. Lesson Learned</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">1.2. Linear Regression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">1.2.1. Linear Equation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">1.2.2. Multivariate Linear Regression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">1.2.3. Linear Regression Algorithm</a></li>
 </ul>
 </li>
 </ul>
