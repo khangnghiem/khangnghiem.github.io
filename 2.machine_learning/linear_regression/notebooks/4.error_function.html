@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/4.error_function';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5. Gradient Descent" href="99.gradient_descent.html" />
+    <link rel="next" title="6. Gradient Descent" href="99.gradient_descent.html" />
     <link rel="prev" title="3. Linear Regression" href="3.linear_regression_algorithm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -186,7 +186,9 @@
 <li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">2. Thoughts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.linear_regression_algorithm.html">3. Linear Regression</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">4. Error Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="99.gradient_descent.html">5. Gradient Descent</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="99.gradient_descent.html">6. Gradient Descent</a></li>
+
 
 </ul>
 </li>
@@ -362,7 +364,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -378,6 +382,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. Error Function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#root-mean-square-error">5. Root Mean Square Error</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -394,6 +408,15 @@ document.write(`
 <li><p>Because A square has a much nicer derivative than an absolute value, which comes in handy during the training process.</p></li>
 </ul>
 <p>MAE:</p>
+</section>
+<section id="root-mean-square-error">
+<h1><span class="section-number">5. </span>Root Mean Square Error<a class="headerlink" href="#root-mean-square-error" title="Link to this heading">#</a></h1>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rmse</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+    <span class="n">differences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">differences</span><span class="p">,</span> <span class="n">differences</span><span class="p">)))</span>
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -440,7 +463,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Gradient Descent</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Gradient Descent</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -451,7 +474,22 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. Error Function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#root-mean-square-error">5. Root Mean Square Error</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
