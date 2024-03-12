@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Gradient Descent &#8212; My Journal</title>
+    <title>5. Gradient Descent &#8212; My Journal</title>
   
   
   
@@ -59,11 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/100.gradient_descent';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/99.gradient_descent';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4. Thoughts" href="2.thoughts.html" />
-    <link rel="prev" title="1. Why Linear Regression?" href="1.linear_regression_intro.html" />
+    <link rel="prev" title="3. Linear Regression" href="3.linear_regression_algorithm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,10 +183,10 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_regression.html">Linear Regression</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1.linear_regression_intro.html">1. Why Linear Regression?</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2. Gradient Descent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">2. Thoughts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.linear_regression_algorithm.html">3. Linear Regression</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">4. Thoughts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.linear_regression_algorithm.html">5. Linear Regression</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5. Gradient Descent</a></li>
 
 </ul>
 </li>
@@ -262,7 +261,7 @@
       
       
       
-      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/linear_regression/notebooks/100.gradient_descent.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/linear_regression/notebooks/99.gradient_descent.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -292,7 +291,7 @@
       
       
       
-      <li><a href="../../../_sources/2.machine_learning/linear_regression/notebooks/100.gradient_descent.md" target="_blank"
+      <li><a href="../../../_sources/2.machine_learning/linear_regression/notebooks/99.gradient_descent.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -386,8 +385,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2. Gradient Descent</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">3. Gradient Descent Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5. Gradient Descent</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">6. Gradient Descent Algorithm</a></li>
 </ul>
 
             </nav>
@@ -401,14 +400,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="gradient-descent">
-<h1><span class="section-number">2. </span>Gradient Descent<a class="headerlink" href="#gradient-descent" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">5. </span>Gradient Descent<a class="headerlink" href="#gradient-descent" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Gradient is a vector denoted as: <span class="math notranslate nohighlight">\(\nabla f = (\frac{\delta f}{\delta x_1}, \frac{\delta f}{\delta x_2}, ..., \frac{\delta f}{\delta x_n})\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\nabla f &gt; 0\)</span>: increasing; <span class="math notranslate nohighlight">\(\nabla f &lt; 0\)</span>: decreasing</p></li>
 </ul>
 </section>
 <section id="gradient-descent-algorithm">
-<h1><span class="section-number">3. </span>Gradient Descent Algorithm<a class="headerlink" href="#gradient-descent-algorithm" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">6. </span>Gradient Descent Algorithm<a class="headerlink" href="#gradient-descent-algorithm" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>With N: epochs (i.e. iterations) and <span class="math notranslate nohighlight">\(\eta\)</span>: learning rate</p></li>
 <li><p>Pick a random point <span class="math notranslate nohighlight">\(p_0\)</span>.</p></li>
@@ -450,22 +449,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1.linear_regression_intro.html"
+       href="3.linear_regression_algorithm.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Why Linear Regression?</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Linear Regression</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="2.thoughts.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Thoughts</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -483,8 +473,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2. Gradient Descent</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">3. Gradient Descent Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5. Gradient Descent</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">6. Gradient Descent Algorithm</a></li>
 </ul>
 
   </nav></div>
