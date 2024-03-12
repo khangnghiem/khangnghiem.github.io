@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/3.linear_regression_algorithm';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5. Gradient Descent" href="99.gradient_descent.html" />
+    <link rel="next" title="4. Error Function" href="4.error_function.html" />
     <link rel="prev" title="2. Thoughts" href="2.thoughts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -186,7 +186,7 @@
 <li class="toctree-l2"><a class="reference internal" href="1.linear_regression_intro.html">1. Why Linear Regression?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">2. Thoughts</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Linear Regression</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="4.error_function.html">4. Error Function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="99.gradient_descent.html">5. Gradient Descent</a></li>
 
 </ul>
@@ -386,7 +386,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Linear Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">3.1. Linear Equation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">3.2. Multivariate Linear Regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">3.3. Linear Regression Algorithm</a></li>
@@ -394,10 +393,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-trick-pseudocode">3.5. Square Trick Pseudocode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-square-trick-pseudocode-multivariate">3.6. General Square Trick Pseudocode (Multivariate)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#error-function">4. Error Function</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -477,13 +472,6 @@ else <span class="math notranslate nohighlight">\(m' = m - \eta x\)</span> and <
 </ul>
 </section>
 </section>
-<section id="error-function">
-<h1><span class="section-number">4. </span>Error Function<a class="headerlink" href="#error-function" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p>The square error is used more commonly in practice than the absolute error.</p></li>
-<li><p>Because A square has a much nicer derivative than an absolute value, which comes in handy during the training process.</p></li>
-</ul>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -525,11 +513,11 @@ else <span class="math notranslate nohighlight">\(m' = m - \eta x\)</span> and <
       </div>
     </a>
     <a class="right-next"
-       href="99.gradient_descent.html"
+       href="4.error_function.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Gradient Descent</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Error Function</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -549,7 +537,6 @@ else <span class="math notranslate nohighlight">\(m' = m - \eta x\)</span> and <
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Linear Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">3.1. Linear Equation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">3.2. Multivariate Linear Regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">3.3. Linear Regression Algorithm</a></li>
@@ -557,10 +544,6 @@ else <span class="math notranslate nohighlight">\(m' = m - \eta x\)</span> and <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-trick-pseudocode">3.5. Square Trick Pseudocode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-square-trick-pseudocode-multivariate">3.6. General Square Trick Pseudocode (Multivariate)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#error-function">4. Error Function</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
