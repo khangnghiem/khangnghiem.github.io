@@ -409,14 +409,15 @@ document.write(`
 <section id="linear-equation">
 <h2><span class="section-number">3.1. </span>Linear Equation<a class="headerlink" href="#linear-equation" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Linear Equation: <span class="math notranslate nohighlight">\(y = \)</span>m(<span class="math notranslate nohighlight">\(x) + \)</span>b + (error)
-b: bias, m: weight</p></li>
+<li><p>Linear Equation: <span class="math notranslate nohighlight">\(y = \)</span>w(<span class="math notranslate nohighlight">\(x) + \)</span>b + (error)
+b: bias, w: weight</p></li>
 </ul>
 </section>
 <section id="multivariate-linear-regression">
 <h2><span class="section-number">3.2. </span>Multivariate Linear Regression<a class="headerlink" href="#multivariate-linear-regression" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Multivariate Linear Regression: $<span class="math notranslate nohighlight">\(y = a_1(x_1) + a_2(x_2) + ... + a_n(x_n) + b + (error)\)</span>$</p></li>
+<li><p>Multivariate Linear Regression: $<span class="math notranslate nohighlight">\(y = w_1(x_1) + w_2(x_2) + ... + w_n(x_n) + b + (error)\)</span><span class="math notranslate nohighlight">\(
+or \)</span><span class="math notranslate nohighlight">\(y = \sum_{j=1}^{n} w_j x_j + b\)</span>$</p></li>
 </ul>
 </section>
 <section id="linear-regression-algorithm">
@@ -461,7 +462,7 @@ else <span class="math notranslate nohighlight">\(m' = m - \eta x\)</span> and <
 <section id="general-square-trick-pseudocode-multivariate">
 <h2><span class="section-number">3.6. </span>General Square Trick Pseudocode (Multivariate)<a class="headerlink" href="#general-square-trick-pseudocode-multivariate" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
-\[\hat{y} = w'_1x_1 + w'_2x_2 + ... + w'_nx_n + b'\]</div>
+\[\hat{y} = \sum_{j=1}^{n} w'_j x'_j + b'\]</div>
 <p>Very similar to single variable Square Trick except:</p>
 <ul class="simple">
 <li><p>Add <span class="math notranslate nohighlight">\(\eta(y-\hat{y})\)</span> to the y-intercept <span class="math notranslate nohighlight">\(b\)</span>. Obtain <span class="math notranslate nohighlight">\(b' = b + \eta(y-\hat{y})\)</span></p></li>
