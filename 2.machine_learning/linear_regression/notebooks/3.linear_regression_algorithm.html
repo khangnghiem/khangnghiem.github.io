@@ -185,6 +185,7 @@
 <li class="toctree-l2"><a class="reference internal" href="1.linear_regression_intro.html">1. Why Linear Regression?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">2. Thoughts</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Linear Regression</a></li>
+
 </ul>
 </li>
 </ul>
@@ -382,10 +383,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Linear Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">3.1. Linear Equation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">3.2. Multivariate Linear Regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">3.3. Linear Regression Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-rate">3.4. Learning Rate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-trick-pseudocode">3.5. Square Trick Pseudocode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-square-trick-pseudocode-multivariate">3.6. General Square Trick Pseudocode (Multivariate)</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#error-function">4. Error Function</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -415,8 +424,62 @@ b: bias, m: weight</p></li>
 <h2><span class="section-number">3.3. </span>Linear Regression Algorithm<a class="headerlink" href="#linear-regression-algorithm" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Linear Regression Algorithm: a repeating step in which we move a line closer to a data point until the regression line is closer to all the data points</p></li>
+<li><p>Use Square Trick or Absolute Trick to reformulate the model by a learning rate. There’s also a Simple Trick but this is only useful for learning purposes.
+$<span class="math notranslate nohighlight">\(\hat{p} = m'x + b'\)</span>$</p></li>
+<li><p>Square Trick: <span class="math notranslate nohighlight">\(x(p-\hat{p})\)</span> will give us a sense to direction to move close to a point (by looking at the quadrants)
+with <span class="math notranslate nohighlight">\(m' = m + \eta x(p-\hat{p})\)</span> and <span class="math notranslate nohighlight">\(b' = b + \eta(p-\hat{p})\)</span></p></li>
+<li><p>Absolute Trick:
+with <span class="math notranslate nohighlight">\(m' = m + \eta x\)</span> and <span class="math notranslate nohighlight">\(b' = b + \eta\)</span> if <span class="math notranslate nohighlight">\(p &gt; \hat{p}\)</span>
+else <span class="math notranslate nohighlight">\(m' = m - \eta x\)</span> and <span class="math notranslate nohighlight">\(b' = b - \eta\)</span></p></li>
 </ul>
 </section>
+<section id="learning-rate">
+<h2><span class="section-number">3.4. </span>Learning Rate<a class="headerlink" href="#learning-rate" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Learning rate is denoted by <span class="math notranslate nohighlight">\(\eta\)</span> or ‘eta’</p></li>
+<li><p>This number helps us make sure our model changes in very small amounts by training. (a random number used to modify / train our model)</p></li>
+</ul>
+</section>
+<section id="square-trick-pseudocode">
+<h2><span class="section-number">3.5. </span>Square Trick Pseudocode<a class="headerlink" href="#square-trick-pseudocode" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="k">def</span> <span class="nf">linear_regression</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">epochs</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="n">price_per_room</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="n">base_price</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">num_rooms</span> <span class="o">=</span> <span class="n">features</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">price_per_room</span><span class="p">,</span> <span class="n">base_price</span> <span class="o">=</span> <span class="n">square_trick</span><span class="p">(</span><span class="n">base_price</span><span class="p">,</span>
+                                                  <span class="n">price_per_room</span><span class="p">,</span>
+                                                  <span class="n">num_rooms</span><span class="p">,</span>
+                                                  <span class="n">price</span><span class="p">,</span>
+                                                  <span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">price_per_room</span><span class="p">,</span> <span class="n">base_price</span>
+</pre></div>
+</div>
+</section>
+<section id="general-square-trick-pseudocode-multivariate">
+<h2><span class="section-number">3.6. </span>General Square Trick Pseudocode (Multivariate)<a class="headerlink" href="#general-square-trick-pseudocode-multivariate" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\hat{y} = w'_1x_1 + w'_2x_2 + ... + w'_nx_n + b'\]</div>
+<p>Very similar to single variable Square Trick except:</p>
+<ul class="simple">
+<li><p>Add <span class="math notranslate nohighlight">\(\eta(y-\hat{y})\)</span> to the y-intercept <span class="math notranslate nohighlight">\(b\)</span>. Obtain <span class="math notranslate nohighlight">\(b' = b + \eta(y-\hat{y})\)</span></p></li>
+<li><p>For i = 1, 2, 3, …, n:</p>
+<ul>
+<li><p>Add <span class="math notranslate nohighlight">\(\eta x(y-\hat{y})\)</span> to the weight <span class="math notranslate nohighlight">\(w_i\)</span>. Obtain <span class="math notranslate nohighlight">\(w'_i = w_i + \eta x(y-\hat{y})\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="error-function">
+<h1><span class="section-number">4. </span>Error Function<a class="headerlink" href="#error-function" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>The square error is used more commonly in practice than the absolute error.</p></li>
+<li><p>Because A square has a much nicer derivative than an absolute value, which comes in handy during the training process.</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -474,10 +537,18 @@ b: bias, m: weight</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Linear Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">3.1. Linear Equation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-linear-regression">3.2. Multivariate Linear Regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-algorithm">3.3. Linear Regression Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-rate">3.4. Learning Rate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-trick-pseudocode">3.5. Square Trick Pseudocode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-square-trick-pseudocode-multivariate">3.6. General Square Trick Pseudocode (Multivariate)</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#error-function">4. Error Function</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
