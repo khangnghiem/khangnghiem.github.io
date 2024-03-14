@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Gradient Descent &#8212; My Journal</title>
+    <title>7. Gradient Descent &#8212; My Journal</title>
   
   
   
@@ -188,7 +188,8 @@
 <li class="toctree-l2"><a class="reference internal" href="3.linear_regression_algorithm.html">3. Linear Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.error_function.html">4. Error Function</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6. Gradient Descent</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7. Gradient Descent</a></li>
 
 
 </ul>
@@ -388,9 +389,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6. Gradient Descent</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">7. Gradient Descent Algorithm</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-gradient-descent-algorithm">8. Batch Gradient Descent Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7. Gradient Descent</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">8. Gradient Descent Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-gradient-descent-algorithm">9. Batch Gradient Descent Algorithm</a></li>
 </ul>
 
             </nav>
@@ -404,14 +405,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="gradient-descent">
-<h1><span class="section-number">6. </span>Gradient Descent<a class="headerlink" href="#gradient-descent" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">7. </span>Gradient Descent<a class="headerlink" href="#gradient-descent" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Gradient is a vector denoted as: <span class="math notranslate nohighlight">\(\nabla f = (\frac{\delta f}{\delta x_1}, \frac{\delta f}{\delta x_2}, ..., \frac{\delta f}{\delta x_n})\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\nabla f &gt; 0\)</span>: increasing; <span class="math notranslate nohighlight">\(\nabla f &lt; 0\)</span>: decreasing</p></li>
 </ul>
 </section>
 <section id="gradient-descent-algorithm">
-<h1><span class="section-number">7. </span>Gradient Descent Algorithm<a class="headerlink" href="#gradient-descent-algorithm" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">8. </span>Gradient Descent Algorithm<a class="headerlink" href="#gradient-descent-algorithm" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>With N: epochs (i.e. iterations) and <span class="math notranslate nohighlight">\(\eta\)</span>: learning rate</p></li>
 <li><p>Pick a random point <span class="math notranslate nohighlight">\(p_0\)</span>.</p></li>
@@ -422,7 +423,7 @@ document.write(`
 </ul>
 </section>
 <section id="batch-gradient-descent-algorithm">
-<h1><span class="section-number">8. </span>Batch Gradient Descent Algorithm<a class="headerlink" href="#batch-gradient-descent-algorithm" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">9. </span>Batch Gradient Descent Algorithm<a class="headerlink" href="#batch-gradient-descent-algorithm" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Pick random weights <span class="math notranslate nohighlight">\(w_1, w_2, …, w_n\)</span> and a random bias <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
 <li><p>For i = 0, …, N – 1:</p>
@@ -433,8 +434,8 @@ document.write(`
 <li><p>Calculate the gradient <span class="math notranslate nohighlight">\(\nabla f(w_1, w_2, …, w_n, b) = (\frac{\delta f}{\delta w_1}, ..., \frac{\delta f}{\delta w_n}, \frac{\delta f}{\delta b})\)</span></p></li>
 <li><p>Replace the weights and bias as follows:</p>
 <ul>
-<li><p>w1 gets replaced by</p></li>
-<li><p>b gets replaced by</p></li>
+<li><p>w1 gets replaced by <span class="math notranslate nohighlight">\(w_i' = w_i - \eta \frac{\delta f}{\delta w_i}\)</span></p></li>
+<li><p>b gets replaced by <span class="math notranslate nohighlight">\(b' = b - \eta \frac{\delta f}{\delta b}\)</span></p></li>
 </ul>
 </li>
 </ul>
@@ -499,9 +500,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6. Gradient Descent</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">7. Gradient Descent Algorithm</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-gradient-descent-algorithm">8. Batch Gradient Descent Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7. Gradient Descent</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-algorithm">8. Gradient Descent Algorithm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-gradient-descent-algorithm">9. Batch Gradient Descent Algorithm</a></li>
 </ul>
 
   </nav></div>
