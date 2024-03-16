@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Palmer’s Penguins &#8212; My Journal</title>
+    <title>10. Indicator Variables &#8212; My Journal</title>
   
   
   
@@ -57,9 +57,10 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/constants/acknowledgement';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2.machine_learning/linear_regression/notebooks/999.glossary';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="7. Gradient Descent" href="99.gradient_descent.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +122,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,18 +179,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../1.journal/2024/2024_11_feb.html">February 2024</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../linear_regression.html">Linear Regression</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/1.linear_regression_intro.html">1. Why Linear Regression?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/2.thoughts.html">2. Thoughts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/3.linear_regression_algorithm.html">3. Linear Regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/4.error_function.html">4. Error Function</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_regression.html">Linear Regression</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.linear_regression_intro.html">1. Why Linear Regression?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.thoughts.html">2. Thoughts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.linear_regression_algorithm.html">3. Linear Regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.error_function.html">4. Error Function</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/99.gradient_descent.html">7. Gradient Descent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="99.gradient_descent.html">7. Gradient Descent</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/999.glossary.html">10. Indicator Variables</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">10. Indicator Variables</a></li>
 </ul>
 </li>
 </ul>
@@ -265,7 +264,7 @@
       
       
       
-      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/linear_regression/constants/acknowledgement.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/khangnghiem/khangnghiem.github.io/issues/new?title=Issue%20on%20page%20%2F2.machine_learning/linear_regression/notebooks/999.glossary.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +294,7 @@
       
       
       
-      <li><a href="../../../_sources/2.machine_learning/linear_regression/constants/acknowledgement.md" target="_blank"
+      <li><a href="../../../_sources/2.machine_learning/linear_regression/notebooks/999.glossary.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,7 +376,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Palmer’s Penguins</h1>
+    <h1>Indicator Variables</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -391,10 +390,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="palmer-s-penguins">
-<h1>Palmer’s Penguins<a class="headerlink" href="#palmer-s-penguins" title="Link to this heading">#</a></h1>
-<p>Dataset Acknowledgment</p>
-<p>Data from the Palmer LTER data repository was supported by the Office of Polar Programs, NSF Grants OPP-9011927, OPP-9632763, and OPP-0217282.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="indicator-variables">
+<h1><span class="section-number">10. </span>Indicator Variables<a class="headerlink" href="#indicator-variables" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Variables that take only the values 0 or 1</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -410,7 +410,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./2.machine_learning/linear_regression/constants"
+            path: "./2.machine_learning/linear_regression/notebooks"
         },
         predefinedOutput: true
     }
@@ -427,6 +427,15 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="99.gradient_descent.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Gradient Descent</p>
+      </div>
+    </a>
 </div>
                 </footer>
               

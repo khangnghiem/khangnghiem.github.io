@@ -193,6 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../2.machine_learning/linear_regression/notebooks/99.gradient_descent.html">7. Gradient Descent</a></li>
 
 
+<li class="toctree-l2"><a class="reference internal" href="../../2.machine_learning/linear_regression/notebooks/999.glossary.html">10. Indicator Variables</a></li>
 </ul>
 </li>
 </ul>
@@ -390,7 +391,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-15-2024">Mar 15, 2024 -</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-16-2024-linear-regression-in-action">Mar 16, 2024 - Linear Regression in action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-15-2024-polynomial-regression">Mar 15, 2024 - Polynomial Regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-14-2024-muay-thai-first-impression">Mar 14, 2024 - Muay Thai First Impression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-13-2024-matrix-derivatives-and-integrals">Mar 13, 2024 - Matrix, Derivatives and Integrals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-12-2024-gradient-descent">Mar 12, 2024 - Gradient Descent</a></li>
@@ -418,10 +420,42 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="march-2024">
 <h1>March 2024<a class="headerlink" href="#march-2024" title="Link to this heading">#</a></h1>
-<section id="mar-15-2024">
-<h2>Mar 15, 2024 -<a class="headerlink" href="#mar-15-2024" title="Link to this heading">#</a></h2>
+<section id="mar-16-2024-linear-regression-in-action">
+<h2>Mar 16, 2024 - Linear Regression in action<a class="headerlink" href="#mar-16-2024-linear-regression-in-action" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li></li>
+<li><p>Coding practice: Move the line ŷ = 2x + 3 closer to the point (x, y) = (5, 15) using the the absolute trick and square trick with learning_rate = 0.01.</p></li>
+</ul>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">absolute_trick</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">):</span>
+    <span class="n">predicted</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span> <span class="o">*</span> <span class="n">features</span>
+    <span class="k">if</span> <span class="n">labels</span> <span class="o">&gt;</span> <span class="n">predicted</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">+=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">features</span>
+        <span class="n">b</span> <span class="o">+=</span> <span class="n">learning_rate</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">features</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">learning_rate</span>
+    <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">square_trick</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">):</span>
+    <span class="n">predicted</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span> <span class="o">*</span> <span class="n">features</span>
+    <span class="n">w</span> <span class="o">+=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">features</span> <span class="o">*</span> <span class="p">(</span><span class="n">labels</span> <span class="o">-</span> <span class="n">predicted</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">+=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="p">(</span><span class="n">labels</span> <span class="o">-</span> <span class="n">predicted</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p><em>Results</em></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">absolute_trick</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="c1"># (2.05, 3.01)</span>
+<span class="n">square_trick</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="c1"># (2.1, 3.02)</span>
+</pre></div>
+</div>
+</section>
+<section id="mar-15-2024-polynomial-regression">
+<h2>Mar 15, 2024 - Polynomial Regression<a class="headerlink" href="#mar-15-2024-polynomial-regression" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Used when datasets are non-linear!</p></li>
+<li><p>We must decide the degree of the polynomial function before the training process to determine the necessary columns.</p></li>
+<li><p>E.g. Is the line of best fit a line (degree 1), a parabola (degree 2), a cubic (degree 3), or some kind of curve?</p></li>
 </ul>
 </section>
 <section id="mar-14-2024-muay-thai-first-impression">
@@ -607,7 +641,8 @@ b: bias, m: weight</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-15-2024">Mar 15, 2024 -</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-16-2024-linear-regression-in-action">Mar 16, 2024 - Linear Regression in action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-15-2024-polynomial-regression">Mar 15, 2024 - Polynomial Regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-14-2024-muay-thai-first-impression">Mar 14, 2024 - Muay Thai First Impression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-13-2024-matrix-derivatives-and-integrals">Mar 13, 2024 - Matrix, Derivatives and Integrals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-12-2024-gradient-descent">Mar 12, 2024 - Gradient Descent</a></li>

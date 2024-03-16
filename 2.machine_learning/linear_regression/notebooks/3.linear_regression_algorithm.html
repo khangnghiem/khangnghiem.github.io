@@ -193,6 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="99.gradient_descent.html">7. Gradient Descent</a></li>
 
 
+<li class="toctree-l2"><a class="reference internal" href="999.glossary.html">10. Indicator Variables</a></li>
 </ul>
 </li>
 </ul>
@@ -429,11 +430,11 @@ or \)</span><span class="math notranslate nohighlight">\(y = \sum_{j=1}^{n} w_j 
 <li><p>Linear Regression Algorithm: a repeating step in which we move a line closer to a data point until the regression line is closer to all the data points</p></li>
 <li><p>Use Square Trick or Absolute Trick to reformulate the model by a learning rate. There’s also a Simple Trick but this is only useful for learning purposes.
 $<span class="math notranslate nohighlight">\(\hat{p} = m'x + b'\)</span>$</p></li>
-<li><p>Square Trick: <span class="math notranslate nohighlight">\(x(p-\hat{p})\)</span> will give us a sense to direction to move close to a point (by looking at the quadrants)
-with <span class="math notranslate nohighlight">\(m' = m + \eta x(p-\hat{p})\)</span> and <span class="math notranslate nohighlight">\(b' = b + \eta(p-\hat{p})\)</span></p></li>
 <li><p>Absolute Trick:
 with <span class="math notranslate nohighlight">\(m' = m + \eta x\)</span> and <span class="math notranslate nohighlight">\(b' = b + \eta\)</span> if <span class="math notranslate nohighlight">\(p &gt; \hat{p}\)</span>
 else <span class="math notranslate nohighlight">\(m' = m - \eta x\)</span> and <span class="math notranslate nohighlight">\(b' = b - \eta\)</span></p></li>
+<li><p>Square Trick: <span class="math notranslate nohighlight">\(x(p-\hat{p})\)</span> will give us a sense to direction to move close to a point (by looking at the quadrants)
+with <span class="math notranslate nohighlight">\(m' = m + \eta x(p-\hat{p})\)</span> and <span class="math notranslate nohighlight">\(b' = b + \eta(p-\hat{p})\)</span></p></li>
 </ul>
 </section>
 <section id="learning-rate">
