@@ -391,6 +391,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-19-2024-airflow-docker-container">Mar 19, 2024 - Airflow Docker Container</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-18-2024-data-pipeline-with-airflow">Mar 18, 2024 - Data Pipeline with Airflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-17-2024-complexity-regularization">Mar 17, 2024 - Complexity Regularization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-16-2024-linear-regression-in-action">Mar 16, 2024 - Linear Regression in action</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-15-2024-polynomial-regression">Mar 15, 2024 - Polynomial Regression</a></li>
@@ -421,6 +423,52 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="march-2024">
 <h1>March 2024<a class="headerlink" href="#march-2024" title="Link to this heading">#</a></h1>
+<section id="mar-19-2024-airflow-docker-container">
+<h2>Mar 19, 2024 - Airflow Docker Container<a class="headerlink" href="#mar-19-2024-airflow-docker-container" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>After a bit of tinkering, Khang was able to run airflow in Docker in NAB work device.</p></li>
+<li><p>Scheduler can use intervals that are:</p>
+<ul>
+<li><p>CRON based:</p>
+<ul>
+<li><p>* * * * *: (minute) (hour) (day) (month) (day of the week)</p></li>
+<li><p>E.g. 45 23 * * SAT = 23:45 every Saturday</p></li>
+</ul>
+</li>
+<li><p>Presets (run at midnight):</p>
+<ul>
+<li><p>&#64;once, &#64;hourly, &#64;daily, etc.</p></li>
+</ul>
+</li>
+<li><p>Frequency based using python datetime library:</p>
+<ul>
+<li><p>E.g. dt.timedelta(days=3)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="mar-18-2024-data-pipeline-with-airflow">
+<h2>Mar 18, 2024 - Data Pipeline with Airflow<a class="headerlink" href="#mar-18-2024-data-pipeline-with-airflow" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Started learning Airflow</p></li>
+<li><p>First impression:</p>
+<ul>
+<li><p>Not very hard to use</p></li>
+<li><p>However, installing in work machine is a pain, both dev (Docker) and local env</p></li>
+<li><p>Easy to visualize DAGs with operator/callable graphs</p></li>
+</ul>
+</li>
+<li><p>3 core components, these are deployed in separate containers:</p>
+<ul>
+<li><p>The webserver</p></li>
+<li><p>The scheduler</p></li>
+<li><p>The worker processes</p></li>
+</ul>
+</li>
+</ul>
+</section>
 <section id="mar-17-2024-complexity-regularization">
 <h2>Mar 17, 2024 - Complexity Regularization<a class="headerlink" href="#mar-17-2024-complexity-regularization" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -430,6 +478,22 @@ document.write(`
 <li><p>L1 norm: The sum of the absolute values of the coefficients, or</p></li>
 <li><p>L2 norm: The sum of the squares of the coefficients</p></li>
 <li><p>bias not included since it is unrelated to complexity</p></li>
+</ul>
+</li>
+<li><p>Reducing the cost function with measures of Quality and Complexity: $<span class="math notranslate nohighlight">\(Error = Regression\ error + \lambda\ Regularization\ term\)</span>$</p>
+<ul>
+<li><p>L1 Lasso Regression (Least Absolute Shrinkage and Selection Operator).</p>
+<ul>
+<li><p>Often used to reduce the number of features.</p></li>
+</ul>
+</li>
+<li><p>L2 Ridge Regression (The name comes from the shape of the function).</p>
+<ul>
+<li><p>Often used to reduce the value of the coefficients of features.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> is the regularization parameter. Bigger <span class="math notranslate nohighlight">\(\lambda\)</span> results in simple model.</p></li>
+<li><p>Started learning Flask (Python microframework for backend)</p></li>
 </ul>
 </li>
 </ul>
@@ -657,6 +721,8 @@ b: bias, m: weight</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-19-2024-airflow-docker-container">Mar 19, 2024 - Airflow Docker Container</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-18-2024-data-pipeline-with-airflow">Mar 18, 2024 - Data Pipeline with Airflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-17-2024-complexity-regularization">Mar 17, 2024 - Complexity Regularization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-16-2024-linear-regression-in-action">Mar 16, 2024 - Linear Regression in action</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-15-2024-polynomial-regression">Mar 15, 2024 - Polynomial Regression</a></li>
