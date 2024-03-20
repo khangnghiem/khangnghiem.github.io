@@ -61,6 +61,8 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1.journal/2024/2024_10_mar';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -428,7 +430,8 @@ document.write(`
 <h1>March 2024<a class="headerlink" href="#march-2024" title="Link to this heading">#</a></h1>
 <section id="mar-20-2024-data-pipeline">
 <h2>Mar 20, 2024 - Data Pipeline<a class="headerlink" href="#mar-20-2024-data-pipeline" title="Link to this heading">#</a></h2>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph BT
+<div class="mermaid">
+            graph BT
   ETL[&quot;ETL Layer&quot;]
   Metadata[(&quot;
     Metadata Layer
@@ -476,9 +479,7 @@ document.write(`
   WarehouseLayer --&gt; Metadata
   EndUser --&gt; Metadata
   
-</pre></div>
-</div>
-</section>
+        </div></section>
 <section id="mar-19-2024-airflow-docker-container">
 <h2>Mar 19, 2024 - Airflow Docker Container<a class="headerlink" href="#mar-19-2024-airflow-docker-container" title="Link to this heading">#</a></h2>
 <ul class="simple">
