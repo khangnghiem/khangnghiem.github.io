@@ -391,6 +391,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-20-2024-data-pipeline">Mar 20, 2024 - Data Pipeline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-19-2024-airflow-docker-container">Mar 19, 2024 - Airflow Docker Container</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-18-2024-data-pipeline-with-airflow">Mar 18, 2024 - Data Pipeline with Airflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-17-2024-complexity-regularization">Mar 17, 2024 - Complexity Regularization</a></li>
@@ -423,6 +424,59 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="march-2024">
 <h1>March 2024<a class="headerlink" href="#march-2024" title="Link to this heading">#</a></h1>
+<section id="mar-20-2024-data-pipeline">
+<h2>Mar 20, 2024 - Data Pipeline<a class="headerlink" href="#mar-20-2024-data-pipeline" title="Link to this heading">#</a></h2>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph BT
+  ETL[&quot;ETL Layer&quot;]
+  Metadata[(&quot;
+    Metadata Layer
+    E.g. Data source, OLAP, 
+    ETL, Warehouse,
+    Reposting, Data Mining 
+    metadata
+  &quot;)]
+
+  subgraph Source[&quot;Data Source Layer&quot;]
+    Internal
+    External
+  end
+  subgraph ETL[&quot;ETL Layer&quot;]
+    direction LR
+    Extraction --&gt;
+    Transformation --&gt;
+    Loading
+  end
+  subgraph WarehouseLayer[&quot;Data Warehouse Layer&quot;]
+    direction LR
+    ODS[&quot;Operational Data 
+    Store (ODS)
+    &quot;] --&gt;
+    Warehouse[&quot;Data Warehouse&quot;]
+    Warehouse --ETL--&gt; Mart1[&quot;Data Mart&quot;] --&gt; Front1[&quot;BI/BU-facing\nData Warehouse&quot;]
+    Warehouse --ETL--&gt; Mart2[&quot;Data Mart&quot;] --&gt; Front2[&quot;BI/BU-facing\nData Warehouse&quot;]
+    Warehouse --ETL--&gt; Mart3[&quot;Data Mart&quot;] --&gt; Front3[&quot;BI/BU-facing\nData Warehouse&quot;]
+  end
+  subgraph EndUser[&quot;End User Layer&quot;]
+    direction BT
+    Query[&quot;Query and Reporting&quot;] --&gt;
+    OLAP[&quot;OLAP, Data Mining&quot;] --&gt;
+    Visual[&quot;Data Visualization&quot;] --&gt;
+    Analytical[&quot;
+      Analytical Apps
+      e.g. modelling, forecasting
+    &quot;]
+  end
+  Source--&gt;ETL
+  ETL --detailed near\nreal-time data--&gt; ODS
+  ETL --Summarised data\nHistorical Data--&gt; Warehouse
+  WarehouseLayer --&gt; EndUser
+  ETL --&gt; Metadata
+  WarehouseLayer --&gt; Metadata
+  EndUser --&gt; Metadata
+  
+</pre></div>
+</div>
+</section>
 <section id="mar-19-2024-airflow-docker-container">
 <h2>Mar 19, 2024 - Airflow Docker Container<a class="headerlink" href="#mar-19-2024-airflow-docker-container" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -726,6 +780,7 @@ b: bias, m: weight</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-20-2024-data-pipeline">Mar 20, 2024 - Data Pipeline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-19-2024-airflow-docker-container">Mar 19, 2024 - Airflow Docker Container</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-18-2024-data-pipeline-with-airflow">Mar 18, 2024 - Data Pipeline with Airflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-17-2024-complexity-regularization">Mar 17, 2024 - Complexity Regularization</a></li>
